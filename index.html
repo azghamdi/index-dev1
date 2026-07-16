@@ -1620,6 +1620,267 @@ footer .footer-bottom{display:flex;justify-content:space-between;align-items:cen
   #statistics .mobile-stats-accordion{display:grid!important}
 }
 </style>
+<style id="statistician-chat-styles">
+.stat-chat-launcher{position:fixed;right:22px;bottom:22px;z-index:9998;display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:8px 10px 8px 17px;border:1px solid rgba(27,131,84,.18);border-radius:999px;background:#fff;color:#18392d;box-shadow:0 14px 38px rgba(16,66,48,.18);cursor:pointer;transition:.22s}.stat-chat-launcher:hover{transform:translateY(-3px);box-shadow:0 19px 44px rgba(16,66,48,.24)}.stat-chat-launcher-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:#1b8354;color:#fff}.stat-chat-launcher-icon svg{width:21px;height:21px}.stat-chat-launcher-text{font-size:13px;font-weight:800;white-space:nowrap}.stat-chat-launcher-dot{position:absolute;top:5px;right:7px;width:10px;height:10px;border:2px solid #fff;border-radius:50%;background:#a8c52a}
+.stat-chat{position:fixed;right:22px;bottom:88px;z-index:9999;width:min(390px,calc(100vw - 28px));max-height:min(640px,calc(100vh - 120px));display:grid;grid-template-rows:auto auto 1fr auto;overflow:hidden;border:1px solid #dce7e1;border-radius:24px;background:#fff;box-shadow:0 28px 80px rgba(15,59,43,.24);opacity:0;visibility:hidden;transform:translateY(14px) scale(.975);transform-origin:bottom right;transition:.25s}.stat-chat.is-open{opacity:1;visibility:visible;transform:none}.stat-chat-header{position:relative;display:flex;align-items:center;gap:12px;padding:17px 18px;color:#fff;background:linear-gradient(130deg,#123f31 0%,#1b8354 100%)}.stat-chat-avatar{width:44px;height:44px;display:grid;place-items:center;flex:none;border-radius:14px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22)}.stat-chat-title{flex:1}.stat-chat-title strong{display:block;font-size:15px}.stat-chat-title span{display:flex;align-items:center;gap:6px;margin-top:4px;font-size:10px;color:rgba(255,255,255,.78)}.stat-chat-title span:before{content:'';width:7px;height:7px;border-radius:50%;background:#c9df54}.stat-chat-close{width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:10px;background:rgba(255,255,255,.13);color:#fff;cursor:pointer}.stat-chat-intro{display:flex;gap:10px;padding:16px 17px 10px;background:#f8fbf9}.stat-chat-botmark{width:35px;height:35px;display:grid;place-items:center;flex:none;border-radius:11px;background:#e8f4ee;color:#1b8354}.stat-chat-bubble{padding:11px 13px;border:1px solid #e0e9e5;border-radius:14px 4px 14px 14px;background:#fff;color:#3f5149;font-size:12px;line-height:1.8}.stat-chat-body{overflow:auto;padding:12px 17px 16px;background:#f8fbf9}.stat-chat-label{margin:0 0 10px;color:#66736d;font-size:11px;font-weight:700}.stat-chat-groups{display:grid;gap:10px}.stat-chat-group{overflow:hidden;border:1px solid #dfe8e4;border-radius:15px;background:#fff}.stat-chat-group-button{width:100%;min-height:50px;display:flex;align-items:center;gap:10px;padding:10px 12px;border:0;background:#fff;color:#253b32;text-align:right;cursor:pointer}.stat-chat-group-button:hover{background:#f4f9f6}.stat-chat-group-icon{width:31px;height:31px;display:grid;place-items:center;flex:none;border-radius:9px;background:#eaf5f0;color:#1b8354}.stat-chat-group-button strong{flex:1;font-size:12px}.stat-chat-chevron{color:#1b8354;transition:.22s}.stat-chat-group.is-open .stat-chat-chevron{transform:rotate(180deg)}.stat-chat-options{display:grid;grid-template-rows:0fr;opacity:0;transition:.25s}.stat-chat-group.is-open .stat-chat-options{grid-template-rows:1fr;opacity:1}.stat-chat-options-inner{min-height:0;overflow:hidden;display:grid;gap:7px;padding:0 10px}.stat-chat-group.is-open .stat-chat-options-inner{padding:0 10px 11px}.stat-chat-option{display:flex;align-items:center;gap:8px;min-height:40px;padding:8px 10px;border:1px solid #e3ebe7;border-radius:10px;background:#fbfdfc;color:#43584f;font-size:11px;font-weight:700}.stat-chat-option:hover{border-color:rgba(27,131,84,.28);background:#eef7f2;color:#146c45}.stat-chat-option:after{content:'←';margin-inline-start:auto;color:#1b8354}.stat-chat-footer{display:flex;gap:8px;padding:12px;border-top:1px solid #e4ebe8;background:#fff}.stat-chat-input{flex:1;min-width:0;height:42px;padding:0 13px;border:1px solid #dce7e2;border-radius:12px;outline:0}.stat-chat-input:focus{border-color:#1b8354;box-shadow:0 0 0 3px rgba(27,131,84,.10)}.stat-chat-send{width:42px;height:42px;display:grid;place-items:center;flex:none;border:0;border-radius:12px;background:#1b8354;color:#fff;cursor:pointer}
+@media(max-width:650px){.stat-chat-launcher{right:14px;bottom:14px;min-width:52px;min-height:52px;padding:7px}.stat-chat-launcher-text{display:none}.stat-chat{right:10px;left:10px;bottom:78px;width:auto;max-height:calc(100dvh - 96px);border-radius:20px;transform-origin:bottom center}.stat-chat-header{padding:14px}.stat-chat-intro{padding:13px 13px 8px}.stat-chat-body{padding:10px 13px 13px}}
+</style><style id="stat-chat-professional-launcher">
+/* ===== أيقونة تحدث مع إحصائي الاحترافية ===== */
+.stat-chat-launcher{
+  width:58px!important;
+  min-width:58px!important;
+  height:58px!important;
+  min-height:58px!important;
+  padding:0!important;
+  gap:0!important;
+  justify-content:flex-start!important;
+  overflow:hidden!important;
+  border:1px solid rgba(27,131,84,.22)!important;
+  border-radius:18px!important;
+  background:linear-gradient(145deg,#ffffff,#f5faf7)!important;
+  color:#1b8354!important;
+  box-shadow:
+    0 14px 34px rgba(14,72,50,.18),
+    inset 0 1px 0 rgba(255,255,255,.9)!important;
+  transition:
+    width .34s cubic-bezier(.2,.8,.2,1),
+    border-radius .34s ease,
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease!important;
+}
+
+.stat-chat-launcher:hover,
+.stat-chat-launcher:focus-visible{
+  width:190px!important;
+  border-radius:18px!important;
+  transform:translateY(-3px)!important;
+  border-color:rgba(27,131,84,.42)!important;
+  box-shadow:
+    0 20px 44px rgba(14,72,50,.24),
+    inset 0 1px 0 rgba(255,255,255,.95)!important;
+}
+
+.stat-chat-launcher-icon{
+  width:58px!important;
+  min-width:58px!important;
+  height:58px!important;
+  border-radius:17px!important;
+  background:linear-gradient(145deg,#1b8354,#146c45)!important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    0 7px 18px rgba(27,131,84,.24)!important;
+  transition:transform .3s ease!important;
+}
+
+.stat-chat-launcher:hover .stat-chat-launcher-icon,
+.stat-chat-launcher:focus-visible .stat-chat-launcher-icon{
+  transform:scale(.9) rotate(-4deg);
+}
+
+.stat-chat-launcher-icon svg{
+  width:25px!important;
+  height:25px!important;
+  stroke-width:1.9!important;
+}
+
+.stat-chat-launcher-text{
+  display:block!important;
+  max-width:0;
+  margin:0;
+  opacity:0;
+  overflow:hidden;
+  white-space:nowrap;
+  color:#18392d!important;
+  font-size:13px!important;
+  font-weight:800!important;
+  transform:translateX(10px);
+  transition:
+    max-width .34s cubic-bezier(.2,.8,.2,1),
+    opacity .2s ease .07s,
+    transform .3s ease!important;
+}
+
+.stat-chat-launcher:hover .stat-chat-launcher-text,
+.stat-chat-launcher:focus-visible .stat-chat-launcher-text{
+  max-width:120px;
+  margin-inline:12px 16px;
+  opacity:1;
+  transform:none;
+}
+
+.stat-chat-launcher-dot{
+  top:6px!important;
+  right:6px!important;
+  width:11px!important;
+  height:11px!important;
+  border:2px solid #fff!important;
+  background:#a8c52a!important;
+  box-shadow:0 0 0 0 rgba(168,197,42,.55);
+  animation:statChatPulse 2.2s ease-out infinite;
+}
+
+@keyframes statChatPulse{
+  0%{box-shadow:0 0 0 0 rgba(168,197,42,.5)}
+  65%{box-shadow:0 0 0 8px rgba(168,197,42,0)}
+  100%{box-shadow:0 0 0 0 rgba(168,197,42,0)}
+}
+
+.stat-chat-launcher:focus-visible{
+  outline:3px solid rgba(168,197,42,.55)!important;
+  outline-offset:4px!important;
+}
+
+@media(max-width:650px){
+  .stat-chat-launcher{
+    width:54px!important;
+    min-width:54px!important;
+    height:54px!important;
+    min-height:54px!important;
+    border-radius:17px!important;
+  }
+  .stat-chat-launcher:hover,
+  .stat-chat-launcher:focus-visible{
+    width:54px!important;
+  }
+  .stat-chat-launcher-icon{
+    width:54px!important;
+    min-width:54px!important;
+    height:54px!important;
+    border-radius:16px!important;
+  }
+  .stat-chat-launcher-text{
+    display:none!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .stat-chat-launcher-dot{animation:none!important}
+}
+</style>
+<style id="mobile-statistics-unified-color">
+/* ===== توحيد ألوان أقسام إحصاءات الهيئة على الجوال ===== */
+@media (max-width:650px){
+
+  #statistics .mobile-main-trigger,
+  #statistics .mobile-main-stat.is-active .mobile-main-trigger{
+    background:linear-gradient(90deg,#ffffff,#f8fbf9)!important;
+    color:#1B2622!important;
+  }
+
+  #statistics .mobile-main-trigger .tab-icon,
+  #statistics .mobile-main-stat.is-active .tab-icon{
+    background:#EAF5F0!important;
+    color:#1B8354!important;
+  }
+
+  #statistics .mobile-main-number,
+  #statistics .mobile-main-stat.is-active .mobile-main-number{
+    background:#EAF5F0!important;
+    color:#1B8354!important;
+  }
+
+  #statistics .mobile-chevron,
+  #statistics .mobile-main-stat.is-active .mobile-chevron{
+    background:#EAF5F0!important;
+    color:#1B8354!important;
+  }
+
+  #statistics .mobile-main-stat,
+  #statistics .mobile-main-stat.is-active{
+    border:1px solid #DCE7E2!important;
+    box-shadow:0 10px 24px rgba(0,76,63,.08)!important;
+  }
+
+  #statistics .mobile-main-stat:before,
+  #statistics .mobile-main-stat.is-active:before{
+    background:#1B8354!important;
+  }
+
+  #statistics .mobile-main-copy strong,
+  #statistics .mobile-main-stat.is-active .mobile-main-copy strong{
+    color:#1B2622!important;
+  }
+
+  #statistics .mobile-main-copy small,
+  #statistics .mobile-main-stat.is-active .mobile-main-copy small{
+    color:#66736D!important;
+  }
+
+  #statistics .mobile-main-stat.is-active{
+    transform:none!important;
+  }
+}
+</style>
+
+
+<style id="mobile-statistics-active-green-fix">
+/* ===== الحالة النهائية: جميع الأقسام خضراء وعند الفتح أخضر غامق ===== */
+@media (max-width:650px){
+
+  /* إزالة الأزرق والزيتوني وتوحيد المتغيرات على الأخضر */
+  #statistics .mobile-main-stat,
+  #statistics .mobile-main-stat:nth-child(2),
+  #statistics .mobile-main-stat:nth-child(3){
+    --main-accent:#1B8354!important;
+    --main-soft:#EAF5F0!important;
+    --main-deep:#0F5F3D!important;
+  }
+
+  /* القسم غير المفتوح */
+  #statistics .mobile-main-stat:not(.is-active) .mobile-main-trigger{
+    background:linear-gradient(90deg,#FFFFFF,#F8FBF9)!important;
+    color:#1B2622!important;
+  }
+
+  /* القسم المفتوح: أخضر غامق مثل التصميم السابق */
+  #statistics .mobile-main-stat.is-active .mobile-main-trigger{
+    background:linear-gradient(125deg,#003B32 0%,#004C3F 48%,#1B8354 100%)!important;
+    color:#FFFFFF!important;
+  }
+
+  #statistics .mobile-main-stat.is-active{
+    border-color:#1B8354!important;
+    box-shadow:0 18px 38px rgba(27,131,84,.16)!important;
+  }
+
+  #statistics .mobile-main-stat.is-active:before{
+    background:#A8C52A!important;
+  }
+
+  /* الأيقونة والرقم والسهم داخل القسم المفتوح */
+  #statistics .mobile-main-stat.is-active .tab-icon,
+  #statistics .mobile-main-stat.is-active .mobile-main-number,
+  #statistics .mobile-main-stat.is-active .mobile-chevron{
+    background:rgba(255,255,255,.15)!important;
+    color:#FFFFFF!important;
+    border-color:rgba(255,255,255,.18)!important;
+  }
+
+  /* النصوص داخل القسم المفتوح */
+  #statistics .mobile-main-stat.is-active .mobile-main-copy strong{
+    color:#FFFFFF!important;
+  }
+
+  #statistics .mobile-main-stat.is-active .mobile-main-copy small,
+  #statistics .mobile-main-stat.is-active .mobile-main-total{
+    color:rgba(255,255,255,.75)!important;
+  }
+
+  /* الأقسام غير المفتوحة تبقى خضراء هادئة */
+  #statistics .mobile-main-stat:not(.is-active) .tab-icon,
+  #statistics .mobile-main-stat:not(.is-active) .mobile-main-number,
+  #statistics .mobile-main-stat:not(.is-active) .mobile-chevron{
+    background:#EAF5F0!important;
+    color:#1B8354!important;
+    border-color:#D5E7DE!important;
+  }
+
+  #statistics .mobile-main-stat:not(.is-active):before{
+    background:#1B8354!important;
+  }
+}
+</style>
 
 </head>
 <body><div class="demo-alert">الموقع للعرض فقط — تجريبي فقط</div><header class="main-header">
@@ -1627,10 +1888,10 @@ footer .footer-bottom{display:flex;justify-content:space-between;align-items:cen
 <div aria-hidden="true" class="logo-mark"></div>
 <div class="name"> <br/><span></span></div>
 </div>
-<nav class="main-nav" aria-label="القائمة الرئيسية">
-<a href="https://www.stats.gov.sa/ar/" class="nav-link-main">الرئيسية</a>
+<nav aria-label="القائمة الرئيسية" class="main-nav">
+<a class="nav-link-main" href="https://www.stats.gov.sa/ar/">الرئيسية</a>
 <div class="nav-item-dropdown">
-<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الهيئة <span class="nav-chevron">⌄</span></button>
+<button aria-expanded="false" class="nav-link-main nav-dropdown-trigger" type="button">الهيئة <span class="nav-chevron">⌄</span></button>
 <div class="nav-dropdown-menu">
 <a href="https://www.stats.gov.sa/ar/gastat-about-us">من نحن</a>
 <a href="#">مجلس الإدارة</a>
@@ -1641,7 +1902,7 @@ footer .footer-bottom{display:flex;justify-content:space-between;align-items:cen
 </div>
 </div>
 <div class="nav-item-dropdown nav-item-mega">
-<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الإحصاءات <span class="nav-chevron">⌄</span></button>
+<button aria-expanded="false" class="nav-link-main nav-dropdown-trigger" type="button">الإحصاءات <span class="nav-chevron">⌄</span></button>
 <div class="nav-dropdown-menu nav-mega-menu">
 <div class="nav-mega-column"><strong>الإحصاءات الاقتصادية</strong>
 <a href="#statistics">الحسابات القومية</a><a href="#statistics">الأسعار</a><a href="#statistics">الأعمال</a><a href="#statistics">الاستثمار</a><a href="#statistics">التجارة الدولية</a>
@@ -1655,22 +1916,22 @@ footer .footer-bottom{display:flex;justify-content:space-between;align-items:cen
 </div>
 </div>
 <div class="nav-item-dropdown">
-<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الخدمات <span class="nav-chevron">⌄</span></button>
+<button aria-expanded="false" class="nav-link-main nav-dropdown-trigger" type="button">الخدمات <span class="nav-chevron">⌄</span></button>
 <div class="nav-dropdown-menu"><a href="#">طلب معلومات إحصائية</a><a href="#">طلب البيانات الدقيقة</a><a href="#">مركز الأعمال</a></div>
 </div>
 <div class="nav-item-dropdown">
-<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">التوعية <span class="nav-chevron">⌄</span></button>
+<button aria-expanded="false" class="nav-link-main nav-dropdown-trigger" type="button">التوعية <span class="nav-chevron">⌄</span></button>
 <div class="nav-dropdown-menu"><a href="#">توعية المسوح</a><a href="#">برنامج المعرفة الإحصائية</a><a href="#">حكاية رقم</a><a href="#">تعرف على المنتجات الإحصائية</a></div>
 </div>
 <div class="nav-item-dropdown">
-<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الأدلة والتصانيف <span class="nav-chevron">⌄</span></button>
+<button aria-expanded="false" class="nav-link-main nav-dropdown-trigger" type="button">الأدلة والتصانيف <span class="nav-chevron">⌄</span></button>
 <div class="nav-dropdown-menu"><a href="#">الأدلة الإحصائية</a><a href="#">التصانيف</a><a href="#">معجم المصطلحات الإحصائية</a></div>
 </div>
 <div class="nav-item-dropdown">
-<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">المركز الإعلامي <span class="nav-chevron">⌄</span></button>
+<button aria-expanded="false" class="nav-link-main nav-dropdown-trigger" type="button">المركز الإعلامي <span class="nav-chevron">⌄</span></button>
 <div class="nav-dropdown-menu"><a href="https://www.stats.gov.sa/ar/news">الأخبار</a><a href="#">الوسائط</a><a href="#">النشاطات والإنجازات</a></div>
 </div>
-<a href="https://www.stats.gov.sa/ar/inner-contact-us" class="nav-link-main">تواصل معنا</a>
+<a class="nav-link-main" href="https://www.stats.gov.sa/ar/inner-contact-us">تواصل معنا</a>
 </nav>
 <div class="header-actions"></div>
 </header><section class="hero" style="padding-top:70px;padding-bottom:70px;">
@@ -1957,7 +2218,6 @@ const hero=document.querySelector('.hero-visual');
 if(hero&&matchMedia('(pointer:fine)').matches){document.querySelector('.hero')?.addEventListener('mousemove',e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;hero.style.transform=`translate3d(${x*14}px,${y*10}px,0)`});document.querySelector('.hero')?.addEventListener('mouseleave',()=>hero.style.transform='')}
 
 </script>
-
 <script>
 document.addEventListener('DOMContentLoaded',function(){
   const items=[...document.querySelectorAll('.nav-item-dropdown')];
@@ -1988,5 +2248,9 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
-
-</body></html>
+<button aria-controls="statChatPanel" aria-expanded="false" class="stat-chat-launcher" id="statChatLauncher" type="button"><span aria-hidden="true" class="stat-chat-launcher-dot"></span><span aria-hidden="true" class="stat-chat-launcher-icon"><svg viewbox="0 0 24 24"><path d="M7 18.5c-2.4-1.3-4-3.7-4-6.5 0-4.1 3.6-7.5 8-7.5s8 3.4 8 7.5-3.6 7.5-8 7.5c-.9 0-1.8-.1-2.6-.4L4 21l1.2-3.2"></path><path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"></path></svg></span><span class="stat-chat-launcher-text">تحدث مع إحصائي</span></button><aside aria-hidden="true" aria-labelledby="statChatTitle" class="stat-chat" id="statChatPanel" role="dialog"><header class="stat-chat-header"><span aria-hidden="true" class="stat-chat-avatar"><svg viewbox="0 0 24 24"><path d="M8 10h8M8 14h5"></path><path d="M5 19l-1 3 4-2h9a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v9a4 4 0 0 0 2 3z"></path></svg></span><div class="stat-chat-title"><strong id="statChatTitle">تحدث مع إحصائي</strong><span>مساعدك لاستكشاف البيانات</span></div><button aria-label="إغلاق" class="stat-chat-close" id="statChatClose" type="button">×</button></header><div class="stat-chat-intro"><span aria-hidden="true" class="stat-chat-botmark">◎</span><div class="stat-chat-bubble">مرحبًا، يمكنني مساعدتك في استكشاف إحصاءات المملكة. اختر تصنيفًا أدناه أو اكتب ما تبحث عنه.</div></div><div class="stat-chat-body"><p class="stat-chat-label">اختر المجال الإحصائي</p><div class="stat-chat-groups">
+<div class="stat-chat-group is-open"><button aria-expanded="true" class="stat-chat-group-button" type="button"><span class="stat-chat-group-icon">↗</span><strong>الإحصاءات الاقتصادية</strong><span class="stat-chat-chevron">⌄</span></button><div class="stat-chat-options"><div class="stat-chat-options-inner"><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">إحصاءات الأعمال</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">إحصاءات الأسعار</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">إحصاءات الحسابات القومية</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">إحصاءات الأعمال قصيرة المدى</a></div></div></div>
+<div class="stat-chat-group"><button aria-expanded="false" class="stat-chat-group-button" type="button"><span class="stat-chat-group-icon">◎</span><strong>الإحصاءات الاجتماعية</strong><span class="stat-chat-chevron">⌄</span></button><div class="stat-chat-options"><div class="stat-chat-options-inner"><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">سوق العمل</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">السكان</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">التعليم</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">الصحة</a></div></div></div>
+<div class="stat-chat-group"><button aria-expanded="false" class="stat-chat-group-button" type="button"><span class="stat-chat-group-icon">⌖</span><strong>الإحصاءات المكانية والموارد</strong><span class="stat-chat-chevron">⌄</span></button><div class="stat-chat-options"><div class="stat-chat-options-inner"><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">إحصاءات الطاقة</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">إحصاءات السياحة</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">إحصاءات النقل</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">الإحصاءات المكانية</a></div></div></div>
+<div class="stat-chat-group"><button aria-expanded="false" class="stat-chat-group-button" type="button"><span class="stat-chat-group-icon">▥</span><strong>أهم المؤشرات الإحصائية</strong><span class="stat-chat-chevron">⌄</span></button><div class="stat-chat-options"><div class="stat-chat-options-inner"><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">السكان</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">التضخم</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">الناتج المحلي</a><a class="stat-chat-option" href="https://webserver-gastat-dev.lfr.cloud/ar/talk-with-ehsaie" rel="noopener" target="_blank">سوق العمل</a></div></div></div>
+</div></div><form class="stat-chat-footer" id="statChatForm"><input aria-label="اكتب سؤالك الإحصائي" class="stat-chat-input" id="statChatInput" placeholder="اكتب ما تبحث عنه..." type="text"/><button aria-label="إرسال" class="stat-chat-send" type="submit"><svg viewbox="0 0 24 24"><path d="m4 12 16-8-6 16-2-6-8-2z"></path></svg></button></form></aside><script id="statistician-chat-script">document.addEventListener('DOMContentLoaded',function(){const launcher=document.getElementById('statChatLauncher'),panel=document.getElementById('statChatPanel'),closeBtn=document.getElementById('statChatClose'),form=document.getElementById('statChatForm'),input=document.getElementById('statChatInput');if(!launcher||!panel)return;function setChat(open){panel.classList.toggle('is-open',open);panel.setAttribute('aria-hidden',String(!open));launcher.setAttribute('aria-expanded',String(open));if(open)setTimeout(()=>input&&input.focus(),180)}launcher.addEventListener('click',()=>setChat(!panel.classList.contains('is-open')));closeBtn&&closeBtn.addEventListener('click',()=>setChat(false));panel.querySelectorAll('.stat-chat-group-button').forEach(button=>button.addEventListener('click',function(){const group=this.closest('.stat-chat-group'),open=!group.classList.contains('is-open');panel.querySelectorAll('.stat-chat-group').forEach(item=>{item.classList.remove('is-open');const btn=item.querySelector('.stat-chat-group-button');if(btn)btn.setAttribute('aria-expanded','false')});if(open){group.classList.add('is-open');this.setAttribute('aria-expanded','true')}}));panel.querySelectorAll('.stat-chat-option').forEach(link=>link.addEventListener('click',()=>setChat(false)));form&&form.addEventListener('submit',function(e){e.preventDefault();const value=(input.value||'').trim();if(!value)return;const stats=document.getElementById('statsSearch');if(stats){setChat(false);document.getElementById('statistics')?.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(()=>{stats.value=value;stats.dispatchEvent(new Event('input',{bubbles:true}));stats.focus()},550)}});document.addEventListener('keydown',e=>{if(e.key==='Escape')setChat(false)})});</script></body></html>
