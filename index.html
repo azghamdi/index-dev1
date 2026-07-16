@@ -1,196 +1,1992 @@
-<!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>تقرير المنهجية والجودة لإحصاءات الرقم القياسي لأسعار المستهلك</title>
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>نسخة تجريبية للعرض الداخلي | الأقسام الإحصائية المطوّرة</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
-:root{--green:#00866a;--green2:#16a085;--navy:#132b3a;--blue:#2867b2;--mint:#e9f7f3;--line:#dbe7e3;--bg:#f5f8f7;--text:#23343d;--muted:#71818a;--white:#fff;--shadow:0 18px 55px rgba(18,54,54,.11)}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'IBM Plex Sans Arabic',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.95} a{color:inherit;text-decoration:none}
-.topbar{height:6px;background:linear-gradient(90deg,#6cc04a,#00a6a6,#3155a6)}
-.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,134,106,.1)}
-.header-inner{max-width:1440px;margin:auto;padding:13px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:14px} .brand-mark{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,var(--green),#23b9a0);display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,134,106,.24)}
-.brand-mark svg{width:31px;height:31px} .brand strong{display:block;font-size:16px} .brand small{color:var(--muted)}
-.actions{display:flex;gap:9px;align-items:center} button,.btn{font:inherit;border:0;cursor:pointer;border-radius:12px;padding:10px 15px;display:inline-flex;align-items:center;gap:8px} .btn-primary{background:var(--green);color:white} .btn-light{background:#edf5f3;color:var(--green)}
-.hero{background:radial-gradient(circle at 15% 20%,rgba(65,202,167,.25),transparent 28%),linear-gradient(135deg,#0b3c3e,#096b60 58%,#0c8b75);color:white;overflow:hidden}
-.hero-inner{max-width:1440px;margin:auto;padding:75px 28px 68px;display:grid;grid-template-columns:1.35fr .65fr;gap:54px;align-items:center} .badge{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);border-radius:999px;font-size:14px}
-.hero h1{font-size:clamp(31px,4vw,58px);line-height:1.35;margin:20px 0 18px;max-width:950px} .hero p{font-size:19px;color:#d7f2eb;max-width:760px} .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px} .hero-meta span{padding:8px 13px;border-radius:10px;background:rgba(255,255,255,.1)}
-.visual{min-height:330px;position:relative;display:grid;place-items:center} .orb{width:285px;height:285px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;position:relative;background:rgba(255,255,255,.06)} .orb:before,.orb:after{content:'';position:absolute;border-radius:50%;border:1px dashed rgba(255,255,255,.22)} .orb:before{inset:23px} .orb:after{inset:55px} .chart{display:flex;align-items:end;gap:11px;height:120px;z-index:2} .chart i{display:block;width:19px;background:#fff;border-radius:7px 7px 3px 3px;animation:bars 3s ease-in-out infinite} .chart i:nth-child(1){height:45px}.chart i:nth-child(2){height:90px}.chart i:nth-child(3){height:66px}.chart i:nth-child(4){height:115px}.chart i:nth-child(5){height:82px}@keyframes bars{50%{transform:scaleY(.72);opacity:.75}}
-.stats-strip{max-width:1280px;margin:-29px auto 35px;padding:0 28px;position:relative;z-index:3} .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:19px;box-shadow:var(--shadow);overflow:hidden} .stat{padding:22px;text-align:center;border-left:1px solid var(--line)} .stat:last-child{border:0} .stat strong{display:block;color:var(--green);font-size:25px} .stat span{color:var(--muted);font-size:14px}
-.layout{max-width:1440px;margin:auto;padding:15px 28px 80px;display:grid;grid-template-columns:290px minmax(0,1fr);gap:28px;align-items:start} .sidebar{position:sticky;top:20px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px;max-height:calc(100vh - 110px);overflow:auto} .search{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:11px;font:inherit;outline:none;margin-bottom:12px} .search:focus{border-color:var(--green)} .nav-title{font-weight:700;margin:5px 5px 12px} .toc a{display:flex;align-items:center;gap:10px;padding:10px 9px;border-radius:10px;color:#52646d;font-size:14px;transition:.2s} .toc a:hover,.toc a.active{background:var(--mint);color:var(--green)} .toc a span{min-width:28px;height:28px;display:grid;place-items:center;border-radius:8px;background:#edf3f1;font-weight:700}
-.content{min-width:0} .intro-card{background:white;border:1px solid var(--line);border-radius:20px;padding:25px 28px;margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:20px} .intro-card h2{margin:0 0 5px} .intro-card p{margin:0;color:var(--muted)}
-.content-section{background:#fff;border:1px solid var(--line);border-radius:20px;margin-bottom:22px;overflow:hidden;box-shadow:0 7px 22px rgba(35,70,66,.035);scroll-margin-top:100px} .section-head{padding:24px 28px;display:flex;gap:17px;align-items:center;background:linear-gradient(90deg,#f5fbf9,#fff);border-bottom:1px solid var(--line)} .num{width:49px;height:49px;border-radius:15px;display:grid;place-items:center;background:var(--green);color:#fff;font-size:22px;font-weight:700} .eyebrow{font-size:12px;color:var(--green);font-weight:700;letter-spacing:.4px} .section-head h2{margin:1px 0 0;font-size:25px;color:var(--navy)} .prose{padding:28px 32px} .prose p{margin:0 0 18px;text-align:justify} .prose h3{margin:27px 0 13px;padding:11px 15px;border-right:4px solid var(--green);background:#f5faf8;border-radius:9px;font-size:18px;color:#153d3d} .prose ul{margin:8px 0 22px;padding:0 25px 0 0} .prose li{margin:7px 0;padding-right:5px} .prose li::marker{color:var(--green)} mark{background:#fff1a8;border-radius:3px;padding:0 2px}
-.footer{background:#102d32;color:#cfe2df;padding:31px 28px;text-align:center} .footer strong{color:white} .reveal{opacity:0;transform:translateY(13px);transition:.55s} .reveal.visible{opacity:1;transform:none}
-@media(max-width:950px){.hero-inner{grid-template-columns:1fr}.visual{display:none}.layout{grid-template-columns:1fr}.sidebar{position:relative;top:auto;max-height:none}.stats-grid{grid-template-columns:repeat(2,1fr)}} @media(max-width:600px){.header-inner,.hero-inner,.layout{padding-left:16px;padding-right:16px}.brand small{display:none}.actions .btn-light{display:none}.hero-inner{padding-top:48px}.stats-strip{padding:0 16px}.stats-grid{grid-template-columns:1fr 1fr}.stat{padding:14px 8px}.prose{padding:21px 18px}.section-head{padding:20px 18px}.intro-card{align-items:flex-start;flex-direction:column}}
-@media print{.header,.sidebar,.stats-strip,.actions{display:none!important}.hero{background:white;color:black}.hero p{color:#555}.hero-inner{padding:20px}.layout{display:block;padding:0}.content-section{break-inside:avoid;box-shadow:none}}
-</style></head><body>
-<div class="stats-strip"><div class="stats-grid"><div class="stat"><strong>23</strong><span>صفحة في المصدر</span></div><div class="stat"><strong>10</strong><span>قسمًا رئيسيًا</span></div><div class="stat"><strong>شهري</strong><span>دورية جمع ونشر البيانات</span></div><div class="stat"><strong>2013</strong><span>بداية التغطية الزمنية</span></div></div></div>
-<main class="layout"><aside class="sidebar"><input id="q" class="search" placeholder="ابحث عن كلمة أو مفهوم..."><div class="nav-title">محتويات التقرير</div><nav class="toc"><a href="#update"><span>1</span>تحديث المنهجية والجودة</a><a href="#presentation"><span>2</span>العرض الإحصائي</a><a href="#processing"><span>3</span>المعالجة الإحصائية</a><a href="#resources"><span>4</span>الموارد المستخدمة</a><a href="#quality"><span>5</span>أبعاد الجودة</a><a href="#confidentiality"><span>8</span>السرية</a><a href="#assurance"><span>6</span>ضمان الجودة</a><a href="#evaluation"><span>7</span>تقييم الجودة</a><a href="#publication"><span>9</span>سياسة النشر</a></nav></aside><div class="content"><section id="update" class="content-section reveal"><div class="section-head"><div class="num">1</div><div><span class="eyebrow">قسم التقرير</span><h2>تحديث المنهجية والجودة</h2></div></div><div class="prose"><p>تحديث المنهجية والجودة 2025/09/15 آخر تحديث للمنهجية والجودة .2.1 .3</p></div></section><section id="presentation" class="content-section reveal"><div class="section-head"><div class="num">2</div><div><span class="eyebrow">قسم التقرير</span><h2>العرض الإحصائي</h2></div></div><div class="prose"><p>العرض الإحصائي وصف البيانات .3.1 الرقم القياسي لأسعار المستهلك • هو مؤشر اقتصادي يعكس التغيرات النسبية في أسعار سلة ثابتة من السلع والخدمات التي تمثل أنماط الإنفاق الاستهلاكي في المملكة العربية السعودية ،وذلك خالل فترة زمنية محددة مقارنة بالفترة ويعد هذا الرقم أداة رئيسة لقياس معدالت التضخم أو الانكماش ،كما ُيستخدم بشكل واسع المرجعيةُ . في التقارير والتحليالت الاقتصادية والإحصائية .يعتمد المؤشر على بيانات تُ جمع من خالل مسوح ميدانية دقيقة ،بالضافة إلى بيانات سجلية ،ويتميز بعدد من الخصائص التي تضمن دقته وموثوقيته كمؤشر</p>
-<h3>يعكس تحركات الأسعار في السوق المحلية ،منها:</h3>
-<p>رصد تحركات أسعار التجزئة للسلع والخدمات ضمن سلة المستهلك. • توفير سلسلة زمنية من البيانات الإحصائية حول الأرقام القياسية للأسعار. • تصنيف الإحصاءات حسب فئات الاستهلاك ،بما يشمل الأرقام القياسية ونسب التغير الشهرية • والسنوية.</p>
-<h3>ومن خالل الرقم القياسي لأسعار المستهلك يمكن تحقيق عدد من الأهداف ،منها:</h3>
-<p>قياس معدل التضخم أو الانكماش. • تقديم بيانات تساهم في دعم رسم السياسات الاقتصادية والاجتماعية من خالل متابعة معدالت • التضخم وتوفير بيانات دقيقة لصناع القرار. الوفاء بالمتطلبات القليمية والدولية ،مثل متطلبات المركز الإحصائي الخليجي وصندوق النقد • الدولي.</p>
-<h3>استخدامات بيانات الرقم القياسي لأسعار المستهلك:</h3>
-<h3>تُ ستخدم بيانات الأسعار لتقدير مجموعة واسعة من المؤشرات ،تشمل:</h3>
-<h3>الأرقام القياسية حسب فئات الإنفاق (تفصيلي) وتتضمن:</h3>
-<p>الأرقام القياسية ومعدالت التغير حسب فئة الإنفاق (للشهر المرجعي). •</p>
-<h3>الأرقام القياسية حسب المنطقة وفئات الإنفاق وتتضمن:</h3>
-<p>الأرقام القياسية حسب المنطقة ،وفئة الإنفاق (للشهر المرجعي). • معدل التغير السنوي حسب المنطقة ،وفئة الإنفاق (للشهر المرجعي). • معدل التغير الشهري حسب المنطقة ،وفئة الإنفاق (للشهر المرجعي). •</p>
-<h3>الأرقام القياسية حسب فئات الإنفاق وتتضمن:</h3>
-<p>سلسلة الأرقام القياسية حسب فئة الإنفاق منذ عام 2013م. • سلسلة معدل التغير السنوي حسب فئة الإنفاق منذ عام 2014م. • سلسلة معدل التغير الشهري حسب فئة الإنفاق منذ عام 2013م. •</p>
-<h3>الأرقام القياسية حسب المنطقة وتتضمن:</h3>
-<p>سلسلة الأرقام القياسية حسب المنطقة منذ عام 2013م. • سلسلة معدل التغير السنوي حسب المنطقة منذ عام 2014م. • سلسلة معدل التغير الشهري حسب المنطقة منذ عام 2013م. • المتوسط السنوي للرقم القياسي ،ويتم نشره في نهاية كل عام ميالدي.</p>
-<ul>
-<li></li>
+:root{--g:#006c4c;--gd:#004b37;--gl:#e8f5ef;--lime:#b8d432;--ink:#15231e;--muted:#66736d;--line:#dce7e2;--bg:#f5f8f6;--white:#fff;--shadow:0 18px 48px rgba(0,68,49,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',Tahoma,Arial,sans-serif;color:var(--ink);background:var(--bg)}button,a{font:inherit}a{text-decoration:none;color:inherit}.container{width:min(1200px,calc(100% - 32px));margin:auto}.govbar{background:#f1f4f2;border-bottom:1px solid var(--line);font-size:12px;color:#46534d}.govbar .container{height:38px;display:flex;align-items:center;justify-content:space-between;gap:16px}.gov-id{display:flex;align-items:center;gap:9px}.flag{width:24px;height:16px;border-radius:2px;background:linear-gradient(#087f57,#087f57);position:relative}.flag:after{content:'✦';color:#fff;position:absolute;inset:0;display:grid;place-items:center;font-size:9px}.top-actions{display:flex;gap:15px}.top-actions a:hover{color:var(--g)}
+.header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,231,226,.9)}.header-inner{min-height:84px;display:flex;align-items:center;gap:32px}.logo{display:flex;align-items:center;gap:11px;min-width:220px}.logo-mark{width:48px;height:48px;border-radius:16px;background:linear-gradient(145deg,var(--gd),var(--g));display:grid;place-items:center;color:#fff;font-weight:bold;box-shadow:0 9px 18px rgba(0,108,76,.22)}.logo-copy strong{display:block;font-size:17px}.logo-copy span{font-size:11px;color:var(--muted)}.nav{display:flex;gap:25px;align-items:center;flex:1}.nav a{font-size:14px;font-weight:bold;padding:30px 0;position:relative}.nav a:after{content:'';position:absolute;right:0;left:0;bottom:20px;height:3px;border-radius:3px;background:var(--lime);transform:scaleX(0);transition:.2s}.nav a:hover:after{transform:scaleX(1)}.header-tools{display:flex;gap:8px}.icon-btn{width:43px;height:43px;border:1px solid var(--line);background:#fff;border-radius:13px;display:grid;place-items:center;cursor:pointer}.icon-btn:hover{border-color:var(--g);color:var(--g)}
+.hero{background:linear-gradient(120deg,#004633 0%,#007154 58%,#0b8060 100%);color:#fff;position:relative;overflow:hidden}.hero:before,.hero:after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.12)}.hero:before{width:520px;height:520px;left:-160px;top:-210px}.hero:after{width:340px;height:340px;right:54%;bottom:-240px}.hero-grid{min-height:490px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;padding:70px 0}.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px}.hero h1{font-size:clamp(36px,5vw,64px);line-height:1.25;margin:22px 0 18px}.hero p{font-size:17px;line-height:2;color:rgba(255,255,255,.85);max-width:690px}.hero-actions{display:flex;gap:12px;margin-top:28px}.btn{border:0;border-radius:13px;padding:13px 21px;font-weight:bold;cursor:pointer;display:inline-flex;align-items:center;gap:9px}.btn-primary{background:var(--lime);color:#173000}.btn-ghost{background:rgba(255,255,255,.10);color:#fff;border:1px solid rgba(255,255,255,.22)}.hero-visual{position:relative;height:320px}.data-orb{width:290px;height:290px;margin:auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#b8d432,transparent 18%),radial-gradient(circle at center,rgba(255,255,255,.16),rgba(255,255,255,.03) 62%);border:1px solid rgba(255,255,255,.22);display:grid;place-items:center;position:relative}.data-orb:before,.data-orb:after{content:'';position:absolute;border-radius:50%;border:1px dashed rgba(255,255,255,.28)}.data-orb:before{inset:28px}.data-orb:after{inset:62px}.chart-bars{display:flex;align-items:end;gap:12px;height:112px;z-index:1}.chart-bars i{width:24px;border-radius:8px 8px 3px 3px;background:linear-gradient(#fff,var(--lime));display:block}.chart-bars i:nth-child(1){height:42%}.chart-bars i:nth-child(2){height:70%}.chart-bars i:nth-child(3){height:52%}.chart-bars i:nth-child(4){height:100%}.floating-card{position:absolute;background:#fff;color:var(--ink);border-radius:15px;padding:13px 16px;box-shadow:0 18px 38px rgba(0,0,0,.18);font-size:12px}.floating-card strong{display:block;font-size:19px;color:var(--g);margin-top:5px}.fc1{top:18px;right:0}.fc2{bottom:18px;left:0}
+.search-band{margin-top:-34px;position:relative;z-index:4}.search-box{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:12px;display:flex;gap:10px}.search-box input{flex:1;border:0;outline:0;padding:13px;font-size:15px}.search-box button{width:52px;border:0;border-radius:13px;background:var(--g);color:#fff;cursor:pointer}.popular{font-size:12px;color:var(--muted);margin:11px 8px 0}.popular a{color:var(--g);margin-inline-start:12px}
+.section{padding:56px 0}.section.white{background:#fff}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:14px}.eyebrow{color:var(--g);font-size:13px;font-weight:bold;display:flex;align-items:center;gap:9px}.eyebrow:before{content:'';width:9px;height:9px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 5px rgba(184,212,50,.18)}.section h2{font-size:clamp(27px,3vw,40px);margin:0}.section-head p{color:var(--muted);line-height:1.8;max-width:500px;margin:10px 0 0}.view-all{color:var(--g);font-weight:bold;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.kpi{background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px;transition:.25s}.kpi:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(0,108,76,.24)}.kpi-icon{width:42px;height:42px;border-radius:13px;background:var(--gl);color:var(--g);display:grid;place-items:center}.kpi strong{display:block;font-size:26px;margin:19px 0 8px}.kpi span{color:var(--muted);font-size:13px;line-height:1.6}.trend{font-size:11px!important;color:var(--g)!important;margin-top:10px;display:block}
+.stats-panel{background:#fff;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:var(--shadow)}.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;background:#edf3f0;padding:8px;border-radius:20px;margin-bottom:18px}.tab{border:0;background:transparent;border-radius:15px;min-height:72px;padding:11px 16px;color:#4e5d56;font-weight:bold;display:flex;justify-content:center;align-items:center;gap:11px;cursor:pointer;transition:.2s}.tab .tab-icon{width:39px;height:39px;border-radius:12px;background:#fff;color:var(--g);display:grid;place-items:center}.tab.active{background:linear-gradient(135deg,var(--gd),var(--g));color:#fff;box-shadow:0 10px 22px rgba(0,108,76,.22)}.tab.active .tab-icon{background:rgba(255,255,255,.15);color:#fff}.browser{display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1.55fr);gap:16px;min-height:0;max-height:0;opacity:0;overflow:hidden;transform:translateY(-8px);transition:max-height .35s ease,opacity .25s ease,transform .35s ease,margin-top .35s ease;margin-top:0}.stats-panel:hover .browser,.stats-panel.is-open .browser{min-height:430px;max-height:700px;opacity:1;transform:translateY(0);margin-top:18px}.column{border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden}.category-list,.detail-list{padding:10px;display:grid;gap:7px}.category-btn{border:1px solid transparent;background:transparent;border-radius:14px;min-height:59px;padding:10px 12px;display:flex;align-items:center;gap:12px;text-align:right;cursor:pointer;color:var(--ink)}.category-btn:hover{background:#f7faf8;border-color:var(--line)}.category-btn.active{background:var(--gl);color:var(--gd);box-shadow:inset -4px 0 0 var(--g)}.cat-icon{width:40px;height:40px;border-radius:11px;background:#eef6f2;color:var(--g);display:grid;place-items:center;flex:none}.category-btn.active .cat-icon{background:var(--g);color:#fff}.category-btn span{font-weight:bold;font-size:13px}.category-btn small{display:block;color:var(--muted);margin-top:4px}.detail-item{border:1px solid var(--line);border-radius:14px;min-height:62px;padding:13px 15px;display:flex;align-items:center;gap:13px;transition:.2s;background:#fff}.detail-item:hover{border-color:rgba(0,108,76,.34);background:#fbfdfc;transform:translateX(-3px)}.detail-icon{width:39px;height:39px;border-radius:11px;background:var(--gl);color:var(--g);display:grid;place-items:center;flex:none}.detail-item strong{font-size:14px;flex:1}.arrow{color:var(--g);font-size:20px}
+.content-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px}.hover-card{cursor:pointer;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}.hover-card:hover,.hover-card.is-open,.hover-card:focus-within{border-color:rgba(0,108,76,.32);box-shadow:var(--shadow);transform:translateY(-3px)}.hover-card-head{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:35px}.hover-card-head h3{margin:0}.hover-card-toggle{width:36px;height:36px;border:0;border-radius:11px;background:var(--gl);color:var(--g);display:grid;place-items:center;cursor:pointer;transition:.25s}.hover-card-toggle svg{transition:transform .3s ease}.hover-card:hover .hover-card-toggle svg,.hover-card.is-open .hover-card-toggle svg,.hover-card:focus-within .hover-card-toggle svg{transform:rotate(180deg)}.hover-card-body{max-height:0;opacity:0;overflow:hidden;transform:translateY(-8px);margin-top:0;transition:max-height .45s ease,opacity .25s ease,transform .35s ease,margin-top .35s ease}.hover-card:hover .hover-card-body,.hover-card.is-open .hover-card-body,.hover-card:focus-within .hover-card-body{max-height:650px;opacity:1;transform:translateY(0);margin-top:12px}.list-row{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}.list-row:last-child{border-bottom:0}.date-box{width:62px;height:62px;border-radius:14px;background:var(--gl);display:grid;place-items:center;color:var(--g);flex:none}.date-box strong{font-size:19px}.date-box small{font-size:10px}.list-row h3{font-size:15px;margin:2px 0 7px;line-height:1.65}.meta{font-size:11px;color:var(--muted)}.release{display:flex;gap:15px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:15px;margin-bottom:9px}.release:last-child{margin-bottom:0}.release-tag{font-size:10px;color:var(--g);background:var(--gl);padding:5px 8px;border-radius:999px}.release strong{font-size:13px;line-height:1.6;flex:1}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.news-card{background:#fff;border:1px solid var(--line);border-radius:21px;overflow:hidden;transition:.25s}.news-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.news-image{height:170px;background:linear-gradient(140deg,var(--gd),var(--g));position:relative;overflow:hidden}.news-image:before{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(184,212,50,.18);left:-35px;top:-45px}.news-image:after{content:'GASTAT';position:absolute;color:rgba(255,255,255,.14);font-size:46px;font-weight:bold;bottom:16px;right:18px}.news-body{padding:20px}.news-body h3{font-size:15px;line-height:1.8;margin:9px 0 14px}.news-body .meta{display:flex;justify-content:space-between}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;min-height:170px;position:relative;overflow:hidden;transition:.25s}.service:before{content:'';position:absolute;width:90px;height:90px;border-radius:50%;background:var(--gl);left:-25px;top:-25px}.service:hover{border-color:var(--g);transform:translateY(-4px)}.service-icon{position:relative;width:48px;height:48px;border-radius:14px;background:var(--g);color:#fff;display:grid;place-items:center}.service h3{font-size:15px;margin:19px 0 8px}.service p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+.footer{background:#073e30;color:#fff;padding:60px 0 25px}.footer-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:40px}.footer .logo-copy span{color:rgba(255,255,255,.65)}.footer p{font-size:12px;line-height:1.9;color:rgba(255,255,255,.66)}.footer h4{font-size:14px;margin:0 0 18px}.footer-links{display:grid;gap:12px;font-size:12px;color:rgba(255,255,255,.72)}.footer-links a:hover{color:var(--lime)}.copyright{margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.62)}
+svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.mobile-menu{display:none}
+@media(max-width:980px){.nav{display:none}.mobile-menu{display:grid}.header-inner{justify-content:space-between}.hero-grid{grid-template-columns:1fr}.hero-visual{display:none}.kpis{grid-template-columns:repeat(2,1fr)}.kpi:last-child{grid-column:1/-1}.content-grid{grid-template-columns:1fr}.news-grid{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.browser{grid-template-columns:1fr}.stats-panel:hover .browser,.stats-panel.is-open .browser{max-height:1100px}}
+@media(max-width:650px){.container{width:min(100% - 22px,1200px)}.govbar .top-actions{display:none}.logo{min-width:0}.logo-copy span{display:none}.hero-grid{min-height:430px;padding:50px 0}.hero-actions{flex-direction:column;align-items:stretch}.section{padding:58px 0}.section-head{align-items:start;flex-direction:column}.kpis,.news-grid,.services,.footer-grid{grid-template-columns:1fr}.kpi:last-child{grid-column:auto}.tabs{display:flex;overflow:auto}.tab{min-width:215px}.stats-panel{padding:10px}.browser{min-height:0}.stats-panel:hover .browser,.stats-panel.is-open .browser{min-height:auto}.copyright{gap:15px;flex-direction:column}.search-box{padding:8px}.header-tools .icon-btn:first-child{display:none}}
+
+/* لمسات مستوحاة من كود المنصات لقسم إحصاءات الهيئة */
+#statistics{position:relative;overflow:hidden}
+#statistics:before{content:'';position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(184,212,50,.13),transparent 68%);right:-190px;top:20px;pointer-events:none}
+#statistics:after{content:'';position:absolute;width:320px;height:320px;border-radius:50%;border:1px dashed rgba(0,108,76,.13);left:-170px;bottom:25px;pointer-events:none}
+#statistics .container{position:relative;z-index:1}
+.stats-panel{position:relative;overflow:hidden;padding:20px;background:linear-gradient(145deg,#fff 0%,#fbfdfc 62%,#f2f8f5 100%);border-color:rgba(0,108,76,.14);box-shadow:0 24px 70px rgba(0,68,49,.12)}
+.stats-panel:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,108,76,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,108,76,.035) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.65),transparent 76%);pointer-events:none}
+.stats-panel:after{content:'';position:absolute;width:230px;height:230px;border-radius:50%;background:rgba(184,212,50,.09);left:-100px;top:-125px;filter:blur(2px);pointer-events:none}
+
+.tabs{position:relative;z-index:1;gap:12px;padding:10px;background:rgba(232,241,237,.82);border:1px solid rgba(0,108,76,.08);border-radius:22px}
+.tab{position:relative;justify-content:flex-start;min-height:86px;padding:14px 16px;overflow:hidden;border:1px solid transparent;text-align:right;isolation:isolate}
+.tab:before{content:'';position:absolute;inset:auto -35px -55px auto;width:115px;height:115px;border-radius:50%;background:rgba(184,212,50,.13);transform:scale(.5);opacity:0;transition:.35s;z-index:-1}
+.tab:hover:before,.tab.active:before{transform:scale(1);opacity:1}
+.tab:hover{background:#fff;border-color:rgba(0,108,76,.14);transform:translateY(-2px)}
+.tab.active{background:linear-gradient(125deg,#063f31 0%,#006c4c 72%,#0b8060 100%);border-color:transparent;transform:translateY(-2px)}
+.tab .tab-icon{width:48px;height:48px;border-radius:15px;box-shadow:0 8px 18px rgba(0,68,49,.08);transition:.3s}
+.tab:hover .tab-icon{transform:rotate(-4deg) scale(1.06)}
+.tab-copy{display:flex;flex-direction:column;gap:5px;line-height:1.4}.tab-copy small{font-size:10px;font-weight:normal;color:var(--muted)}.tab.active .tab-copy small{color:rgba(255,255,255,.7)}
+.tab-index{margin-inline-start:auto;width:28px;height:28px;border-radius:9px;background:rgba(0,108,76,.08);color:var(--g);display:grid;place-items:center;font-size:11px}.tab.active .tab-index{background:rgba(255,255,255,.14);color:#fff}
+.browser{position:relative;z-index:1;grid-template-columns:minmax(285px,.85fr) minmax(0,1.65fr);gap:18px}
+.column{position:relative;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-color:rgba(0,108,76,.13);box-shadow:0 12px 30px rgba(0,68,49,.055)}
+.column:first-child:before,.column:last-child:before{display:block;padding:15px 18px 10px;color:var(--muted);font-size:11px;font-weight:bold;letter-spacing:.1px}
+.column:first-child:before{content:'الموضوعات الإحصائية'}
+.column:last-child:before{content:'المنتجات والبيانات المتاحة'}
+.category-list,.detail-list{padding:8px 12px 14px}
+.category-btn{position:relative;min-height:68px;padding:11px 12px;border-color:transparent;transition:.25s;overflow:hidden}
+.category-btn:after{content:'←';position:absolute;left:15px;color:var(--g);font-size:17px;opacity:0;transform:translateX(8px);transition:.25s}
+.category-btn:hover:after,.category-btn.active:after{opacity:1;transform:translateX(0)}
+.category-btn:hover{background:#f8fbf9;border-color:rgba(0,108,76,.13);transform:translateX(-3px)}
+.category-btn.active{background:linear-gradient(90deg,var(--gl),#f7fbf9);box-shadow:inset -4px 0 0 var(--g),0 9px 20px rgba(0,108,76,.08)}
+.cat-icon{width:44px;height:44px;border-radius:14px;transition:.25s}.category-btn:hover .cat-icon,.category-btn.active .cat-icon{transform:scale(1.07)}
+.cat-copy{padding-left:28px}.cat-count{display:inline-flex!important;align-items:center;gap:5px;font-size:10px!important;font-weight:normal!important}.cat-count:before{content:'';width:5px;height:5px;border-radius:50%;background:var(--lime)}
+.detail-list{grid-template-columns:repeat(2,minmax(0,1fr));align-content:start}
+.detail-item{position:relative;min-height:86px;padding:14px;border-color:rgba(0,108,76,.11);overflow:hidden;isolation:isolate;box-shadow:0 7px 20px rgba(0,68,49,.035)}
+.detail-item:before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(232,245,239,.75),transparent 62%);opacity:0;transition:.25s;z-index:-1}
+.detail-item:after{content:'';position:absolute;width:72px;height:72px;border-radius:50%;background:rgba(184,212,50,.12);left:-36px;bottom:-42px;transition:.3s;z-index:-1}
+.detail-item:hover{transform:translateY(-3px);border-color:rgba(0,108,76,.3);box-shadow:0 14px 28px rgba(0,108,76,.10)}
+.detail-item:hover:before{opacity:1}.detail-item:hover:after{transform:scale(1.45)}
+.detail-icon{width:44px;height:44px;border-radius:14px;transition:.25s}.detail-item:hover .detail-icon{background:var(--g);color:#fff;transform:rotate(-4deg)}
+.detail-copy{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1}.detail-copy strong{font-size:13px;line-height:1.55}.detail-copy small{color:var(--muted);font-size:10px}.detail-item .arrow{width:29px;height:29px;border-radius:9px;background:var(--gl);display:grid;place-items:center;transition:.25s}.detail-item:hover .arrow{background:var(--g);color:#fff;transform:translateX(-3px)}
+@media(max-width:980px){.detail-list{grid-template-columns:1fr}}
+@media(max-width:650px){.stats-panel{padding:10px}.tab{min-width:235px}.browser{gap:12px}.column:first-child:before,.column:last-child:before{padding:13px 14px 8px}}
+@media(prefers-reduced-motion:reduce){.tab,.tab:before,.tab-icon,.category-btn,.detail-item,.detail-icon,.arrow{transition:none!important}}
+
+/* ===== Premium interaction layer ===== */
+:root{--ease:cubic-bezier(.2,.75,.25,1)}
+body{overflow-x:hidden}
+body.dark{--ink:#edf8f3;--muted:#a8bbb2;--line:#284a3f;--bg:#0b1e18;--white:#102a21;--gl:#153a2d;--shadow:0 22px 55px rgba(0,0,0,.28);background:var(--bg)}
+body.dark .header{background:rgba(10,30,23,.92)}body.dark .govbar{background:#0c241c;color:#c0d0c9}
+body.dark .search-box,body.dark .kpi,body.dark .stats-panel,body.dark .column,body.dark .detail-item,body.dark .card,body.dark .news-card,body.dark .service,body.dark .icon-btn{background:var(--white)}
+body.dark .tabs{background:#0c241c}body.dark .tab{color:#c3d4cc}body.dark .search-box input{background:transparent;color:var(--ink)}
+body.dark .category-btn:hover,body.dark .detail-item:hover{background:#143329}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.reveal.in-view{opacity:1;transform:none}.reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}.reveal-delay-3{transition-delay:.24s}
+.header{transition:box-shadow .3s ease,background .3s ease}.header.scrolled{box-shadow:0 10px 32px rgba(0,55,39,.10)}
+.hero-grid>div:first-child{animation:heroIn .85s var(--ease) both}.hero-visual{animation:heroVisualIn 1s .12s var(--ease) both}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}@keyframes heroVisualIn{from{opacity:0;transform:translateX(-30px) scale(.96)}to{opacity:1;transform:none}}
+.data-orb{animation:orbFloat 5s ease-in-out infinite}.floating-card{animation:cardFloat 4s ease-in-out infinite}.fc2{animation-delay:-2s}
+@keyframes orbFloat{50%{transform:translateY(-10px)}}@keyframes cardFloat{50%{transform:translateY(-7px)}}
+.chart-bars i{transform-origin:bottom;animation:barGrow 1s var(--ease) both}.chart-bars i:nth-child(2){animation-delay:.12s}.chart-bars i:nth-child(3){animation-delay:.24s}.chart-bars i:nth-child(4){animation-delay:.36s}@keyframes barGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.kpi,.news-card,.service,.detail-item,.release,.list-row{will-change:transform}.kpi:hover .kpi-icon,.service:hover .service-icon{transform:rotate(-5deg) scale(1.08)}.kpi-icon,.service-icon{transition:transform .35s var(--ease)}
+.tab{position:relative;overflow:hidden;transition:all .35s var(--ease)}.tab:before{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent,rgba(255,255,255,.12),transparent);transform:translateX(110%);transition:transform .7s ease}.tab:hover:before{transform:translateX(-110%)}
+.tab-copy{display:grid;text-align:right;gap:3px}.tab-copy small{font-size:10px;font-weight:normal;opacity:.72}.tab-index{margin-inline-start:auto;font-size:11px;opacity:.55}
+.cat-copy{display:grid;text-align:right}.detail-copy{display:grid;gap:4px;flex:1}.detail-copy small{font-size:10px;color:var(--muted)}
+.detail-item{animation:itemIn .38s var(--ease) both}.detail-item:nth-child(2){animation-delay:.05s}.detail-item:nth-child(3){animation-delay:.1s}@keyframes itemIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.hover-card-head:after{content:'مرّر لعرض المحتوى';font-size:10px;color:var(--muted);margin-inline-start:auto}.hover-card:hover .hover-card-head:after,.hover-card.is-open .hover-card-head:after{content:'المحتوى ظاهر';color:var(--g)}
+.release,.list-row{transition:transform .25s var(--ease),background .25s,border-color .25s}.release:hover,.list-row:hover{transform:translateX(-5px);background:#f8fbf9}.dark .release:hover,.dark .list-row:hover{background:#143329}
+.mobile-nav{position:fixed;inset:0;z-index:50;background:rgba(4,31,23,.55);backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:.3s}.mobile-nav.open{opacity:1;visibility:visible}.mobile-nav-panel{position:absolute;top:0;right:0;width:min(360px,88vw);height:100%;background:var(--white);padding:25px;transform:translateX(100%);transition:transform .4s var(--ease);box-shadow:-20px 0 50px rgba(0,0,0,.18)}.mobile-nav.open .mobile-nav-panel{transform:none}.mobile-nav-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.mobile-nav-links{display:grid;gap:8px}.mobile-nav-links a{padding:15px;border-radius:13px;font-weight:bold}.mobile-nav-links a:hover{background:var(--gl);color:var(--g)}
+.theme-toggle.active{background:var(--gd);color:#fff;border-color:var(--gd)}
+@media(max-width:650px){.hover-card-head:after{display:none}.tab-copy small,.tab-index{display:none}.reveal{transform:translateY(18px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* ===== أداة بناء الجداول ===== */
+.table-builder-section{
+  padding:0 0 42px;
+  background:var(--bg);
+}
+.table-builder-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:220px 1fr;
+  align-items:center;
+  gap:22px;
+  min-height:210px;
+  padding:30px 38px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 9% 20%,rgba(184,212,50,.16),transparent 24%),
+    linear-gradient(135deg,#fff 0%,#fbfdfc 58%,#eef7f2 100%);
+  box-shadow:0 18px 48px rgba(0,68,49,.08);
+  overflow:hidden;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s ease;
+}
+.table-builder-card:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,108,76,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,108,76,.035) 1px,transparent 1px);
+  background-size:30px 30px;
+  mask-image:linear-gradient(90deg,rgba(0,0,0,.7),transparent 56%);
+  pointer-events:none;
+}
+.table-builder-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(0,108,76,.28);
+  box-shadow:0 24px 58px rgba(0,68,49,.13);
+}
+.table-builder-visual{
+  position:relative;
+  z-index:1;
+  min-height:150px;
+  border-radius:20px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:linear-gradient(145deg,var(--gd),var(--g) 72%,#0a8060);
+  box-shadow:0 16px 34px rgba(0,108,76,.24);
+  overflow:hidden;
+}
+.table-builder-visual:before,
+.table-builder-visual:after{
+  content:'';
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+}
+.table-builder-visual:before{width:150px;height:150px;right:-65px;top:-75px}
+.table-builder-visual:after{width:110px;height:110px;left:-45px;bottom:-58px}
+.sheet-icon{
+  position:relative;
+  z-index:2;
+  width:118px;
+  height:104px;
+  padding:14px;
+  border-radius:16px;
+  background:#fff;
+  transform:rotate(-3deg);
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
+}
+.sheet-icon-head{
+  height:15px;
+  border-radius:6px;
+  background:linear-gradient(90deg,var(--lime),#4ac28e);
+  margin-bottom:9px;
+}
+.sheet-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:5px;
+}
+.sheet-grid i{
+  height:13px;
+  border-radius:3px;
+  background:#dceee6;
+}
+.sheet-grid i:nth-child(4n+1){background:#bfe2d3}
+.sheet-chart{
+  position:absolute;
+  left:22px;
+  bottom:17px;
+  z-index:3;
+  width:66px;
+  height:62px;
+  padding:9px;
+  border-radius:14px;
+  background:#fff;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  gap:6px;
+  box-shadow:0 12px 24px rgba(0,0,0,.16);
+}
+.sheet-chart i{
+  display:block;
+  width:9px;
+  border-radius:4px 4px 2px 2px;
+  background:var(--g);
+}
+.sheet-chart i:nth-child(1){height:42%}
+.sheet-chart i:nth-child(2){height:70%}
+.sheet-chart i:nth-child(3){height:92%;background:var(--lime)}
+.table-builder-content{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  padding:8px 20px;
+}
+.table-builder-content h2{
+  margin:0 0 12px;
+  font-size:clamp(25px,3vw,36px);
+}
+.table-builder-content p{
+  max-width:720px;
+  margin:0 auto 22px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+}
+.table-builder-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-width:132px;
+  padding:12px 22px;
+  border-radius:11px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--gd),var(--g));
+  font-weight:bold;
+  font-size:13px;
+  box-shadow:0 10px 20px rgba(0,108,76,.2);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.table-builder-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 25px rgba(0,108,76,.28);
+}
+.table-builder-btn span{transition:transform .25s ease}
+.table-builder-btn:hover span{transform:translateX(-4px)}
+body.dark .table-builder-card{
+  background:linear-gradient(135deg,#102a21,#14372b);
+}
+@media(max-width:760px){
+  .table-builder-section{padding-bottom:28px}
+  .table-builder-card{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:22px;
+  }
+  .table-builder-visual{min-height:165px}
+  .table-builder-content{padding:0}
+}
+
+.date-box{background:#fff!important;display:flex!important;align-items:center;justify-content:center}
+.date-box strong,.date-box small{display:none!important}
+.date-box::before{content:'';width:54px;height:54px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23006c4c'/><rect x='19' y='18' width='26' height='20' rx='3' fill='none' stroke='white' stroke-width='3'/><line x1='32' y1='38' x2='32' y2='45' stroke='white' stroke-width='3'/><line x1='26' y1='45' x2='38' y2='45' stroke='white' stroke-width='3'/><line x1='25' y1='25' x2='25' y2='31' stroke='white' stroke-width='2'/><line x1='32' y1='23' x2='32' y2='33' stroke='white' stroke-width='2'/><line x1='39' y1='27' x2='39' y2='33' stroke='white' stroke-width='2'/></svg>") center/contain no-repeat;display:block}
+
+/* ===== قسم أداة بناء الجداول مطابق للتصميم المرفق ===== */
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+.matched-builder{
+  padding:0 0 42px;
+  background:var(--bg);
+}
+.matched-builder-banner{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:0 18px 48px rgba(0,68,49,.08);
+  background:#eef7f3;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.matched-builder-banner:hover{
+  transform:translateY(-4px);
+  box-shadow:0 24px 58px rgba(0,68,49,.14);
+}
+.matched-builder-banner img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+.matched-builder-link{
+  position:absolute;
+  z-index:3;
+  left:32.5%;
+  top:68%;
+  width:11%;
+  height:18%;
+  min-width:112px;
+  min-height:42px;
+  border-radius:10px;
+  cursor:pointer;
+}
+.matched-builder-link:focus-visible{
+  outline:3px solid var(--lime);
+  outline-offset:4px;
+}
+body.dark .matched-builder-banner{
+  border-color:#284a3f;
+  background:#102a21;
+}
+@media(max-width:760px){
+  .matched-builder{padding-bottom:28px}
+  .matched-builder-banner{
+    border-radius:16px;
+    overflow:hidden;
+  }
+  .matched-builder-banner img{
+    width:150%;
+    max-width:none;
+    transform:translateX(16%);
+  }
+  .matched-builder-link{
+    left:25%;
+    top:67%;
+    width:18%;
+    height:20%;
+  }
+}
+
+/* ===== أداة بناء الجداول: صورة مستقلة + نص HTML قابل للتعديل ===== */
+.semantic-builder{
+  padding:0 0 42px;
+  background:var(--bg);
+}
+.semantic-builder-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(360px,.95fr) minmax(0,1.05fr);
+  align-items:center;
+  gap:22px;
+  min-height:185px;
+  padding:18px 30px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 10% 20%,rgba(184,212,50,.10),transparent 24%),
+    linear-gradient(135deg,#f8fcfa 0%,#fff 54%,#edf7f2 100%);
+  box-shadow:0 18px 48px rgba(0,68,49,.08);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s ease;
+}
+.semantic-builder-card:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,108,76,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,108,76,.025) 1px,transparent 1px);
+  background-size:30px 30px;
+  mask-image:linear-gradient(90deg,rgba(0,0,0,.6),transparent 65%);
+  pointer-events:none;
+}
+.semantic-builder-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(0,108,76,.25);
+  box-shadow:0 24px 58px rgba(0,68,49,.13);
+}
+.semantic-builder-media{
+  position:relative;
+  z-index:1;
+  min-height:190px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.semantic-builder-media img{
+  width:100%;
+  max-width:430px;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  filter:drop-shadow(0 16px 26px rgba(0,68,49,.13));
+  transition:transform .35s var(--ease);
+}
+.semantic-builder-card:hover .semantic-builder-media img{
+  transform:translateY(-4px) scale(1.015);
+}
+.semantic-builder-content{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  padding:12px 24px;
+}
+.semantic-builder-content h2{
+  margin:0 0 14px;
+  color:var(--g);
+  font-size:clamp(28px,3vw,38px);
+}
+.semantic-builder-content p{
+  max-width:500px;
+  margin:0 auto 23px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+}
+.semantic-builder-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  min-width:138px;
+  padding:12px 24px;
+  border-radius:10px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--gd),var(--g));
+  font-weight:bold;
+  box-shadow:0 10px 20px rgba(0,108,76,.20);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.semantic-builder-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 26px rgba(0,108,76,.28);
+}
+.semantic-builder-btn span{transition:transform .25s ease}
+.semantic-builder-btn:hover span{transform:translateX(-4px)}
+body.dark .semantic-builder-card{
+  background:linear-gradient(135deg,#102a21,#14372b);
+}
+@media(max-width:820px){
+  .semantic-builder-card{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:22px;
+  }
+  .semantic-builder-media{order:1;min-height:150px}
+  .semantic-builder-content{order:2;padding:0 8px 8px}
+  .semantic-builder-media img{max-width:500px}
+}
+
+/* SVG شفاف عالي الدقة لأداة بناء الجداول */
+.semantic-builder-media{
+  background:transparent!important;
+  overflow:visible;
+}
+.builder-laptop-svg{
+  display:block;
+  width:100%;
+  max-width:500px;
+  height:auto;
+  overflow:visible;
+  filter:drop-shadow(0 18px 28px rgba(0,68,49,.10));
+  transition:transform .4s var(--ease),filter .4s ease;
+}
+.semantic-builder-card:hover .builder-laptop-svg{
+  transform:translateY(-6px) scale(1.018);
+  filter:drop-shadow(0 24px 34px rgba(0,68,49,.16));
+}
+body.dark .builder-laptop-svg{
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.28));
+}
+@media(max-width:820px){
+  .builder-laptop-svg{max-width:430px}
+}
+
+/* ===== الضبط النهائي لقسم أداة بناء الجداول ===== */
+.semantic-builder{
+  padding:0 0 30px;
+}
+.semantic-builder-card{
+  grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);
+  gap:18px;
+  min-height:168px;
+  padding:14px 28px;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 9% 18%,rgba(184,212,50,.09),transparent 22%),
+    linear-gradient(135deg,#f8fcfa 0%,#fff 56%,#eef7f3 100%);
+}
+.semantic-builder-card:after{
+  content:'';
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  border:1px dashed rgba(0,108,76,.10);
+  right:-90px;
+  bottom:-105px;
+  pointer-events:none;
+}
+.semantic-builder-media{
+  min-height:135px;
+  justify-content:flex-start;
+  padding-inline-start:4px;
+}
+.builder-laptop-svg{
+  width:78%;
+  max-width:420px;
+  margin-inline-start:0;
+  transform:translateX(8px);
+}
+.semantic-builder-card:hover .builder-laptop-svg{
+  transform:translateX(8px) translateY(-4px) scale(1.012);
+}
+.semantic-builder-content{
+  padding:4px 12px;
+}
+.semantic-builder-content h2{
+  margin-bottom:8px;
+  font-size:clamp(26px,2.6vw,34px);
+  line-height:1.25;
+}
+.semantic-builder-content p{
+  max-width:610px;
+  margin-bottom:14px;
+  font-size:13px;
+  line-height:1.8;
+}
+.semantic-builder-btn{
+  min-width:122px;
+  padding:10px 19px;
+  border-radius:9px;
+  font-size:12px;
+}
+@media(max-width:820px){
+  .semantic-builder{
+    padding-bottom:24px;
+  }
+  .semantic-builder-card{
+    grid-template-columns:1fr;
+    gap:4px;
+    min-height:auto;
+    padding:18px;
+  }
+  .semantic-builder-media{
+    min-height:120px;
+    justify-content:center;
+    padding:0;
+  }
+  .builder-laptop-svg{
+    width:82%;
+    max-width:390px;
+    transform:none;
+  }
+  .semantic-builder-card:hover .builder-laptop-svg{
+    transform:translateY(-3px) scale(1.01);
+  }
+  .semantic-builder-content{
+    padding:0 6px 4px;
+  }
+}
+
+/* ===== لوحة ألوان مستوحاة من الموقع الرسمي للهيئة العامة للإحصاء ===== */
+:root{
+  --g:#006341;
+  --gd:#004C3F;
+  --gdeep:#003B32;
+  --gmid:#138A64;
+  --gl:#EAF5F0;
+  --gl2:#F3F8F5;
+  --lime:#A8C52A;
+  --lime-soft:#EEF4D4;
+  --ink:#1B2622;
+  --muted:#66736D;
+  --line:#DDE7E2;
+  --bg:#F6F8F7;
+  --white:#FFFFFF;
+  --shadow:0 18px 48px rgba(0,76,63,.10);
+}
+
+/* الشريط العلوي والرأس */
+.govbar{
+  background:#F4F6F5;
+  color:#46534D;
+  border-color:#E4EAE7;
+}
+.header{
+  background:rgba(255,255,255,.96);
+  border-bottom-color:#E2E9E5;
+}
+.logo-mark,
+
+.nav a:after{
+  background:var(--lime);
+}
+
+/* الواجهة الرئيسية */
+.hero{
+  background:
+    radial-gradient(circle at 12% 15%,rgba(168,197,42,.18),transparent 23%),
+    linear-gradient(115deg,var(--gdeep) 0%,var(--gd) 42%,var(--g) 100%);
+}
+.hero-badge{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.20);
+}
+.btn-primary{
+  background:var(--lime);
+  color:#173121;
+}
+.btn-primary:hover{
+  background:#B7D234;
+}
+.btn-ghost{
+  background:rgba(255,255,255,.09);
+}
+
+/* البحث */
+.search-box button{
+  background:var(--g);
+}
+.popular a,
+.view-all,
+.eyebrow,
+.arrow{
+  color:var(--g);
+}
+
+/* المؤشرات والبطاقات */
+.kpi-icon,
+.detail-icon,
+.cat-icon,
+.hover-card-toggle,
+.date-box,
+.release-tag{
+  background:var(--gl);
+  color:var(--g);
+}
+.kpi:hover,
+.hover-card:hover,
+.hover-card.is-open,
+.semantic-builder-card:hover{
+  border-color:rgba(0,99,65,.28);
+  box-shadow:0 20px 52px rgba(0,76,63,.13);
+}
+
+/* قسم الإحصاءات */
+#statistics:before{
+  background:radial-gradient(circle,rgba(168,197,42,.12),transparent 68%);
+}
+.stats-panel{
+  background:linear-gradient(145deg,#fff 0%,#FCFEFD 58%,#F1F7F4 100%);
+  border-color:rgba(0,99,65,.14);
+}
+.tabs{
+  background:#EDF3F0;
+}
+.tab.active{
+  background:linear-gradient(125deg,var(--gdeep),var(--gd) 45%,var(--g));
+  box-shadow:0 10px 24px rgba(0,76,63,.24);
+}
+.tab:hover{
+  border-color:rgba(0,99,65,.16);
+}
+.category-btn.active{
+  background:linear-gradient(90deg,var(--gl),#F7FBF9);
+  box-shadow:inset -4px 0 0 var(--g),0 9px 20px rgba(0,99,65,.08);
+}
+.detail-item:hover{
+  border-color:rgba(0,99,65,.30);
+}
+
+/* قسم النشرات */
+.release-tag{
+  background:var(--lime-soft);
+  color:var(--gd);
+}
+.release:hover,
+.list-row:hover{
+  background:#F5F9F7;
+}
+
+/* أداة بناء الجداول */
+.semantic-builder-card{
+  background:
+    radial-gradient(circle at 9% 18%,rgba(168,197,42,.10),transparent 22%),
+    linear-gradient(135deg,#F8FBF9 0%,#FFFFFF 54%,#EDF6F1 100%);
+  border-color:#DCE7E1;
+}
+.semantic-builder-content h2{
+  color:var(--g);
+}
+.semantic-builder-btn{
+  background:linear-gradient(135deg,var(--gd),var(--g));
+  box-shadow:0 10px 22px rgba(0,76,63,.21);
+}
+.semantic-builder-btn:hover{
+  box-shadow:0 14px 28px rgba(0,76,63,.29);
+}
+
+/* الرسم المتجهي داخل أداة بناء الجداول */
+.builder-laptop-svg [stop-color="#006c4c"]{stop-color:var(--g)}
+.builder-laptop-svg [fill="#006c4c"]{fill:var(--g)}
+.builder-laptop-svg [stroke="#006c4c"]{stroke:var(--g)}
+.builder-laptop-svg [fill="#b8d432"]{fill:var(--lime)}
+.builder-laptop-svg [stroke="#b8d432"]{stroke:var(--lime)}
+
+/* التذييل */
+.footer{
+  background:var(--gdeep);
+}
+.footer-links a:hover{
+  color:var(--lime);
+}
+
+/* الوضع الداكن المتوافق مع اللوحة الجديدة */
+body.dark{
+  --ink:#EEF6F2;
+  --muted:#AEC0B8;
+  --line:#29483F;
+  --bg:#0A1F18;
+  --white:#102920;
+  --gl:#17372D;
+  --shadow:0 22px 55px rgba(0,0,0,.30);
+}
+body.dark .semantic-builder-card{
+  background:linear-gradient(135deg,#102920,#15372C);
+}
+body.dark .release:hover,
+body.dark .list-row:hover{
+  background:#15372C;
+}
+
+/* ===== الضبط الاحترافي النهائي لمستكشف البيانات - متوافق مع كود المنصات ===== */
+.semantic-builder{padding:18px 0 54px;background:var(--bg)}
+.semantic-builder-card{
+  isolation:isolate;
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  grid-template-areas:"content media";
+  gap:34px;
+  min-height:285px;
+  padding:34px 42px;
+  border:1px solid #d8e6df;
+  border-radius:28px;
+  background:linear-gradient(118deg,#ffffff 0%,#fbfdfc 44%,#edf7f2 100%);
+  box-shadow:0 18px 48px rgba(0,76,63,.09);
+}
+.semantic-builder-card:before{
+  background-image:linear-gradient(rgba(27,131,84,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(27,131,84,.035) 1px,transparent 1px);
+  background-size:32px 32px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.75) 45%,rgba(0,0,0,.25) 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.75) 45%,rgba(0,0,0,.25) 100%);
+}
+.semantic-builder-card:after{
+  width:280px;height:280px;right:-120px;bottom:-150px;
+  border:1px dashed rgba(27,131,84,.14);
+  box-shadow:0 0 0 46px rgba(27,131,84,.025),0 0 0 92px rgba(168,197,42,.025);
+}
+.semantic-builder-content{grid-area:content;text-align:right;padding:8px 0;align-self:center}
+.semantic-builder-media{grid-area:media;min-height:215px;justify-content:center;padding:0}
+.builder-laptop-svg{width:100%;max-width:470px;margin:0;transform:none;filter:drop-shadow(0 22px 30px rgba(0,76,63,.12))}
+.semantic-builder-card:hover{transform:translateY(-5px);border-color:rgba(27,131,84,.35);box-shadow:0 28px 70px rgba(0,76,63,.14)}
+.semantic-builder-card:hover .builder-laptop-svg{transform:translateY(-5px) scale(1.012);filter:drop-shadow(0 28px 36px rgba(0,76,63,.18))}
+.semantic-builder-kicker{display:inline-flex;align-items:center;gap:9px;margin-bottom:13px;color:#1b8354;font-size:13px;font-weight:700}
+.semantic-builder-kicker:before{content:'';width:8px;height:8px;border-radius:50%;background:#a8c52a;box-shadow:0 0 0 5px rgba(168,197,42,.16)}
+.semantic-builder-content h2{margin:0 0 12px;color:#1b8354;font-size:clamp(30px,3vw,43px);line-height:1.25;letter-spacing:-.4px}
+.semantic-builder-content p{max-width:650px;margin:0 0 20px;color:#5f6f67;font-size:15px;line-height:2}
+.semantic-builder-benefits{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 23px;padding:0;list-style:none}
+.semantic-builder-benefits li{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid #dce9e3;border-radius:999px;background:rgba(255,255,255,.76);color:#38584a;font-size:11px;font-weight:700}
+.semantic-builder-benefits li:before{content:'✓';display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#e9f5ef;color:#1b8354;font-size:11px}
+.semantic-builder-btn{min-width:146px;padding:12px 22px;border-radius:12px;background:#1b8354;box-shadow:0 10px 24px rgba(27,131,84,.22);font-size:13px}
+.semantic-builder-btn:hover{background:#146c45;box-shadow:0 15px 30px rgba(27,131,84,.29)}
+.semantic-builder-btn:focus-visible{outline:3px solid rgba(168,197,42,.65);outline-offset:4px}
+body.dark .semantic-builder-card{background:linear-gradient(118deg,#102920,#14372c);border-color:#29483f}
+body.dark .semantic-builder-content p{color:#b3c3bb}
+body.dark .semantic-builder-benefits li{background:rgba(16,41,32,.78);border-color:#315247;color:#dceae3}
+@media(max-width:900px){
+ .semantic-builder-card{grid-template-columns:1fr;grid-template-areas:"media" "content";gap:10px;padding:26px}
+ .semantic-builder-media{min-height:175px}
+ .builder-laptop-svg{max-width:480px;width:88%}
+ .semantic-builder-content{text-align:center}
+ .semantic-builder-kicker{justify-content:center}
+ .semantic-builder-content p{margin-inline:auto;margin-bottom:18px}
+ .semantic-builder-benefits{justify-content:center}
+}
+@media(max-width:560px){
+ .semantic-builder{padding:8px 0 34px}
+ .semantic-builder-card{padding:20px 16px;border-radius:20px}
+ .semantic-builder-media{min-height:130px}
+ .builder-laptop-svg{width:100%}
+ .semantic-builder-content h2{font-size:28px}
+ .semantic-builder-content p{font-size:13px;line-height:1.85}
+ .semantic-builder-benefits{gap:7px}.semantic-builder-benefits li{font-size:10px;padding:6px 9px}
+ .semantic-builder-btn{width:100%}
+}
+
+/* ===== شريط أهم المؤشرات المتحرك ===== */
+.indicators-section{overflow:hidden}
+.kpis-slider{position:relative;overflow:hidden;padding:10px 0 22px;margin-inline:calc((100vw - min(1200px,calc(100% - 32px)))/-2);padding-inline:calc((100vw - min(1200px,calc(100% - 32px)))/2)}
+.kpis-slider:before,.kpis-slider:after{content:'';position:absolute;top:0;bottom:0;width:90px;z-index:3;pointer-events:none}
+.kpis-slider:before{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
+.kpis-slider:after{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.kpis-track{display:flex;gap:14px;width:max-content;animation:kpiMarquee 42s linear infinite;will-change:transform}
+.kpis-slider:hover .kpis-track,.kpis-slider:focus-within .kpis-track{animation-play-state:paused}
+.kpis-track .kpi{width:224px;min-width:224px;min-height:192px;display:flex;flex-direction:column;justify-content:flex-start}
+.kpis-track .kpi strong{font-size:25px}
+@keyframes kpiMarquee{from{transform:translateX(0)}to{transform:translateX(calc(50% + 7px))}}
+@media(max-width:650px){.kpis-slider{margin-inline:-11px;padding-inline:11px}.kpis-slider:before,.kpis-slider:after{width:34px}.kpis-track{animation-duration:34s}.kpis-track .kpi{width:198px;min-width:198px;min-height:180px;padding:20px}.kpis-track .kpi strong{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.kpis-track{animation:none;overflow-x:auto;max-width:100%;padding-bottom:8px}.kpis-track .kpi[aria-hidden="true"]{display:none}}
+
+/* ===== إبقاء أحدث النشرات والتقويم الإحصائي مفتوحين دائمًا ===== */
+#releases .hover-card.always-open{
+  cursor:default;
+  border-color:rgba(0,99,65,.22);
+  box-shadow:0 16px 40px rgba(0,76,63,.08);
+  transform:none;
+}
+#releases .hover-card.always-open .hover-card-body{
+  max-height:none;
+  opacity:1;
+  overflow:visible;
+  transform:none;
+  margin-top:12px;
+}
+#releases .hover-card.always-open .hover-card-toggle{display:none}
+#releases .hover-card.always-open .hover-card-head:after{
+  content:'المحتوى ظاهر';
+  color:var(--g);
+}
+#releases .hover-card.always-open:hover{transform:none}
+
+/* ===== أكورديون إحصاءات الهيئة للجوال ===== */
+.mobile-stats-accordion{display:none}
+@media(max-width:650px){
+  .stats-panel .tabs,.stats-panel .browser{display:none!important}
+  .stats-panel{overflow:visible}
+  .mobile-stats-accordion{display:grid;gap:10px;position:relative;z-index:2;margin-top:12px}
+  .mobile-main-stat{border:1px solid rgba(27,131,84,.15);border-radius:17px;background:#fff;overflow:hidden;box-shadow:0 7px 20px rgba(0,76,63,.045)}
+  .mobile-main-stat.is-active{border-color:rgba(27,131,84,.34);box-shadow:0 14px 30px rgba(0,76,63,.10)}
+  .mobile-main-trigger{width:100%;min-height:72px;padding:12px 13px;border:0;background:#fff;color:var(--ink);display:flex;align-items:center;gap:11px;text-align:right;cursor:pointer}
+  .mobile-main-stat.is-active .mobile-main-trigger{background:linear-gradient(125deg,var(--gdeep),var(--gd) 45%,var(--g));color:#fff}
+  .mobile-main-trigger .tab-icon{width:43px;height:43px;border-radius:13px;background:var(--gl);color:var(--g);display:grid;place-items:center;flex:none}
+  .mobile-main-stat.is-active .mobile-main-trigger .tab-icon{background:rgba(255,255,255,.15);color:#fff}
+  .mobile-main-copy{display:grid;gap:3px;flex:1}.mobile-main-copy strong{font-size:13px}.mobile-main-copy small{font-size:10px;color:var(--muted)}
+  .mobile-main-stat.is-active .mobile-main-copy small{color:rgba(255,255,255,.72)}
+  .mobile-chevron{width:29px;height:29px;border-radius:9px;background:var(--gl);color:var(--g);display:grid;place-items:center;transition:transform .3s ease;flex:none}
+  .mobile-main-stat.is-active .mobile-chevron{background:rgba(255,255,255,.14);color:#fff;transform:rotate(180deg)}
+  .mobile-main-panel{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .35s ease,opacity .25s ease}
+  .mobile-main-stat.is-active .mobile-main-panel{grid-template-rows:1fr;opacity:1}
+  .mobile-main-panel-inner{min-height:0;overflow:hidden;padding:0 10px}
+  .mobile-main-stat.is-active .mobile-main-panel-inner{padding:10px}
+  .mobile-category{border:1px solid var(--line);border-radius:14px;background:#fbfdfc;margin-bottom:8px;overflow:hidden}
+  .mobile-category:last-child{margin-bottom:0}
+  .mobile-category-trigger{width:100%;min-height:62px;padding:10px;border:0;background:transparent;color:var(--ink);display:flex;align-items:center;gap:10px;text-align:right;cursor:pointer}
+  .mobile-category.is-active{border-color:rgba(27,131,84,.28);background:#fff}
+  .mobile-category.is-active .mobile-category-trigger{background:var(--gl)}
+  .mobile-category-trigger .cat-icon{width:38px;height:38px;border-radius:11px;flex:none}
+  .mobile-category.is-active .cat-icon{background:var(--g);color:#fff}
+  .mobile-category-copy{display:grid;gap:3px;flex:1}.mobile-category-copy strong{font-size:12px}.mobile-category-copy small{font-size:9px;color:var(--muted)}
+  .mobile-category-chevron{font-size:18px;color:var(--g);transition:transform .3s ease}
+  .mobile-category.is-active .mobile-category-chevron{transform:rotate(90deg)}
+  .mobile-products{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .3s ease,opacity .22s ease}
+  .mobile-category.is-active .mobile-products{grid-template-rows:1fr;opacity:1}
+  .mobile-products-inner{min-height:0;overflow:hidden;display:grid;gap:7px;padding:0 8px}
+  .mobile-category.is-active .mobile-products-inner{padding:2px 8px 10px}
+  .mobile-product{display:flex;align-items:center;gap:9px;min-height:52px;padding:9px 10px;border:1px solid var(--line);border-radius:11px;background:#fff}
+  .mobile-product .detail-icon{width:34px;height:34px;border-radius:10px;flex:none}
+  .mobile-product strong{font-size:11px;line-height:1.5;flex:1}.mobile-product .arrow{font-size:16px}
+  body.dark .mobile-main-stat,body.dark .mobile-main-trigger,body.dark .mobile-category,body.dark .mobile-product{background:var(--white)}
+  body.dark .mobile-category.is-active .mobile-category-trigger{background:var(--gl)}
+}
+
+/* ===== تحسين تمييز الأقسام الرئيسية وتجربة الجوال ===== */
+@media(max-width:650px){
+  .mobile-stats-accordion{gap:14px;margin-top:16px}
+  .mobile-main-stat{position:relative;border:1px solid #d7e6df;border-radius:20px;background:linear-gradient(180deg,#fff,#fbfdfc);box-shadow:0 10px 26px rgba(0,76,63,.07);overflow:hidden;transition:border-color .28s ease,box-shadow .28s ease,transform .28s ease}
+  .mobile-main-stat:before{content:'';position:absolute;right:0;top:0;bottom:0;width:5px;background:#dfece6;transition:background .28s ease}
+  .mobile-main-stat.is-active{border-color:rgba(27,131,84,.42);box-shadow:0 18px 38px rgba(0,76,63,.14);transform:translateY(-2px)}
+  .mobile-main-stat.is-active:before{background:var(--lime)}
+  .mobile-main-trigger{min-height:84px;padding:15px 15px 15px 12px;gap:13px;position:relative}
+  .mobile-main-stat:not(.is-active) .mobile-main-trigger{background:linear-gradient(90deg,#fff,#f7fbf9)}
+  .mobile-main-stat.is-active .mobile-main-trigger{background:linear-gradient(125deg,#003b32 0%,#004c3f 48%,#1b8354 100%)}
+  .mobile-main-trigger .tab-icon{width:50px;height:50px;border-radius:15px;box-shadow:0 8px 20px rgba(0,76,63,.10)}
+  .mobile-main-copy{gap:5px}
+  .mobile-main-copy strong{font-size:15px;line-height:1.5}
+  .mobile-main-copy small{font-size:11px}
+  .mobile-main-number{width:29px;height:29px;border-radius:10px;background:#edf5f1;color:var(--g);display:grid;place-items:center;font-size:11px;font-weight:800;flex:none}
+  .mobile-main-stat.is-active .mobile-main-number{background:rgba(255,255,255,.14);color:#fff}
+  .mobile-chevron{width:32px;height:32px;border-radius:10px;font-weight:bold}
+  .mobile-main-panel-inner{background:linear-gradient(180deg,#f6faf8,#fff);border-top:1px solid rgba(27,131,84,.10)}
+  .mobile-main-stat.is-active .mobile-main-panel-inner{padding:12px}
+  .mobile-category{margin-bottom:10px;border-radius:15px;background:#fff;box-shadow:0 4px 12px rgba(0,76,63,.035)}
+  .mobile-category-trigger{min-height:66px;padding:11px 12px}
+  .mobile-category.is-active{border-color:rgba(27,131,84,.38);box-shadow:0 9px 22px rgba(0,76,63,.08)}
+  .mobile-category.is-active .mobile-category-trigger{background:linear-gradient(90deg,#eaf5f0,#f6fbf8)}
+  .mobile-category-copy strong{font-size:13px}
+  .mobile-category-copy small{font-size:10px}
+  .mobile-category-chevron{width:28px;height:28px;border-radius:9px;background:#edf5f1;display:grid;place-items:center}
+  .mobile-category.is-active .mobile-category-chevron{background:var(--g);color:#fff;transform:rotate(90deg)}
+  .mobile-products-inner{gap:8px}
+  .mobile-product{min-height:56px;padding:10px 11px;border-radius:12px;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+  .mobile-product:active{transform:scale(.985);background:#f3f8f5;border-color:rgba(27,131,84,.35)}
+  .mobile-product strong{font-size:12px}
+
+}
+
+/* ===== تمييز واضح بين الأقسام الرئيسية والفرعية على الجوال ===== */
+@media(max-width:650px){
+  .mobile-main-stat{
+    --main-accent:#1b8354;
+    --main-soft:#e8f5ef;
+    --main-deep:#0f5f3d;
+    border:2px solid color-mix(in srgb,var(--main-accent) 28%,#dce7e2);
+    background:linear-gradient(135deg,var(--main-soft),#fff 72%);
+  }
+  .mobile-main-stat:nth-child(2){--main-accent:#2878a8;--main-soft:#eaf4fb;--main-deep:#17587f}
+  .mobile-main-stat:nth-child(3){--main-accent:#7b7f2b;--main-soft:#f4f5df;--main-deep:#5c6020}
+  .mobile-main-stat:before{width:7px;background:var(--main-accent)}
+  .mobile-main-stat:not(.is-active) .mobile-main-trigger{background:linear-gradient(110deg,var(--main-soft),#fff 76%)}
+  .mobile-main-stat.is-active{border-color:var(--main-accent);box-shadow:0 20px 42px color-mix(in srgb,var(--main-accent) 20%,transparent)}
+  .mobile-main-stat.is-active:before{background:var(--main-accent)}
+  .mobile-main-stat.is-active .mobile-main-trigger{background:linear-gradient(125deg,var(--main-deep),var(--main-accent))}
+  .mobile-main-trigger .tab-icon{background:var(--main-accent);color:#fff}
+  .mobile-main-stat:not(.is-active) .mobile-main-copy strong{color:var(--main-deep)}
+  .mobile-main-stat:not(.is-active) .mobile-main-copy small{color:color-mix(in srgb,var(--main-deep) 78%,#66736d)}
+  .mobile-main-number{background:#fff;color:var(--main-accent);border:1px solid color-mix(in srgb,var(--main-accent) 25%,transparent)}
+  .mobile-chevron{background:#fff;color:var(--main-accent);border:1px solid color-mix(in srgb,var(--main-accent) 20%,transparent)}
+  .mobile-main-panel-inner{background:#f8fbf9;border-top:1px solid color-mix(in srgb,var(--main-accent) 18%,transparent)}
+
+  /* الأقسام الفرعية تبقى محايدة لتوضيح فرق المستوى */
+  .mobile-category{border:1px solid #dfe8e4;background:#fff;box-shadow:none}
+  .mobile-category-trigger{background:#fff!important}
+  .mobile-category .cat-icon{width:36px;height:36px;background:#eef4f1;color:#5c6d65}
+  .mobile-category-copy strong{color:#26352f;font-size:13px;font-weight:700}
+  .mobile-category-copy small{color:#7b8983}
+  .mobile-category-chevron{background:#f1f5f3;color:#65756e}
+  .mobile-category.is-active{border-color:color-mix(in srgb,var(--main-accent) 35%,#dfe8e4);box-shadow:0 8px 20px rgba(0,76,63,.07)}
+  .mobile-category.is-active .mobile-category-trigger{background:color-mix(in srgb,var(--main-soft) 55%,#fff)!important}
+  .mobile-category.is-active .cat-icon,.mobile-category.is-active .mobile-category-chevron{background:var(--main-accent);color:#fff}
+
+  .mobile-product{margin-inline-start:12px;border-style:dashed;background:#fcfdfd}
+}
+
+/* ===== السلوك النهائي المطلوب: طي الجوال وفتح النشرات بالهوفر ===== */
+#releases .hover-card.always-open{cursor:pointer;border-color:var(--line);box-shadow:none}
+#releases .hover-card.always-open .hover-card-body{max-height:0;opacity:0;overflow:hidden;transform:translateY(-8px);margin-top:0}
+#releases .hover-card.always-open .hover-card-toggle{display:grid}
+#releases .hover-card.always-open .hover-card-head:after{content:'مرّر لعرض المحتوى';color:var(--muted)}
+@media (hover:hover) and (pointer:fine){
+  #releases .hover-card:hover .hover-card-body{max-height:650px;opacity:1;transform:translateY(0);margin-top:12px}
+}
+@media(max-width:650px){
+  #releases .hover-card:hover .hover-card-body{max-height:0;opacity:0;transform:translateY(-8px);margin-top:0}
+  #releases .hover-card.is-open .hover-card-body{max-height:650px;opacity:1;transform:translateY(0);margin-top:12px}
+  #releases .hover-card-head:after{display:none}
+}
+
+/* ===== المرحلة الأولى: Mega Menu ذكي لإحصاءات الهيئة ===== */
+.stats-smart-search{position:relative;z-index:3;display:flex;align-items:center;gap:10px;margin:0 0 14px;padding:8px 10px;border:1px solid rgba(27,131,84,.18);border-radius:17px;background:rgba(255,255,255,.92);box-shadow:0 10px 26px rgba(0,76,63,.06);transition:border-color .2s ease,box-shadow .2s ease}
+.stats-smart-search:focus-within{border-color:rgba(27,131,84,.48);box-shadow:0 0 0 4px rgba(27,131,84,.09),0 12px 30px rgba(0,76,63,.08)}
+.stats-search-icon{width:38px;height:38px;border-radius:11px;background:var(--gl);color:var(--g);display:grid;place-items:center;flex:none}
+.stats-smart-search input{min-width:0;flex:1;border:0;outline:0;background:transparent;color:var(--ink);font-size:14px;padding:8px 2px}
+.stats-smart-search input::placeholder{color:#87958e}
+#statsSearchClear{width:31px;height:31px;border:0;border-radius:9px;background:#f0f5f2;color:var(--muted);cursor:pointer;font-size:20px;display:none;place-items:center}
+#statsSearchClear.visible{display:grid}.stats-search-count{font-size:10px;font-weight:700;color:var(--g);background:var(--gl);padding:7px 10px;border-radius:999px;white-space:nowrap}
+.stats-search-results{position:relative;z-index:4;display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:-3px 0 15px;padding:12px;border:1px solid rgba(27,131,84,.15);border-radius:17px;background:#fff;box-shadow:0 18px 42px rgba(0,76,63,.11)}
+.stats-search-results.visible{display:grid}.stats-search-result{display:flex;align-items:center;gap:11px;padding:11px;border:1px solid var(--line);border-radius:13px;background:#fff;transition:.2s}
+.stats-search-result:hover{border-color:rgba(27,131,84,.32);background:#f7fbf9;transform:translateY(-2px)}
+.stats-search-result .detail-icon{width:37px;height:37px}.stats-search-result-copy{display:grid;gap:3px;min-width:0;flex:1}.stats-search-result-copy strong{font-size:12px}.stats-search-result-copy small{font-size:9px;color:var(--muted)}
+.stats-search-empty{grid-column:1/-1;text-align:center;padding:22px;color:var(--muted);font-size:13px}
+.tab-count-badge{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:23px;padding:0 7px;border-radius:999px;background:rgba(27,131,84,.10);color:var(--g);font-size:9px;font-weight:800}.tab.active .tab-count-badge{background:rgba(255,255,255,.16);color:#fff}
+.category-btn .category-count{margin-inline-start:auto;margin-inline-end:23px;min-width:27px;height:27px;border-radius:9px;background:#edf5f1;color:var(--g);display:grid;place-items:center;font-size:10px;font-weight:800}.category-btn.active .category-count{background:var(--g);color:#fff}
+@media(max-width:650px){.stats-smart-search{margin-top:12px}.stats-search-count{display:none}.stats-search-results{grid-template-columns:1fr;max-height:330px;overflow:auto}.stats-panel .stats-smart-search{display:flex!important}.mobile-main-total{display:inline-flex;width:max-content;padding:4px 8px;border-radius:999px;background:rgba(27,131,84,.10);color:var(--main-accent,var(--g));font-size:9px;font-weight:800}.mobile-main-stat.is-active .mobile-main-total{background:rgba(255,255,255,.15);color:#fff}}
+body.dark .stats-smart-search,body.dark .stats-search-results,body.dark .stats-search-result{background:var(--white)}
+
+/* ===== عناوين الأقسام بالشريط الرأسي المطابق للتصميم المرجعي ===== */
+.indicators-section .section-head > div:first-child,
+#statistics .section-head > div:first-child,
+#releases .section-head > div:first-child{
+  position:relative;
+  padding-inline-start:24px;
+}
+.indicators-section .section-head h2,
+#statistics .section-head h2,
+#releases .section-head h2{
+  position:relative;
+  margin:0;
+  color:#183153;
+  font-size:clamp(30px,3.2vw,46px);
+  font-weight:800;
+  line-height:1.22;
+  letter-spacing:-.35px;
+}
+.indicators-section .section-head h2::before,
+#statistics .section-head h2::before,
+#releases .section-head h2::before{
+  content:'';
+  position:absolute;
+  inset-inline-start:-24px;
+  top:50%;
+  width:11px;
+  height:54px;
+  transform:translateY(-50%);
+  border-radius:999px;
+  background:#1b8354;
+}
+.indicators-section .section-head p,
+#statistics .section-head p,
+#releases .section-head p{
+  margin-top:12px;
+}
+@media(max-width:650px){
+  .indicators-section .section-head > div:first-child,
+  #statistics .section-head > div:first-child,
+  #releases .section-head > div:first-child{padding-inline-start:18px}
+  .indicators-section .section-head h2,
+  #statistics .section-head h2,
+  #releases .section-head h2{font-size:clamp(25px,7vw,34px)}
+  .indicators-section .section-head h2::before,
+  #statistics .section-head h2::before,
+  #releases .section-head h2::before{
+    inset-inline-start:-18px;
+    width:8px;
+    height:42px;
+  }
+}
+
+
+/* ===== خط IBM Plex Sans Arabic ===== */
+html,body,button,input,textarea,select{
+  font-family:'IBM Plex Sans Arabic','IBM Plex Sans',Tahoma,Arial,sans-serif;
+}
+
+/* تحسين المسافات بين الأقسام */
+#indicators{padding-bottom:24px!important;}
+#statistics{padding-top:24px!important;}
+
+
+/* ===== زر إظهار الكل داخل النشرات والتقويم ===== */
+#releases .hover-card-head{
+  position:relative;
+}
+#releases .section-action{
+  margin-inline-start:auto;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 13px;
+  border:1px solid rgba(27,131,84,.30);
+  border-radius:10px;
+  background:#fff;
+  color:#1b8354;
+  font-size:12px;
+  font-weight:700;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateX(-8px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s ease,
+             background .2s ease,color .2s ease,border-color .2s ease;
+}
+#releases .hover-card:hover .section-action,
+#releases .hover-card.is-open .section-action,
+#releases .hover-card.always-open .section-action,
+#releases .hover-card:focus-within .section-action{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:none;
+}
+#releases .section-action .action-arrow{
+  display:inline-block;
+  transition:transform .2s ease;
+}
+#releases .section-action:hover{
+  background:#1b8354;
+  border-color:#1b8354;
+  color:#fff;
+}
+#releases .section-action:hover .action-arrow{
+  transform:translate(-2px,-2px);
+}
+#releases .hover-card-head:after{
+  display:none!important;
+}
+@media(max-width:650px){
+  #releases .section-action{
+    padding:7px 10px;
+    font-size:11px;
+  }
+}
+
+
+/* ===== اللمسة النهائية النظيفة لقسم إحصاءات الهيئة - كود المنصات ===== */
+#statistics{
+  --platform-green:#1B8354;
+  --platform-green-dark:#146C45;
+  --platform-green-soft:#F0F7F3;
+  --platform-gray-25:#FCFCFD;
+  --platform-gray-50:#F9FAFB;
+  --platform-gray-100:#F3F4F6;
+  --platform-gray-200:#E5E7EB;
+  --platform-gray-300:#D1D5DB;
+  --platform-gray-700:#374151;
+  --platform-gray-900:#111827;
+}
+
+#statistics .stats-panel{
+  background:#FFFFFF;
+  border:1px solid var(--platform-gray-200);
+  box-shadow:0 10px 30px rgba(17,24,39,.06);
+}
+
+#statistics .tabs{
+  background:var(--platform-gray-100);
+  border:1px solid var(--platform-gray-200);
+  box-shadow:none;
+}
+
+#statistics .tab{
+  color:var(--platform-gray-700);
+  background:transparent;
+  border:1px solid transparent;
+  box-shadow:none;
+}
+
+#statistics .tab:hover{
+  background:#FFFFFF;
+  border-color:var(--platform-gray-300);
+  color:var(--platform-green-dark);
+  transform:translateY(-1px);
+}
+
+#statistics .tab.active{
+  background:linear-gradient(135deg,#24483A 0%,var(--platform-green-dark) 100%);
+  color:#FFFFFF;
+  border-color:transparent;
+  box-shadow:0 8px 20px rgba(27,131,84,.16);
+}
+
+#statistics .tab .tab-icon{
+  background:#FFFFFF;
+  color:var(--platform-green);
+  border:1px solid var(--platform-gray-200);
+  box-shadow:none;
+}
+
+#statistics .tab.active .tab-icon{
+  background:rgba(255,255,255,.14);
+  color:#FFFFFF;
+  border-color:rgba(255,255,255,.18);
+}
+
+#statistics .column{
+  background:var(--platform-gray-25);
+  border:1px solid var(--platform-gray-200);
+  box-shadow:none;
+}
+
+#statistics .column:first-child:before,
+#statistics .column:last-child:before{
+  color:#6B7280;
+  background:var(--platform-gray-50);
+  border-bottom:1px solid var(--platform-gray-200);
+}
+
+#statistics .category-btn{
+  color:var(--platform-gray-700);
+  background:transparent;
+  border:1px solid transparent;
+  box-shadow:none;
+}
+
+#statistics .category-btn:hover{
+  background:#FFFFFF;
+  border-color:var(--platform-gray-300);
+  color:var(--platform-green-dark);
+  transform:none;
+}
+
+#statistics .category-btn.active{
+  background:var(--platform-green-soft);
+  color:var(--platform-green-dark);
+  border-color:rgba(27,131,84,.26);
+  box-shadow:inset -4px 0 0 var(--platform-green);
+}
+
+#statistics .cat-icon,
+#statistics .detail-icon{
+  background:#FFFFFF;
+  color:var(--platform-green);
+  border:1px solid var(--platform-gray-200);
+  box-shadow:none;
+}
+
+#statistics .category-btn.active .cat-icon{
+  background:var(--platform-green);
+  color:#FFFFFF;
+  border-color:var(--platform-green);
+}
+
+#statistics .detail-item{
+  background:#FFFFFF;
+  border:1px solid var(--platform-gray-200);
+  box-shadow:none;
+  color:var(--platform-gray-900);
+}
+
+#statistics .detail-item:hover{
+  background:var(--platform-green-soft);
+  border-color:rgba(27,131,84,.32);
+  box-shadow:0 8px 18px rgba(17,24,39,.06);
+  transform:translateY(-2px);
+}
+
+#statistics .detail-item:hover .detail-icon{
+  background:var(--platform-green);
+  color:#FFFFFF;
+  border-color:var(--platform-green);
+  transform:none;
+}
+
+#statistics .detail-item .arrow{
+  background:var(--platform-gray-100);
+  color:var(--platform-green);
+}
+
+#statistics .detail-item:hover .arrow{
+  background:var(--platform-green);
+  color:#FFFFFF;
+  transform:none;
+}
+
+/* تقليل المؤثرات الزخرفية للحصول على مظهر أنظف */
+#statistics:before,
+#statistics:after,
+#statistics .stats-panel:before,
+#statistics .stats-panel:after,
+#statistics .tab:before,
+#statistics .detail-item:before,
+#statistics .detail-item:after{
+  opacity:.28;
+}
+
+/* الجوال */
+@media(max-width:650px){
+  #statistics .mobile-main-stat{
+    background:#FFFFFF;
+    border-color:var(--platform-gray-200);
+    box-shadow:0 8px 22px rgba(17,24,39,.06);
+  }
+
+  #statistics .mobile-main-stat:not(.is-active) .mobile-main-trigger{
+    background:var(--platform-gray-50);
+    color:var(--platform-gray-900);
+  }
+
+  #statistics .mobile-main-stat.is-active .mobile-main-trigger{
+    background:linear-gradient(135deg,#24483A,var(--platform-green-dark));
+  }
+
+  #statistics .mobile-category{
+    background:var(--platform-gray-50);
+    border-color:var(--platform-gray-200);
+  }
+
+  #statistics .mobile-category.is-active{
+    background:#FFFFFF;
+    border-color:rgba(27,131,84,.30);
+  }
+
+  #statistics .mobile-category.is-active .mobile-category-trigger{
+    background:var(--platform-green-soft);
+  }
+
+  #statistics .mobile-product{
+    background:#FFFFFF;
+    border-color:var(--platform-gray-200);
+  }
+}
+
+
+/* ===== تحسين نهائي لمستكشف البيانات - رمادي + أخضر بأسلوب كود المنصات ===== */
+.semantic-builder{
+  padding:10px 0 36px;
+  background:var(--bg);
+}
+
+.semantic-builder-card{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);
+  grid-template-areas:"content media";
+  gap:24px;
+  min-height:228px;
+  padding:24px 30px;
+  border:1px solid #E1E5E3;
+  border-radius:22px;
+  background:
+    linear-gradient(135deg,#FFFFFF 0%,#F8FAF9 58%,#EEF5F1 100%);
+  box-shadow:0 12px 30px rgba(17,24,39,.06);
+  overflow:hidden;
+}
+
+.semantic-builder-card:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(27,131,84,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(27,131,84,.025) 1px,transparent 1px);
+  background-size:28px 28px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 48%,rgba(0,0,0,.15) 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 48%,rgba(0,0,0,.15) 100%);
+  pointer-events:none;
+}
+
+.semantic-builder-card:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  height:4px;
+  background:linear-gradient(90deg,#D5DEDA 0%,#1B8354 55%,#A7B6AF 100%);
+}
+
+.semantic-builder-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(27,131,84,.28);
+  box-shadow:0 18px 38px rgba(17,24,39,.08);
+}
+
+.semantic-builder-content{
+  grid-area:content;
+  align-self:center;
+  text-align:right;
+  padding:0;
+}
+
+.semantic-builder-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:10px;
+  color:#4B5563;
+  font-size:12px;
+  font-weight:700;
+}
+
+.semantic-builder-kicker:before{
+  content:'';
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#1B8354;
+  box-shadow:0 0 0 4px rgba(27,131,84,.10);
+}
+
+.semantic-builder-content h2{
+  margin:0 0 8px;
+  color:#1F2937;
+  font-size:clamp(27px,2.5vw,34px);
+  line-height:1.25;
+}
+
+.semantic-builder-content p{
+  max-width:580px;
+  margin:0 0 14px;
+  color:#667085;
+  font-size:13px;
+  line-height:1.85;
+}
+
+.semantic-builder-benefits{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:0 0 16px;
+  padding:0;
+  list-style:none;
+}
+
+.semantic-builder-benefits li{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 10px;
+  border:1px solid #E1E5E3;
+  border-radius:999px;
+  background:#FFFFFF;
+  color:#475467;
+  font-size:10px;
+  font-weight:700;
+}
+
+.semantic-builder-benefits li:before{
+  content:'✓';
+  display:grid;
+  place-items:center;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:#EDF7F1;
+  color:#1B8354;
+  font-size:10px;
+}
+
+.semantic-builder-btn{
+  min-width:138px;
+  padding:11px 20px;
+  border-radius:10px;
+  background:#1B8354;
+  color:#FFFFFF;
+  font-size:12px;
+  font-weight:700;
+  box-shadow:0 8px 18px rgba(27,131,84,.18);
+}
+
+.semantic-builder-btn:hover{
+  background:#146C45;
+  transform:translateY(-1px);
+  box-shadow:0 12px 22px rgba(27,131,84,.24);
+}
+
+.semantic-builder-media{
+  grid-area:media;
+  min-height:165px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  background:transparent!important;
+}
+
+.builder-laptop-svg{
+  width:88%;
+  max-width:390px;
+  margin:0;
+  transform:none;
+  filter:drop-shadow(0 16px 22px rgba(17,24,39,.08));
+}
+
+.semantic-builder-card:hover .builder-laptop-svg{
+  transform:translateY(-3px) scale(1.008);
+  filter:drop-shadow(0 20px 26px rgba(17,24,39,.10));
+}
+
+/* تهدئة ألوان الرسم لتصبح رمادية وخضراء */
+.builder-laptop-svg [fill="#ffffff"],
+.builder-laptop-svg [fill="#fff"]{
+  fill:#FFFFFF;
+}
+.builder-laptop-svg [fill="#e8f5ef"],
+.builder-laptop-svg [fill="#EAF5F0"]{
+  fill:#EEF3F1;
+}
+.builder-laptop-svg [fill="#006c4c"],
+.builder-laptop-svg [fill="#006341"],
+.builder-laptop-svg [stroke="#006c4c"],
+.builder-laptop-svg [stroke="#006341"]{
+  fill:#1B8354;
+  stroke:#1B8354;
+}
+.builder-laptop-svg [fill="#b8d432"],
+.builder-laptop-svg [fill="#A8C52A"],
+.builder-laptop-svg [stroke="#b8d432"],
+.builder-laptop-svg [stroke="#A8C52A"]{
+  fill:#8AAE98;
+  stroke:#8AAE98;
+}
+
+body.dark .semantic-builder-card{
+  background:linear-gradient(135deg,#15231E,#1B2C25);
+  border-color:#33463E;
+}
+body.dark .semantic-builder-content h2{color:#F3F4F6}
+body.dark .semantic-builder-content p{color:#B8C4BE}
+body.dark .semantic-builder-benefits li{
+  background:#1C2D26;
+  border-color:#33463E;
+  color:#DCE5E0;
+}
+
+@media(max-width:900px){
+  .semantic-builder-card{
+    grid-template-columns:1fr;
+    grid-template-areas:"media" "content";
+    gap:8px;
+    min-height:auto;
+    padding:20px;
+  }
+
+  .semantic-builder-media{
+    min-height:135px;
+  }
+
+  .builder-laptop-svg{
+    width:76%;
+    max-width:340px;
+  }
+
+  .semantic-builder-content{
+    text-align:center;
+  }
+
+  .semantic-builder-kicker{
+    justify-content:center;
+  }
+
+  .semantic-builder-content p{
+    margin-inline:auto;
+  }
+
+  .semantic-builder-benefits{
+    justify-content:center;
+  }
+}
+
+@media(max-width:560px){
+  .semantic-builder{
+    padding:6px 0 28px;
+  }
+
+  .semantic-builder-card{
+    padding:16px;
+    border-radius:18px;
+  }
+
+  .semantic-builder-media{
+    min-height:115px;
+  }
+
+  .builder-laptop-svg{
+    width:88%;
+  }
+
+  .semantic-builder-content h2{
+    font-size:25px;
+  }
+
+  .semantic-builder-content p{
+    font-size:12px;
+    line-height:1.75;
+  }
+
+  .semantic-builder-btn{
+    width:100%;
+  }
+}
+
+
+/* ===== منيو الهيئة المحاكية - إضافة آمنة دون التأثير على الجوال ===== */
+.main-nav{display:flex;align-items:center;gap:7px;flex:1;position:relative}
+.nav-link-main{position:relative;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:12px 9px!important;border:0;background:transparent;color:var(--ink);font-size:13px!important;font-weight:700;cursor:pointer;white-space:nowrap}
+.nav-link-main:after{content:'';position:absolute;right:9px;left:9px;bottom:3px;height:3px;border-radius:999px;background:#1B8354;transform:scaleX(0);transition:transform .2s ease}
+.nav-link-main:hover:after,.nav-item-dropdown:hover>.nav-link-main:after,.nav-item-dropdown:focus-within>.nav-link-main:after,.nav-item-dropdown.is-open>.nav-link-main:after{transform:scaleX(1)}
+.nav-chevron{color:#66736D;font-size:13px;line-height:1;transition:transform .2s ease}
+.nav-item-dropdown{position:relative}
+.nav-item-dropdown:hover .nav-chevron,.nav-item-dropdown:focus-within .nav-chevron,.nav-item-dropdown.is-open .nav-chevron{transform:rotate(180deg)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 10px);right:0;z-index:40;min-width:245px;padding:10px;border:1px solid #E1E5E3;border-radius:16px;background:#FFF;box-shadow:0 18px 45px rgba(17,24,39,.12);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease,visibility .2s ease}
+.nav-item-dropdown:hover>.nav-dropdown-menu,.nav-item-dropdown:focus-within>.nav-dropdown-menu,.nav-item-dropdown.is-open>.nav-dropdown-menu{opacity:1;visibility:visible;transform:none}
+.nav-dropdown-menu a{display:block;padding:10px 12px!important;border-radius:10px;color:#374151;font-size:12px!important;font-weight:600}
+.nav-dropdown-menu a:hover{background:#F0F7F3;color:#146C45}.nav-dropdown-menu a:after{display:none!important}
+.nav-item-mega{position:static}.nav-mega-menu{right:0;left:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;min-width:760px;padding:20px}
+.nav-mega-column{display:grid;align-content:start;gap:3px}.nav-mega-column strong{margin-bottom:7px;padding:0 10px 9px;color:#1B8354;font-size:13px;border-bottom:1px solid #E5E7EB}
+@media(max-width:1150px){.main-nav{gap:1px}.nav-link-main{font-size:11px!important;padding-inline:6px!important}}
+@media(max-width:980px){.main-nav{display:none!important}}
+
+</style>
+<style id="demo-shell-preserve">
+/* الغلاف الأصلي للصفحة الجديدة: الهيدر والواجهة والفوتر محفوظة */
+:root{--color-primary:#6B6C7E;--color-secondary:#1B8354;--color-secondary-dark:#155f3d;--color-card-green:#188354;--color-accent:#E5E7EB;--color-bg:#F9FAFB;--color-text:#272833;--color-link:#A7A9BC;--radius:4px;--font-body:'IBM Plex Sans Arabic','IBM Plex Sans',Tahoma,Arial,sans-serif}
+body{font-family:var(--font-body)}
+.demo-alert{background:#F59E0B;color:#fff;text-align:center;padding:6px 12px;font-size:13px;font-weight:600}
+header.main-header{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;border-bottom:1px solid var(--color-accent);position:relative;z-index:50}
+header.main-header .brand{display:flex;align-items:center;gap:10px}
+header.main-header .brand .logo-mark{width:44px;height:44px;border-radius:50%;background:conic-gradient(from 45deg,var(--color-secondary),#2fae76,var(--color-secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;text-align:center}
+header.main-header .brand .name{font-size:14px;font-weight:600;line-height:1.3}
+header.main-header .brand .name span{display:block;font-size:11px;font-weight:400;color:var(--color-primary)}
+nav.main-nav{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+nav.main-nav a{padding:10px 14px;font-size:14px;border-radius:var(--radius);color:var(--color-text);white-space:nowrap}
+nav.main-nav a.active{background:var(--color-secondary);color:#fff;font-weight:600}
+nav.main-nav a:not(.active):hover{background:var(--color-bg)}
+.header-actions{display:flex;align-items:center;gap:18px;font-size:14px}
+body>section.hero{position:relative;min-height:420px;display:flex;align-items:flex-end;padding:70px 32px;overflow:hidden;background:linear-gradient(180deg,rgba(19,38,29,.55) 0%,rgba(15,31,24,.86) 100%),repeating-linear-gradient(90deg,#24483a 0 60px,#1c3b2f 60px 120px);color:#fff}
+body>section.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(transparent 60%,rgba(0,0,0,.35) 100%),repeating-linear-gradient(90deg,transparent 0 90px,rgba(255,255,255,.035) 90px 94px);opacity:.8}
+body>section.hero::after{content:"";position:absolute;right:6%;bottom:0;width:88%;height:55%;background:linear-gradient(#3a5c4b,#3a5c4b) 0 40%/6% 60% no-repeat,linear-gradient(#3a5c4b,#3a5c4b) 10% 20%/5% 80% no-repeat,linear-gradient(#345343,#345343) 20% 55%/7% 45% no-repeat,linear-gradient(#3a5c4b,#3a5c4b) 32% 10%/5% 90% no-repeat,linear-gradient(#345343,#345343) 42% 35%/8% 65% no-repeat,linear-gradient(#3a5c4b,#3a5c4b) 55% 0%/6% 100% no-repeat,linear-gradient(#345343,#345343) 66% 25%/9% 75% no-repeat,linear-gradient(#3a5c4b,#3a5c4b) 80% 15%/5% 85% no-repeat,linear-gradient(#345343,#345343) 90% 45%/6% 55% no-repeat;opacity:.9}
+body>section.hero .hero-content{position:relative;z-index:2;max-width:1000px;color:#fff}
+body>section.hero .hero-content h1{font-size:34px;font-weight:700;margin-bottom:14px}
+body>section.hero .hero-content p{font-size:15px;color:#e7e9e7;max-width:900px;margin-bottom:22px;line-height:1.8}
+body>section.hero .btn-light{background:#fff;color:var(--color-text);border-radius:4px;padding:11px 22px}
+/* ألوان بطاقات المؤشرات مأخوذة من الصفحة الجديدة مع استمرار الحركة */
+.indicators-section{background:#fff}
+.indicators-section .kpi{background:#F3F4F6;border-color:#EEF0F2;border-radius:26px;text-align:center;align-items:center}
+.indicators-section .kpi-icon{border-radius:50%;background:#1B8354;color:#fff}
+.indicators-section .kpi strong{color:#272833}
+.indicators-section .kpi span{color:#5b5d6b}
+.indicators-section .trend{color:#6B6C7E!important}
+.indicators-section .kpi:hover{background:#fff;border-color:rgba(27,131,84,.30)}
+.indicators-section .kpis-slider:before{background:linear-gradient(270deg,#fff,transparent)}
+.indicators-section .kpis-slider:after{background:linear-gradient(90deg,#fff,transparent)}
+footer{background:var(--color-secondary-dark);color:#e4ece7;padding:40px 32px 20px;margin-top:20px}
+footer .footer-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.15)}
+footer .footer-grid h4{font-size:14px;margin-bottom:14px;color:#fff}
+footer .footer-grid ul{display:flex;flex-direction:column;gap:10px;padding:0;margin:0;list-style:none}
+footer .footer-grid a{font-size:13px;color:#cfe0d6}
+footer .footer-grid a:hover{color:#fff}
+footer .social-row{display:flex;gap:10px;margin-top:10px}
+footer .social-row a{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:13px}
+footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:18px;font-size:12px;color:#bcd0c4;flex-wrap:wrap;gap:10px}
+@media(max-width:1100px){nav.main-nav{display:none}footer .footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){header.main-header{padding:12px 16px}body>section.hero{padding:52px 18px;min-height:360px}body>section.hero .hero-content h1{font-size:28px}footer{padding:34px 18px 18px}footer .footer-grid{grid-template-columns:1fr}.indicators-section .kpi{text-align:right;align-items:flex-start}.indicators-section .kpi-icon{align-self:flex-start}}
+</style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+@media(max-width:650px){
+  #statistics,#releases,.semantic-builder{display:block!important;visibility:visible!important;opacity:1!important}
+  #releases .hover-card.always-open .hover-card-body{display:block!important;max-height:none!important;opacity:1!important;visibility:visible!important;overflow:visible!important}
+  #statistics .mobile-stats-accordion{display:grid!important}
+}
+</style>
+
+</head>
+<body><div class="demo-alert">الموقع للعرض فقط — تجريبي فقط</div><header class="main-header">
+<div class="brand">
+<div aria-hidden="true" class="logo-mark"></div>
+<div class="name"> <br/><span></span></div>
+</div>
+<nav class="main-nav" aria-label="القائمة الرئيسية">
+<a href="https://www.stats.gov.sa/ar/" class="nav-link-main">الرئيسية</a>
+<div class="nav-item-dropdown">
+<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الهيئة <span class="nav-chevron">⌄</span></button>
+<div class="nav-dropdown-menu">
+<a href="https://www.stats.gov.sa/ar/gastat-about-us">من نحن</a>
+<a href="#">مجلس الإدارة</a>
+<a href="#">الهيكل التنظيمي</a>
+<a href="#">السياسات والاستراتيجيات</a>
+<a href="#">التقرير السنوي</a>
+<a href="#">الأنظمة واللوائح</a>
+</div>
+</div>
+<div class="nav-item-dropdown nav-item-mega">
+<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الإحصاءات <span class="nav-chevron">⌄</span></button>
+<div class="nav-dropdown-menu nav-mega-menu">
+<div class="nav-mega-column"><strong>الإحصاءات الاقتصادية</strong>
+<a href="#statistics">الحسابات القومية</a><a href="#statistics">الأسعار</a><a href="#statistics">الأعمال</a><a href="#statistics">الاستثمار</a><a href="#statistics">التجارة الدولية</a>
+</div>
+<div class="nav-mega-column"><strong>الإحصاءات الاجتماعية</strong>
+<a href="#statistics">سوق العمل</a><a href="#statistics">الصحة</a><a href="#statistics">السكان</a><a href="#statistics">التعليم</a><a href="#statistics">المساكن</a>
+</div>
+<div class="nav-mega-column"><strong>الإحصاءات المكانية والبيئية</strong>
+<a href="#statistics">السياحة والحج والعمرة</a><a href="#statistics">النقل والخدمات اللوجستية</a><a href="#statistics">الزراعة</a><a href="#statistics">الطاقة</a><a href="#statistics">الإحصاءات المكانية</a>
+</div>
+</div>
+</div>
+<div class="nav-item-dropdown">
+<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الخدمات <span class="nav-chevron">⌄</span></button>
+<div class="nav-dropdown-menu"><a href="#">طلب معلومات إحصائية</a><a href="#">طلب البيانات الدقيقة</a><a href="#">مركز الأعمال</a></div>
+</div>
+<div class="nav-item-dropdown">
+<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">التوعية <span class="nav-chevron">⌄</span></button>
+<div class="nav-dropdown-menu"><a href="#">توعية المسوح</a><a href="#">برنامج المعرفة الإحصائية</a><a href="#">حكاية رقم</a><a href="#">تعرف على المنتجات الإحصائية</a></div>
+</div>
+<div class="nav-item-dropdown">
+<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">الأدلة والتصانيف <span class="nav-chevron">⌄</span></button>
+<div class="nav-dropdown-menu"><a href="#">الأدلة الإحصائية</a><a href="#">التصانيف</a><a href="#">معجم المصطلحات الإحصائية</a></div>
+</div>
+<div class="nav-item-dropdown">
+<button class="nav-link-main nav-dropdown-trigger" type="button" aria-expanded="false">المركز الإعلامي <span class="nav-chevron">⌄</span></button>
+<div class="nav-dropdown-menu"><a href="https://www.stats.gov.sa/ar/news">الأخبار</a><a href="#">الوسائط</a><a href="#">النشاطات والإنجازات</a></div>
+</div>
+<a href="https://www.stats.gov.sa/ar/inner-contact-us" class="nav-link-main">تواصل معنا</a>
+</nav>
+<div class="header-actions"></div>
+</header><section class="hero" style="padding-top:70px;padding-bottom:70px;">
+<div class="hero-content">
+<h1>منتدى الأمم المتحدة العالمي السادس للبيانات 2026
+</h1>
+<p> يعد المنتدى العالمي للبيانات منصة دولية رفيعة المستوى، أطلقتها الأمم المتحدة في عام 2017، وذلك في إطار السعي الدولي الحثيث نحو تطوير البيانات والإحصاءات لمواكبة المتغيرات العالمية المتسارعة في كافة المجالات، نظير ما تمثله المؤشرات الإحصائية من أهمية في تطوير الخطط ورسم السياسات وصناعة القرارات ودعم التخطيط الاقتصادي والتنموي.
+
+</p>
+<a class="btn btn-light" href="https://www.stats.gov.sa/ar/united-nations-world-data-forum">التسجيل الآن</a>
+</div>
+</section>
+<main>
+<section class="section indicators-section"><div class="container"><div class="section-head"><div><h2>أهم المؤشرات الإحصائية</h2></div></div><div aria-label="أهم المؤشرات الإحصائية" class="kpis-slider"><div class="kpis-track"><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></div><strong>35,300,280</strong><span>التقديرات السكانية لعام 2024</span><small class="trend">آخر تحديث: 2024</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="m4 16 5-5 4 4 7-8"></path><path d="M15 7h5v5"></path></svg></div><strong>3.0%</strong><span>نمو الناتج المحلي الإجمالي الحقيقي</span><small class="trend">الربع الأول 2026</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path></svg></div><strong>6.4%</strong><span>البطالة بين السعوديين</span><small class="trend">الربع الأول 2026</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><strong>1.8%</strong><span>معدل التضخم السنوي</span><small class="trend">مايو 2026</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M3 21h18M5 21V9l5 3V9l5 3V5h4v16"></path></svg></div><strong>-18.7%</strong><span>الإنتاج الصناعي</span><small class="trend">مايو 2026</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M3 21h18M6 21V7h12v14M9 10h2M13 10h2M9 14h2M13 14h2"></path></svg></div><strong>1.2 مليون</strong><span>عدد المنشآت النشطة</span><small class="trend">الربع الأول 2026</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M3 12h18M5 7h14M7 17h10"></path><circle cx="12" cy="12" r="9"></circle></svg></div><strong>4.6%</strong><span>نمو الصادرات غير النفطية</span><small class="trend">أبريل 2026</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M4 19h16M6 16l4-5 3 3 5-7"></path><path d="M18 7h2v2"></path></svg></div><strong>2.7%</strong><span>نمو مبيعات التجارة الإلكترونية</span><small class="trend">الربع الأول 2026</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M5 20V9l7-5 7 5v11"></path><path d="M9 20v-6h6v6"></path></svg></div><strong>68.2%</strong><span>نسبة تملك المساكن للأسر السعودية</span><small class="trend">2025</small></article><article class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"></path><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg></div><strong>91.5%</strong><span>نسبة استخدام الإنترنت</span><small class="trend">2025</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></div><strong>35,300,280</strong><span>التقديرات السكانية لعام 2024</span><small class="trend">آخر تحديث: 2024</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="m4 16 5-5 4 4 7-8"></path><path d="M15 7h5v5"></path></svg></div><strong>3.0%</strong><span>نمو الناتج المحلي الإجمالي الحقيقي</span><small class="trend">الربع الأول 2026</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path></svg></div><strong>6.4%</strong><span>البطالة بين السعوديين</span><small class="trend">الربع الأول 2026</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><strong>1.8%</strong><span>معدل التضخم السنوي</span><small class="trend">مايو 2026</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M3 21h18M5 21V9l5 3V9l5 3V5h4v16"></path></svg></div><strong>-18.7%</strong><span>الإنتاج الصناعي</span><small class="trend">مايو 2026</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M3 21h18M6 21V7h12v14M9 10h2M13 10h2M9 14h2M13 14h2"></path></svg></div><strong>1.2 مليون</strong><span>عدد المنشآت النشطة</span><small class="trend">الربع الأول 2026</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M3 12h18M5 7h14M7 17h10"></path><circle cx="12" cy="12" r="9"></circle></svg></div><strong>4.6%</strong><span>نمو الصادرات غير النفطية</span><small class="trend">أبريل 2026</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M4 19h16M6 16l4-5 3 3 5-7"></path><path d="M18 7h2v2"></path></svg></div><strong>2.7%</strong><span>نمو مبيعات التجارة الإلكترونية</span><small class="trend">الربع الأول 2026</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M5 20V9l7-5 7 5v11"></path><path d="M9 20v-6h6v6"></path></svg></div><strong>68.2%</strong><span>نسبة تملك المساكن للأسر السعودية</span><small class="trend">2025</small></article><article aria-hidden="true" class="kpi"><div class="kpi-icon"><svg viewbox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"></path><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg></div><strong>91.5%</strong><span>نسبة استخدام الإنترنت</span><small class="trend">2025</small></article></div></div></div></section>
+<section class="section white" id="statistics"><div class="container"><div class="section-head"><div><h2>إحصاءات الهيئة</h2></div></div><div class="stats-panel"><div class="stats-smart-search" role="search"><span class="stats-search-icon"><svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></span><input aria-label="البحث داخل إحصاءات الهيئة" autocomplete="off" id="statsSearch" placeholder="ماذا تريد أن تعرف؟.." type="search"/><button aria-label="مسح البحث" id="statsSearchClear" type="button">×</button><span class="stats-search-count" id="statsSearchCount">45 نشرة إحصائية </span></div><div aria-live="polite" class="stats-search-results" id="statsSearchResults"></div><div class="tabs" id="tabs" role="tablist"></div><div aria-label="أقسام إحصاءات الهيئة" class="mobile-stats-accordion" id="mobileStatsAccordion"></div><div class="browser"><div class="column"><div class="category-list" id="categories"></div></div><div class="column"><div class="detail-list" id="details"></div></div></div></div></div></section>
+<section class="section" id="releases"><div class="container"><div class="section-head"><div><h2>النشرات والتقويم الإحصائي</h2></div></div><div class="content-grid"><div class="card hover-card"><div class="hover-card-head"><h3>أحدث النشرات</h3><a aria-label="إظهار كل أحدث النشرات" class="section-action" href="#">إظهار الكل <span aria-hidden="true" class="action-arrow">↗</span></a><button aria-expanded="false" aria-label="فتح أحدث النشرات" class="hover-card-toggle" type="button"><svg viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></div><div class="hover-card-body"><div class="list-row"><div class="date-box"><strong>14</strong><small>يوليو</small></div><div><h3>مؤشر ثقة الأعمال لشهر يونيو 2026</h3><span class="meta">نشرة شهرية · PDF</span></div></div><div class="list-row"><div class="date-box"><strong>10</strong><small>يوليو</small></div><div><h3>الرقم القياسي للإنتاج الصناعي لشهر مايو 2026</h3><span class="meta">نشرة شهرية · PDF</span></div></div><div class="list-row"><div class="date-box"><strong>08</strong><small>يوليو</small></div><div><h3>إحصاءات المنشآت السياحية للربع الأول 2026</h3><span class="meta">نشرة ربع سنوية · PDF</span></div></div></div></div><div class="card hover-card"><div class="hover-card-head"><h3>إصدارات التقويم الإحصائي</h3><a aria-label="إظهار كل إصدارات التقويم الإحصائي" class="section-action" href="https://gleaming-fox-84a830.netlify.app" rel="noopener" target="_blank">إظهار الكل <span aria-hidden="true" class="action-arrow">↗</span></a><button aria-expanded="false" aria-label="فتح إصدارات التقويم الإحصائي" class="hover-card-toggle" type="button"><svg viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg></button></div><div class="hover-card-body"><div class="release"><span class="release-tag">15 يوليو</span><strong>متوسطات أسعار السلع والخدمات لشهر يونيو 2026</strong><span>←</span></div><div class="release"><span class="release-tag">15 يوليو</span><strong>الرقم القياسي لأسعار الجملة لشهر يونيو 2026</strong><span>←</span></div><div class="release"><span class="release-tag">15 يوليو</span><strong>الرقم القياسي لأسعار المستهلك لشهر يونيو 2026</strong><span>←</span></div><div class="release"><span class="release-tag">20 يوليو</span><strong>إحصاءات التجارة الدولية لشهر مايو 2026</strong><span>←</span></div></div></div></div></div></section>
+<section aria-labelledby="table-builder-title" class="table-builder-section semantic-builder" id="table-builder">
+<div class="container">
+<div class="semantic-builder-card">
+<div class="semantic-builder-media">
+<svg aria-label="حاسوب محمول يعرض جدول بيانات مع رسوم بيانية" class="builder-laptop-svg" role="img" viewbox="0 0 820 520" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="screenFrame" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#1e3f4a"></stop>
+<stop offset="1" stop-color="#0f2730"></stop>
+</lineargradient>
+<lineargradient id="screenTop" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#006c4c"></stop>
+<stop offset="1" stop-color="#1a8c69"></stop>
+</lineargradient>
+<lineargradient id="baseGrad" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#f8fbfc"></stop>
+<stop offset="1" stop-color="#dce7ea"></stop>
+</lineargradient>
+<lineargradient id="cardGrad" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#ffffff"></stop>
+<stop offset="1" stop-color="#eef5f2"></stop>
+</lineargradient>
+<filter height="180%" id="softShadow" width="160%" x="-30%" y="-30%">
+<fedropshadow dx="0" dy="18" flood-color="#003f2e" flood-opacity=".18" stddeviation="18"></fedropshadow>
+</filter>
+<filter height="180%" id="cardShadow" width="160%" x="-30%" y="-30%">
+<fedropshadow dx="0" dy="12" flood-color="#003f2e" flood-opacity=".16" stddeviation="12"></fedropshadow>
+</filter>
+</defs>
+<!-- decorative connectors -->
+<g fill="none" opacity=".38" stroke="#5bb494" stroke-dasharray="8 10" stroke-linecap="round" stroke-width="3">
+<path d="M85 155h95c24 0 38 14 38 38v22"></path>
+<path d="M705 96v54c0 22-14 36-36 36h-32"></path>
+<path d="M690 405h-42c-25 0-38-14-38-38v-18"></path>
+</g>
+<g fill="#e8f5ef" stroke="#72bda3" stroke-width="2">
+<circle cx="84" cy="155" r="7"></circle>
+<circle cx="705" cy="96" r="7"></circle>
+<circle cx="690" cy="405" r="7"></circle>
+</g>
+<!-- laptop -->
+<g filter="url(#softShadow)">
+<rect fill="url(#screenFrame)" height="275" rx="24" width="390" x="250" y="75"></rect>
+<rect fill="#fff" height="235" rx="12" width="350" x="270" y="95"></rect>
+<rect fill="url(#screenTop)" height="34" rx="12" width="350" x="270" y="95"></rect>
+<circle cx="292" cy="112" fill="#dff4ea" r="4"></circle>
+<circle cx="307" cy="112" fill="#dff4ea" opacity=".75" r="4"></circle>
+<circle cx="322" cy="112" fill="#dff4ea" opacity=".5" r="4"></circle>
+<!-- spreadsheet -->
+<g stroke="#c8ddd4" stroke-width="2">
+<path d="M285 151h320M285 181h320M285 211h320M285 241h320M285 271h320M285 301h320"></path>
+<path d="M335 140v176M390 140v176M445 140v176M500 140v176M555 140v176"></path>
+</g>
+<rect fill="#cce8dc" height="11" rx="5" width="50" x="285" y="140"></rect>
+<rect fill="#eef7f3" height="30" width="55" x="390" y="181"></rect>
+<rect fill="#e4f3ec" height="30" width="55" x="500" y="241"></rect>
+<!-- laptop base -->
+<path d="M200 350h490l48 55c9 11 1 28-14 28H165c-15 0-23-17-14-28z" fill="url(#baseGrad)"></path>
+<rect fill="#c8d6db" height="18" rx="9" width="194" x="349" y="373"></rect>
+<path d="M150 414h590" stroke="#c7d4d8" stroke-linecap="round" stroke-width="5"></path>
+</g>
+<!-- donut card -->
+<g filter="url(#cardShadow)" transform="translate(95 235) rotate(-7)">
+<rect fill="url(#cardGrad)" height="150" rx="22" width="220"></rect>
+<circle cx="72" cy="74" fill="none" r="38" stroke="#e3eee9" stroke-width="18"></circle>
+<circle cx="72" cy="74" fill="none" r="38" stroke="#006c4c" stroke-dasharray="87 152" stroke-width="18" transform="rotate(-90 72 74)"></circle>
+<circle cx="72" cy="74" fill="none" r="38" stroke="#b8d432" stroke-dasharray="46 193" stroke-dashoffset="-88" stroke-width="18" transform="rotate(-90 72 74)"></circle>
+<circle cx="72" cy="74" fill="none" r="38" stroke="#f0c64d" stroke-dasharray="34 205" stroke-dashoffset="-135" stroke-width="18" transform="rotate(-90 72 74)"></circle>
+<g fill="#b8cec5">
+<rect height="10" rx="5" width="58" x="128" y="45"></rect>
+<rect height="10" rx="5" width="44" x="128" y="68"></rect>
+<rect height="10" rx="5" width="66" x="128" y="91"></rect>
+</g>
+</g>
+<!-- bar chart card -->
+<g filter="url(#cardShadow)" transform="translate(555 235) rotate(7)">
+<rect fill="url(#cardGrad)" height="160" rx="22" width="205"></rect>
+<path d="M38 120h130" stroke="#c8d8d1" stroke-linecap="round" stroke-width="3"></path>
+<g>
+<rect fill="#a7cdbd" height="38" rx="5" width="18" x="52" y="82"></rect>
+<rect fill="#72b89d" height="60" rx="5" width="18" x="82" y="60"></rect>
+<rect fill="#006c4c" height="79" rx="5" width="18" x="112" y="41"></rect>
+<rect fill="#b8d432" height="92" rx="5" width="18" x="142" y="28"></rect>
+</g>
+<rect fill="#d9e8e1" height="10" rx="5" width="56" x="42" y="25"></rect>
+</g>
+<!-- subtle icon -->
+<g opacity=".75" transform="translate(700 325)">
+<circle cx="34" cy="34" fill="#fff" r="34" stroke="#d8e8e1" stroke-width="2"></circle>
+<path d="M34 18v25m0 0-10-10m10 10 10-10M23 51h22" fill="none" stroke="#006c4c" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+</g>
+</svg>
+</div>
+<div class="semantic-builder-content">
+<span class="semantic-builder-kicker">أداة تفاعلية للبيانات</span>
+<h2 id="table-builder-title">مستكشف البيانات</h2>
+<p>أنشئ جداولك الإحصائية بسهولة، واختر المؤشرات والصفوف والأعمدة التي تناسب احتياجك، ثم استعرض النتائج بصورة واضحة ومرنة.</p>
+<ul aria-label="مزايا مستكشف البيانات" class="semantic-builder-benefits">
+<li>اختيار المؤشرات</li><li>تخصيص الجداول</li><li>استعراض مرن</li>
 </ul>
-<p>التصنيفات .3.2 تصنيف الاستهلاك الفردي حسب الغرض (:)COICOP 2018 هو تصنيف دولي مرجعي صادر عن الأمم المتحدةُ ،يستخدم لتنظيم وتصنيف إنفاق الأسر على السلع والخدمات بحسب الغرض من استخدامها .يهدف هذا التصنيف إلى تسهيل التحليل الإحصائي والمقارنة ألنماط ويعد أداة معيارية لتوحيد البيانات المتعلقة بأنماط الاستهلاك الفردي. الاستهلاك بين الدول والقطاعاتُ ، رئيسا تمثل الإنفاق الاستهلاكي العائلي ،ويشمل ستة مستويات من التفصيل: ً ً قسما يتألف التصنيف من 13 ويستخدم بشكل أساسي في بناء الرقم القياسيُ ، والبند الفرعية، الفئة و الفئة، و الفصل، القسم ،والمجموعة ،و ً وفقا لغرض استخدامها. لأسعار المستهلك لتصنيف مكونات سلة الاستهلاك</p>
-<p>المصدر :الأمم المتحدة https://unstats.un.org/unsd/classifications/coicop التعاريف والمفاهيم الإحصائية .3.3</p>
-<h3>المصطلحات والمفاهيم المتعلقة بالرقم القياسي لأسعار المستهلك:</h3>
-<p>الرقم القياسي: • يعرف الرقم القياسي بأنه رقم نسبي يقيس التغير في ظاهرة واحدة أو أكثر ،ويتم احتسابه بنسبة القيمة الظاهرة في فترة المقارنة إلى قيمتها في فترة الأساس. الرقم القياسي لأسعار المستهلك: • يعرف الرقم القياسي لأسعار المستهلك بأنه مقياس إحصائي يعكس تحركات أسعار سلة ثابتة من السلع والخدمات التي تمثل أنماط الإنفاق الاستهلاكي ،وذلك خالل فترة زمنية محددة مقارنة بالفترة المرجعية. سلة السلع والخدمات: • مجموعة من السلع والخدمات التي يقوم المستهلك الأسري بالإنفاق عليها ألغراض معيشية. مسح الدخل والإنفاق الاستهلاكي لألسرة: • هو أحد المسوح الميدانية العينية الأسرية ،يوفر بيانات عن الدخل وأنماط الإنفاق في المجتمع،</p>
-<p>أيضا مستوىويعكس أنماط الإنفاق على السلع والخدمات من ِقبل الأسر في المملكة ،كما يعكس ً الدخل لدى الأسر ،وتستخدم نتائج مسح الدخل والإنفاق الاستهلاكي لألسرة في تحديد التوزيع النسبي لإلنفاق على السلع والخدمات الداخلة في تركيب رقم إنفاق الأسرة المعيشية :وهو قيمة ما ينفقه جميع أفراد الأسرة خالل فترة الإسناد الزمني مقابل الحصول على السلع والخدمات (الاستهلاكية وغير الاستهلاكية) ،سواء كان هذا الإنفاق يتعلق بالأسرة مثل :الإنفاق على الأغذية والمشروبات ،أو المسكن ،أو الكهرباء ،أو اقتناء السلع ،أو الحصول على الخدمات ،أو ما يتعلق بإنفاق أفرادها ،كالإنفاق على المالبس أو الأدوات الشخصية ،ونحو ذلك.</p>
-<p>الأهمية النسبية للبند: • هي نسبة نصيب الإنفاق على السلعة أو الخدمة من إجمالي الإنفاق الكلي لكافة السلع والخدمات داخل سلة المستهلك. نقاط البيع: • هي المنشآت أو الوحدات التي تُ جمع منها بيانات أسعار السلع والخدمات الداخلة في سلة المستهلك، مثل محالت البيع بالتجزئة كالبقاالت ،ومحالت بيع المواد الغذائية ،ومحالت بيع المالبس ،بالضافة إلى محالت تقديم الخدمات المتنوعة للمستهلك مثل المستوصفات وخدمات الأطباء وغيرها من محالت الخدمات. عينة الظل: • هي مجموعة من نقاط البيع االحتياطية التي يتم الرجوع إليها عند الحاجة إلى استبدال أحد نقاط البيع ً نهائيا ،أو عدم توفر السلعة بشكل الأساسية لتعذر الحصول على السعر منها ألي سبب ،كإغالق المحل</p>
-<p>دائم. سعر فترة المقارنة: • هو السعر المسجل للسلعة أو الخدمة في الفترة الزمنية الجارية. سعر الفترة المرجعية: • هو السعر المسجل للسلعة أو الخدمة في فترة سابقة يقارن به السعر الجاري. الرقم القياسي الأساسي: • هو الرقم القياسي العام بعد استبعاد البنود ذات التقلبات السعرية ،والمتمثلة في قسم الأغذية والمشروبات ،وبنود الطاقة. الرقم القياسي للسلع: • هو مقياس إحصائي يعكس التغيرات في أسعار السلع التي يستهلكها الأفراد ،وتشمل :السلع المعمرة ،والسلع شبه المعمرة ،والسلع غير المعمرة. السلع المعمرة: • ً نسبيا (عادة أكثر من ٣سنوات) ،وال تُ ستهلك بمجرد استخدامها ألول هي سلع تُ ستخدم لفترة طويلة</p>
-<p>مرة ،مثل :الأثاث ،والسيارات ،والأجهزة الكهربائية. السلع شبه المعمرة: • ً تدريجيا مع ً تقريبا) ،وتفقد قيمتها هي سلع تدوم فترة متوسطة (من سنة إلى ثالث سنوات الاستخدام ،مثل :المالبس ،والأحذية ،والأدوات المنزلية البسيطة. السلع غير المعمرة: • هي سلع تُ ستهلك بسرعة أو خالل فترة قصيرة (أقل من سنة) ،وال يمكن استخدامها أكثر من مرة غالباً، مثل :الأغذية والمشروبات ،والوقود ،والأدوية. الرقم القياسي للخدمات: • هو مقياس إحصائي يعكس التغيرات في أسعار الخدمات التي يستهلكها الأفراد ،مثل :خدمات النقل، والتعليم ،والرعاية الصحية ،واالتصاالت. السالسل المتحركة: • هي منهجية إحصائية تُ ستخدم في احتساب الرقم القياسي لأسعار المستهلك ،وتعتمد على تحديث أوزان سلة</p>
-<p>استنادا إلى نتائج الإنفاق الاستهلاكي النهائي العائلي المستخرجة من ً السلع والخدمات بشكل سنوي بدال من االعتماد على سنة أساس ثابتة تُ ستخدم فيها أوزان ثابتة لعدة سنوات والتي تستند الحسابات القوميةً ، عادة إلى نتائج مسح الدخل والإنفاق الاستهلاكي لألسرة (الذي ُيجرى كل ثالث إلى خمس سنوات) وتُ ربطً نتائج الرقم القياسي مع بداية كل سنة ميالدية بالأوزان الجديدة ،مما يتيح تكوين سلسلة زمنية مرنة ومتسقة ويعزز من دقة المؤشر ومرونته في تعكس التغيرات في الأنماط الاستهلاكية وتقلبات الأسعار بشكل أدقُ ، تمثيل السلوك الاستهلاكي.</p>
-<h3>مزايا منهجية السالسل المتحركة:</h3>
-<p>دقة أعلى في تمثيل أنماط الاستهلاك :حيث تعكس التغيرات الفعلية في سلوك المستهلكين بشكل • سنوي ،مما يعزز واقعية المؤشر. مرونة في مواكبة التحوالت الاقتصادية :تتكيف مع التغيرات السريعة في السوق ،مثل تغير الأسعار • أو ظهور منتجات جديدة. استخدام سنة مرجعية ديناميكية :مثل سنة ،2023تُ ستخدم لربط السنوات بطريقة متسقة دون الحاجة • إلى إعادة بناء السلسلة الزمنية بالكامل. مقارنات دولية أكثر موثوقية :تتماشى مع المنهجيات المعتمدة في معظم دول مجموعة العشرين، • مما يسهل إجراء مقارنات اقتصادية دقيقة. مصادر البيانات .3.4</p>
-<h3>تعتمد بيانات إحصاءات الرقم القياسي لأسعار المستهلك على مصدرين رئيسين:</h3>
-<p>المصدر الأول :المسوح الميدانية ،وتعد المصدر الرئيس لبيانات إحصاءات الرقم القياسي لأسعار المستهلك، وتشمل الزيارات الميدانية لعينة المسح في 23مدينة تمثل الثالث عشرة منطقة إدارية للمملكة.</p>
-<h3>المتغيرات الرئيسة المنشورة لبيانات مسح الرقم القياسي لأسعار المستهلك هي:</h3>
-<p>الأرقام القياسية لأسعار المستهلك حسب المناطق وفئات الإنفاق. • نسب التغير السنوية في الأرقام القياسية لأسعار المستهلك. • نسب التغير الشهرية في الأرقام القياسية لأسعار المستهلك. •</p>
-<h3>المصدر الثاني :السجالت الإدارية لحصاءات الرقم القياسي لأسعار المستهلك:</h3>
-<h3>مثل :البيانات المستخلصة من السجالت الإدارية ،من منصة &quot;إيجار&quot; ،والتي تشمل:</h3>
-<p>القيمة اليجارية للفلل ،والشقق ،والأدوار. •</p>
-<h3>المتغيرات الرئيسة المنشورة من مصدر السجالت الإدارية تشمل:</h3>
-<p>الأرقام القياسية لأسعار المستهلك للبنود اليجارية حسب المملكة والمناطق وفئات الإنفاق. • نسب التغير السنوية في الأرقام القياسية لأسعار المستهلك للبنود اليجارية. • نسب التغير الشهرية في الأرقام القياسية لأسعار المستهلك للبنود اليجارية. • تصميم أداة الجمع .3.5 تم تصميم استمارة مسح أسعار المستهلك لتكون أداة فعالة وشاملة في جمع البيانات المطلوبة بدقة</p>
-<h3>ومنهجية .وتشتمل االستمارة على جزئين رئيسين:</h3>
-<h3>البيانات التعريفية:</h3>
-<p>تتضمن هذه البيانات معلومات أساسية تساعد في تحديد نقطة البيع والموقع الجغرافي بدقة ،وتشمل: رقم ونوع المنشأة (مثل :متجر تجزئة ،سوبر ماركت ،صيدلية ،إلخ). • اسم المنشأة (نقطة البيع). • العنوان التفصيلي والموقع الجغرافي (بما في ذلك المدينة ،والحي ،والرمز البريدي). • بيانات الاتصال (مثل رقم الهاتف). •</p>
-<h3>بيانات البنود وأسعارها:</h3>
-<p>يحتوي هذا الجزء على قائمة بالسلع والخدمات التي تُ عد ضمن سلة المستهلك ،ويتم جمع بيانات تفصيلية عن وفقا للمواصفات القياسية المعتمدة ،وتشمل: ً كل بند اسم البند (السلعة أو الخدمة). • الكمية أو الوحدة القياسية للقياس (مثل كيلوغرام ،لتر ،وحدة ،إلخ). • بلد المنشأ للمنتج. • السعر الحالي والسعر السابق للبند. • حالة توفر البند في نقطة البيع. • المالحظات المتعلقة بأي تغير في السعر ،مثل العروض الترويجية أو التغيرات في الجودة أو الحجم. رموز خاصة لتفسير التغيرات في الأسعار (مثل :ارتفاع السعر بسبب تغير المورد ،أو انخفاض بسبب خصم موسمي ...إلخ). ويتم إعداد هذه االستمارة بطريقة تسهل على الباحثين الميدانيين إدخال البيانات بدقة وموثوقية ،كما تتيح</p>
-<p>إمكانية المراجعة والتحقق من التغيرات السعرية ،بما يضمن إنتاج بيانات إحصائية عالية الجودة تعكس واقع الأسعار في السوق المحلية بشكل دقيق. اختبار الاستبيان (اختبار معرفي) .3.6 ال ينطبق. المجتمع الإحصائي .3.7 يتألف المجتمع الإحصائي لـلرقم القياسي لأسعار المستهلك من جميع السلع والخدمات المدرجة في قائمة سلة السلع والخدمات ،والتي يتم الحصول على أسعارها من نقاط بيع ومقدمي الخدمات بسعر التجزئة في المملكة العربية السعودية. تصميم العينة .3.8</p>
-<h3>تم اعتماد منهج مزدوج لتصميم العينة ،يتضمن مرحلتين أساسيتين:</h3>
-<p>ً أوال :العينة القصدية (المرحلة الأولى): • مسبقا ،بهدف تمثيل مختلف مناطق المملكة، ً بناء على معايير محددة في هذه المرحلة ،تم اختيار المدن ً</p>
-<h3>وتشمل:</h3>
-<p>عدد السكان :تم اختيار 23مدينة تمثل ثالث عشرة منطقة إدارية في المملكة. • النشاط الاقتصادي :تم الأخذ بعين االعتبار مدى توفر السلع والخدمات في المدينة. • التوزيع الجغرافي :لضمان تمثيل متوازن للمناطق الإدارية المختلفة. • تنوعا في أنماط الاستهلاك وأسعار السوق ،ويعكس الواقع الاقتصادي والاجتماعي ً هذا االختيار يضمن للمملكة.</p>
-<h3>ثانيا :العينة الطبقية (المرحلة الثانية):</h3>
-<p>ً • بعد تحديد المدن ،تم تطبيق أسلوب المعاينة الطبقية باستخدام إطار محدث لنقاط البيع ،وذلك عبر مراحل</p>
-<h3>متعددة:</h3>
-<p>بناء على المناطق الجغرافية. المرحلة الأولى :تقسيم المدن إلى طبقات ً • المرحلة الثانية :اختيار عناقيد (مثل الأحياء السكنية أو المجمعات التجارية) بشكل عشوائي من كل • طبقة. المرحلة الثالثة :اختيار نقاط البيع داخل العناقيد المختارة بطريقة عشوائية ،مع مراعاة حجم كل نقطة • بيع لضمان تمثيل مناسب. ً متكامال يضمن جودة البيانات ودقتها ،ويعزز من موثوقية نتائج المسح. إطارا ً تمثل هذه المنهجية الوحدة الإحصائية (المعاينة) .3.9 الوحدة الإحصائية في الرقم القياسي لأسعار المستهلك هي كل سلعة أو خدمة يتم قياس سعرها داخل سلة المستهلك.</p>
-<h3>.3.10جمع البيانات</h3>
-<h3>أسلوب جمع البيانات من المسوح:</h3>
-<p>يتم جمع بيانات الرقم القياسي لأسعار المستهلك من خالل المقابالت عبر الإنترنت بمساعدة الكمبيوتر ( ،)CAWIأو المقابالت الشخصية بمساعدة الكمبيوتر (.)CAPI</p>
-<h3>جمع البيانات من السجالت الإدارية:</h3>
-<p>بالتنسيق مع إدارات الهيئة ذات العالقة بتنفيذ المسح وإدارة جمع البيانات ،يتم الحصول على بيانات سجلية من الهيئة العامة للعقار تشمل بيانات متعلقة بأسعار إيجارات الوحدات العقارية المؤجرة لألسر المعيشية. ويتم حفظ البيانات على قواعد البيانات في الهيئة ،وذلك بعد عمليات التدقيق والمراجعة وفق الأساليب الإحصائية المعتمدة ومعايير الجودة المتعارف عليها ،والرجوع لمصدر البيانات في حال اكتشاف أخطاء ،أو وجود مالحظات على البيانات.</p>
-<h3>.3.11دورية جمع البيانات</h3>
-<p>تنفذ عملية جمع بيانات مسح إحصاءات الرقم القياسي لأسعار المستهلك على أساس شهري.</p>
-<h3>.3.12المنطقة المرجعية</h3>
-<p>يغطي الرقم القياسي لأسعار المستهلك 23مدينة هي( :الرياض ،مكة المكرمة ،جدة ،الطائف ،المدينة المنورة ،بريدة ،عنيزة ،الدمام ،الخبر ،الهفوف ،المبرز ،أبها ،خميس مشيط ،تبوك ،حائل ،عرعر ،جيزان ،أبو عريش، نجران ،الباحة ،بلجرشي ،سكاكا ،القريات) وهي ممثلة لكافة المناطق الإدارية الـثالث عشرة في المملكة العربية السعودية.</p>
-<h3>.3.13الفترة المرجعية (الإسناد الزمني)</h3>
-<h3>الفترة المرجعية للمتغيرات أو مجموعة البيانات على النحو التالي:</h3>
-<p>تسند البيانات المجمعة للشهر الميالدي الذي يتم فيه جمع بيانات الأسعار ،مع الالتزام بدورة تسعير • محددة لكل بند دورة (أسبوعية ،وشهرية ،وربع سنوية ،ونصف سنوية).</p>
-<h3>.3.14فترة الأساس</h3>
-<p>يتم تحديث سنة الأساس بشكل سنوي باستخدام منهجية السالسل المتحركة لحساب الأرقام القياسية بطريقة تسمح بتحديث أوزان السلع والخدمات بشكل مستمر (يتم ربط كل سنة مع السنة السابقة لتكوين سلسلة متصلة من المؤشرات) ،مما يعكس التغيرات في أنماط الإنفاق الاستهلاكي. بناء عليها ،وهي فيما تُ عد سنة 2023م هي السنة المرجعية ) (Reference yearالتي تُ عرض الأرقام القياسية ً السنة التي تُ ضبط فيها قيمة المؤشر لتكون ،)100=2023( 100وتُ ستخدم كمقياس للمقارنة عند عرض الرقم القياسي.</p>
-<h3>.3.15وحدة القياس</h3>
-<p>يتم قياس البيانات كنسب مئوية للتغيرات الشهرية والسنوية لألرقام القياسية.</p>
-<h3>.3.16التغطية الزمنية</h3>
-<p>البيانات متاحة من عام 2013م إلى الشهر الحالي.</p>
-<h3>.3.17دورية النشر</h3>
-<p>تنشر نتائج هذا المؤشر على أساس شهري وفق التقويم الإحصائي المعتمد ،ويتم نشر المتوسط السنوي للرقم القياسي لأسعار المستهلك نهاية كل عام ميالدي. .4المعالجة ال حصائية اكتشاف الأ خطاء .4.1 أثناء عملية جمع بيانات الأسعار من الميدان ،تبدأ مرحلة حيوية في ضمان جودة البيانات تتمثل في تطبيق قواعد التنبيه والمنع والتصحيح ،ومراجعة اتساق البيانات ودقتها مقارنة بالدورات السابقة .وتهدف هذه المجمعة موثوقة ،وخالية من الأخطاء أو القيم الشاذة ،قبل البدء فيّ المرحلة إلى التأكد من أن البيانات عمليات</p></div></section><section id="processing" class="content-section reveal"><div class="section-head"><div class="num">3</div><div><span class="eyebrow">قسم التقرير</span><h2>المعالجة الإحصائية</h2></div></div><div class="prose"><p>المعالجة الإحصائية واستخراج النتائج النهائية. ً</p>
-<h3>أوال :تطبيق قواعد التنبيه والمنع:</h3>
-<h3>.1قواعد التنبيه:</h3>
-<p>جدا مقارنة بالسعر جدا أو المنخفضة ً تُ ستخدم للكشف عن القيم غير المعتادة أو المرتفعة ً o السابق. تنبيها لمراجعة ً مثال :إذا ارتفع سعر سلعة بنسبة %30مقارنة بالشهر السابقُ ،يصدر النظام o هذه القيمة.</p>
-<h3>.2قواعد المنع:</h3>
-<p>تُ ستخدم لمنع إدخال البيانات التي ال تتوافق مع المعايير المنطقية أو المواصفات الفنية o المعتمدة. إدخال رمز تحليل ال يتوافق مع اتجاه السعر ،مثل تسجيل الرمز الذي يشير إلى انخفاض السعر o في حين أن السعر الفعلي المسجل يدل على ارتفاع.</p>
-<h3>ثانيا :تطبيق قواعد التصحيح:</h3>
-<p>ً بعد التحقق من التنبيهات أو الحاالت التي لم ُيسمح بإدخالها ،يتم تنفيذ عمليات تصحيح بالتنسيق مع • ِفرق العمل الميداني أو من خالل الرجوع إلى مصادر البيانات. تلقائيا ،بل تمر عبر مراجعة بشرية لضمان صحة التغيير وعدم التأثير على مصداقية ً ال تتم التعديالت • السلسلة الزمنية للبيانات. ً ثالثا :المقارنة مع الفترات السابقة</p>
-<h3>تُ جرى مقارنات تفصيلية بين بيانات الدورة الحالية وبيانات:</h3>
-<p>الشهر السابق للكشف عن تغيرات شهرية غير مبررة. • نفس الشهر من السنة السابقة لرصد التغيرات السنوية ومراقبة اتجاهات الأسعار الموسمية أو • التضخمية. عدة أشهر سابقة لتحليل الأنماط الزمنية واكتشاف أي خلل في السلسلة الزمنية. • دمج ومطابقة البيانات من المصادر المتعددة .4.2 تتم مراجعة ومطابقة البيانات للتأكد من صحتها ودقتها بطريقة تتناسب وطبيعة تلك البيانات؛ بهدف إضفاء مزيدا من الجودة والدقة على إحصاءات النشرة ،ومن ذلك أن يتم تطبيق قواعد التنبيه والمنع وقواعد التصحيح ً بعد عملية جمع البيانات ،ومقارنة البيانات للدورة الحالية للنشرة مع بيانات الدورة السابقة؛ وذلك للتحقق من</p>
-<p>تمهيدا لعملية المعالجة ،واستخراج النتائج ومراجعتها ،ويتم فحص البيانات مع ً سالمة البيانات واتساقها السنوات السابقة لتحديد أي تغييرات مهمة في البيانات. التعويض والمعايرة .4.3 ً</p>
-<h3>أوال :عند فقد البيانات من نقاط البيع:</h3>
-<h3>.1التحقق من حالة نقطة البيع:</h3>
-<p>دائما. ً التأكد مما إذا كانت النقطة مغلقة مؤقتً ا أو o التأكد من وجود رفض تعاون ،أو عائق ميداني مؤقت. o</p>
-<h3>.2إعادة محاولة الزيارة:</h3>
-<p>في حال التعذر المؤقت ،تُ عاد زيارة نقطة البيع في وقت الحق خالل نفس دورة المسح. o</p>
-<h3>.3استبدال نقطة البيع:</h3>
-<p>إذا كانت النقطة مغلقة بشكل دائم أو متوقفة عن النشاط ،يتم اختيار نقطة بديلة مماثلة o من نفس الفئة والموقع الجغرافي.</p>
-<h3>.4توثيق الحالة:</h3>
-<p>المتخذ (رفض ،أو إغالق ،أو نقل تسجيل المالحظة في النظام ،وتحديد سبب الغياب والجراء ُ o .)...</p>
-<h3>ثانيا :عند فقد البيانات من البنود (السلع أو الخدمات):</h3>
-<p>ً</p>
-<h3>.1تمييز نوع االختفاء:</h3>
-<p>نهائيا؟ ً موسميا ،أم منقطع ً هل البند مفقود مؤقتً ا ،أو o</p>
-<h3>.2معالجة البند المختفي مؤقتً ا:</h3>
-<p>احتساب متوسط السعر من بنود مماثلة أو من نقاط بيع أخرى داخل نفس المدينة. o</p>
-<h3>.3معالجة البند الموسمي:</h3>
-<p>تعليق تسعيره مؤقتً ا خالل الفترة التي ال يتوفر فيها مع تقدير السعر باعتماد التغير السعري o في الفئة الأعلى في التصنيف الذي ينتمي له البند. تلقائيا عند ظهوره في السوق مرة أخرى. ً إعادة تسعيره o</p>
-<h3>نهائيا:</h3>
-<p>ً .4معالجة البند المختفي التحقق من اختفائه في أكثر من نقطة بيع ،وألكثر من دورة. o إزالته من العينة ،مع استبداله ببند بديل له نفس الخصائص الاستهلاكية. o تعديل الموسمية .4.4</p>
-<h3>.1معالجة البند الموسمي:</h3>
-<p>تعليق تسعيره مؤقتً ا خالل الفترة التي ال يتوفر فيها. o تلقائيا عند ظهوره في السوق مرة أخرى. ً إعادة تسعيره o</p>
-<h3>نهائيا:</h3>
-<p>ً .2معالجة البند المختفي التحقق من اختفائه في أكثر من نقطة بيع وألكثر من دورة. o إزالته من العينة ،مع استبداله ببند بديل له نفس الخصائص الاستهلاكية. o تعديل النتائج الأولية .4.5 ال ينطبق ،سيتم نشر النتائج النهائية فقط. .5</p></div></section><section id="resources" class="content-section reveal"><div class="section-head"><div class="num">4</div><div><span class="eyebrow">قسم التقرير</span><h2>الموارد المستخدمة</h2></div></div><div class="prose"><p>الموارد المستخدمة الجمالي الوصف</p>
-<h3>154 مجموع العاملين (موظفو الهيئة ،والباحثون الميدانيون).</h3>
-<h3>21 مجموع عدد أيام فترة جمع البيانات (تاريخ االنتهاء -تاريخ البدء).</h3>
-<h3>660 يوميا (أثناء جمع البيانات).</h3>
-<p>ً متوسط المقابالت التي يتم إجراؤها .6</p></div></section><section id="quality" class="content-section reveal"><div class="section-head"><div class="num">5</div><div><span class="eyebrow">قسم التقرير</span><h2>أبعاد الجودة</h2></div></div><div class="prose"><p>أبعاد الجودة المالءمة .6.1 معيار يوضح مدى تلبية المنتج الحتياجات المستخدمين.</p>
-<h3>.6.1.1احتياجات المستخدمين</h3>
-<h3>المستخدمون الخارجيون المستفيدون من بيانات الرقم القياسي لأسعار المستهلك:</h3>
-<p>الجهات الحكومية وشبه الحكومية. • المنظمات القليمية والدولية. • الجهات الأكاديمية والبحثية والمستثمرون. • وسائل العالم. • الأفراد. •</p>
-<h3>أمثلة ألبرز الجهات الخارجية المستفيدة من بيانات الرقم القياسي لأسعار المستهلك:</h3>
-<p>وزارة المالية. وزارة االقتصاد والتخطيط. البنك المركزي.</p>
-<h3>.6.1.2الاكتمال</h3>
-<p>تستند بيانات الرقم القياسي لأسعار المستهلك على المسح الميداني للرقم القياسي لأسعار المستهلك ،وهو بشكل شهري يندرج تحت تصنيف (الإحصاءات الاقتصادية) ،ويتم فيه ٍ مسح ميداني تُ جريه الهيئة العامة لإلحصاء جمع الأسعار من خالل زيارات ميدانية لنقاط البيع ،وتقديم الخدمات بسعر التجزئة في مختلف المناطق الإدارية في المملكة العربية السعودية ،واستيفاء استمارات إلكترونية تحتوي على عدد من السلع والخدمات ،ومن خالله يتم توفير مؤشرات تتعلق بالرقم القياسي لأسعار المستهلك .أما فيما يخص البيانات السجلية ،فيتم جمعها من مصادرها في نهاية كل شهر ميالدي. الدقة والموثوقية .6.2</p>
-<p>هما معيار يوضح مدى اقتراب الحسابات أو التقديرات من القيم الدقيقة أو الحقيقية التي تعكس الواقع.</p>
-<h3>.6.2.1نظرة عامة للدقة</h3>
-<p>بناء على عدة معايير عملية وموضوعية تتعلق بطبيعة يتم رفع جودة البيانات من خالل اختيار الباحثين ً • العمل ،وتأهيلهم وتدريبهم. يتم تطبيق قواعد التنبيه والمنع وقواعد التصحيح أثناء عملية جمع البيانات على االستبانة الإلكترونية • لـلرقم القياسي لأسعار المستهلك من أجل تحسين جودة البيانات. يتم فحص البيانات مع السنوات السابقة لتحديد أي تغييرات مهمة في البيانات. • يتم التحقق من التناسق الداخلي للبيانات قبل االنتهاء منها. • يتم فحص الترابط بين المتغيرات وتأكيد الاتساق بين سالسل البيانات المختلفة. • الالتزام بالوقت ودقة المواعيد .6.3 ظهر مدى الفترة الزمنية بين توفر المعلومات ووقوع الحدث.</p>
-<p>الالتزام بالوقت معيار ُي ِ وتعكس دقة المواعيد الفارق الزمني بين تاريخ نشر البيانات والتاريخ المستهدف عندما يتم ذلك بشكل فعلي.</p>
-<h3>.6.3.1الالتزام بالوقت</h3>
-<p>وفقا لهذا تطبق الهيئة العامة لإلحصاء المعيار الخاص لنشر البيانات ( )SDDSالصادر من صندوق النقد الدولي .و ً المعيار ،يتعين على جميع الجهات الإحصائية نشر البيانات على أساس شهري ،وبتأخر زمني ال يزيد عن 6أسابيع يوما) بعد نهاية الفترة المرجعية .وإذا كانت البيانات تعد من بيانات مصدرية مختلفة ،من الممكن نشرها (ً 42 بوتيرة مختلفة.</p>
-<h3>.6.3.2دقة المواعيد</h3>
-<p>وفقا لتواريخ النشر الواردة في التقويم الإحصائي المنشور لـلرقم القياسي لأسعار المستهلك على ً يتم النشر الموقع الإلكتروني الرسمي للهيئة العامة لإلحصاء. والبيانات متاحة في الوقت المتوقع ،كما هو مجدول في التقويم الإحصائي ،وفي حال تأخر النشر ،فسيتم تقديم الأسباب. الاتساق وإمكانية المقارنة .6.4 يشير ذلك إلى إمكانية وصول المستخدمين إلى البيانات ،ومدى توافر البيانات الدقيقة أو الكلية ،كما يشير ً أيضا إلى توفر تقرير المنهجية والجودة.</p>
-<h3>.6.4.1إمكانية المقارنة -جغرافيا</h3>
-<p>ً محليا ،وكذلك على المستوى الدولي. البيانات قابلة للمقارنة بين المناطق الإدارية</p>
-<h3>.6.4.2إمكانية المقارنة -بمرور الوقت</h3>
-<p>بدأ المسح في عام 1979م كمسح شهري ،وفيما يلي التغييرات الرئيسة التي طرأت في السنوات الأخيرة: سنة الأساس 1988م: • تم زيادة عدد السلع والخدمات الداخلة في تركيب الرقم القياسي لأسعار المستهلك إلى ( )220سلعة وخدمة. سنة الأساس 1999م: • احتوت سلة السلع الجديدة على 406من السلع والخدمات. سنة الأساس 2007م: • بلغت السلة 476سلعة وخدمة. سنة الأساس 2013م: • بندا. بلغ إجمالي بنود سلة السلع الجديدة (ً )489 سنة الأساس 2018م: • شملت سلة المستهلك ( )490سلعة وخدمة. سنة الأساس 2023م: • شملت سلة المستهلك ( )582سلعة وخدمة. فيما تتضمن النشرة بيانات تاريخية تفصيلية منذ عام 2013م.</p>
-<h3>.6.4.3الاتساق -عبر النطاق</h3>
-<p>ال ينطبق.</p>
-<h3>.6.4.4الاتساق -الإحصاءات السنوية ودون السنوية</h3>
-<p>ابتداء من عام 2013م باستخدام تصنيفً تم إعادة بناء السالسل الزمنية للرقم القياسي لأسعار المستهلك الاستهلاك الفردي حسب الغرض (– Classification of Individual Consumption According to Purpose ، )COICOP 2018ومنهجية السالسل المتحركة ،وذلك بهدف توفير سلسلة زمنية متسقة تعكس التغيرات الاقتصادية بدقة ومرونة .وقد ُروعي في عملية إعادة البناء الحفاظ على اتساق النتائج السنوية والشهرية مع سابقا في سنة الأساس 2018م ،بما يضمن إمكانية إجراء المقارنات وتحليل االتجاهات التاريخية وفق ً ما نُ شر المنهجية الجديدة ،دون الخالل بسالمة البيانات وفقدان الترابط الزمني.</p>
-<h3>.6.4.5الاتساق -الحسابات القومية</h3>
-<p>تم حساب الرقم القياسي لأسعار المستهلك بما في ذلك الفترات المرجعية ،والتصنيفات ،وأوزان سلة المستهلك بما يتوافق مع الأسس التي تُ بنى عليها بيانات الناتج المحلي الجمالي والحسابات القومية.</p>
-<h3>.6.4.6الاتساق -داخليا</h3>
-<p>تقديرات الرقم القياسي لأسعار المستهلك لها اتساق داخلي كامل ،حيث إنها تستند جميعها إلى نفس مجموعة البيانات الدقيقة ،ويتم حسابها باستخدام نفس طرق التقدير. إمكانية الوصول والوضوح .6.5 يشير ذلك إلى إمكانية وصول المستخدمين إلى البيانات ،ومدى توافر البيانات الدقيقة أو الكلية ،كما يشير ً أيضا إلى توفر تقرير المنهجية والجودة.</p>
-<h3>.6.5.1الأخبار الصحفية</h3>
-<p>العالنات لكل نشرة متاحة في التقويم الإحصائي كما هو مذكور في .10.1مع إمكانية الوصول إلى التقويم الإحصائي ،كما يمكن االطالع على الأ خبار الصحفية على موقع الهيئة العامة لإلحصاء: الأخبار الصحفية</p>
-<h3>.6.5.2النشرات</h3>
-<p>تُ صدر الهيئة العامة لإلحصاء منشورات وتقارير الرقم القياسي لأسعار المستهلك بشكل منتظم ضمن خطة نشر مسبقا ،ويتم نشرها على موقع الهيئة على الإنترنت .وتحرص الهيئة على نشر نتائجها بطريقة تخدم جميعً معدة المستخدمين باختالف أنواعهم ،بما في ذلك النشرات بصيغ مختلفة تحتوي على (جداول نشر ورسوم بيانية للبيانات والمؤشرات ،وتقرير المنهجية والجودة ،واالستمارات المستخدمة) باللغتين النجليزية والعربية.</p>
-<h3>نتائج الرقم القياسي لأسعار المستهلك متاحة على:</h3>
-<p>النشرات</p>
-<h3>.6.5.3قاعدة بيانات على الإنترنت</h3>
-<h3>يتم نشر البيانات في قاعدة البيانات الإحصائية على:</h3>
-<p>)GASTAT (stats.gov.sa</p>
-<h3>.6.5.4إمكانية الوصول للبيانات الدقيقة</h3>
-<p>البيانات الدقيقة هي بيانات تفصيلية على مستوى الوحدة يتم الحصول عليها من مصادر متعددة مثل عينات مفصلة حول ّ توفر معلومات المسوح الإحصائية ،والتعداد العام للسكان والمساكن ،والأنظمة الإدارية ،حيث ّ خصائص الأفراد ،والأسر ،والكيانات التجارية ،والمناطق الجغرافية ،مما يدعم بناء وتطوير المؤشرات الإحصائية والبحوث العلمية.</p>
-<h3>الأنواع المختلفة من ملفات البيانات الدقيقة لتلبية احتياجات المعلومات المتنوعة:</h3>
-<p>الاستخدام العام: • يتألف من مجموعات من السجالت التي تحتوي على معلومات عن الأفراد أو الأسر أو الكيانات التجارية مجهولة المصدر بطريقة ال يمكن التعرف فيها على المستجيب إما بشكل مباشر مثل( :االسم ،أو العنوان، أو رقم الاتصال ،أو رقم الهوية وما إلى ذلك) أو بشكل غير مباشر من خالل الجمع بين خصائص مختلفة ونادرة بشكل خاص للمستجيبين مثل( :العمر ،والمهنة ،والتعليم ،وما إلى ذلك). الاستخدام العلمي: • بناء على طلب طالب البيانات الستخراج مجموعات بيانات بناء على منهجيات محددة ً تنشأ هذه الملفات ً ذات خصائص محددة تستخدم في الدراسات االستراتيجية ،واتخاذ القرارات ،وكذلك ألغراض البحث العلمي</p>
-<p>لألفراد والأسر والشركات ،مع ضمان عدم احتوائها على أي معرفات مباشرة ،وخضوعها لضوابط حماية</p></div></section><section id="confidentiality" class="content-section reveal"><div class="section-head"><div class="num">8</div><div><span class="eyebrow">قسم التقرير</span><h2>السرية</h2></div></div><div class="prose"><p>السرية. ُيمكن للمستخدمين المؤهلين والمستوفين لمعايير وإجراءات حماية السرية الوصول إلى ملفات الاستخدام العلمي للبيانات الدقيقة من خالل منصة &quot;إتاحة&quot; التابعة للهيئة العامة لإلحصاء ،في حين تتم مشاركة البيانات الأكثر حساسية لالستخدام من خالل زيارة معمل البيانات الدقيقة ضمن بيئة آمنة تُ دار بواسطة الهيئة.</p>
-<h3>.6.5.5المراجع والمعايير</h3>
-<p>وصفا ً المعايير العامة للعملية الإحصائية :الالتزام بالنموذج العام للعملية الإحصائية ) ،(GSBPMوالذي يوفر موحدا لمراحل إنتاج البيانات الإحصائية من تحديد االحتياجات وحتى النشر والتقييم. ً</p>
+<a class="semantic-builder-btn" href="http://dbt.stats.gov.sa:5002/dbt?lang=ar" rel="noopener" target="_blank">
+          ابدأ الاستكشاف
+          <span aria-hidden="true">←</span>
+</a>
+</div>
+</div>
+</div>
+</section></main>
+<footer>
+<div class="footer-grid">
+<div>
+<h4>تابعنا على</h4>
+<div class="social-row">
+<a href="#">in</a><a href="#">▶</a><a href="#">◎</a><a href="#">f</a><a href="#">𝕏</a>
+</div>
+</div>
+<div>
+<h4>روابط ذات صلة</h4>
 <ul>
-<li>الدليل الرشادي الستيفاء االستمارة (كتيب الباحث) :الدليل التوجيهي لمسح الرقم القياسي لأسعار</li>
+<li><a href="#">وزارة الاقتصاد والتخطيط</a></li>
+<li><a href="#">منصة البيانات المفتوحة</a></li>
+<li><a href="#">التحول الرقمي وإستراتيجية الحكومة الرقمية</a></li>
+<li><a href="#">رؤية المملكة 2030</a></li>
 </ul>
-<p>المستهلك. الدليل االسترشادي لتصنيف الاستهلاك الفردي حسب الغرض (:)COICOP 2018 https://unstats.un.org/unsd/classifications/coicop دليل الرقم القياسي لأسعار المستهلك لسنة 2020الصادر عن صندوق النقد الدولي ،ويتم االعتماد عليه لضمان جودة النتائج وقابلية المقارنة الدولية https://www.imf.org/en/Data/Statistics/cpi-manual .7</p></div></section><section id="assurance" class="content-section reveal"><div class="section-head"><div class="num">6</div><div><span class="eyebrow">قسم التقرير</span><h2>ضمان الجودة</h2></div></div><div class="prose"><p>ضمان الجودة وجها تحرص الهيئة العامة لإلحصاء على مراعاة المبادئ التالية :الحيادية ،وأن يكون المنتج الإحصائي ُم ً للمستخدم ،وجودة العمليات والمخرجات ،وفعالية العمليات الإحصائية ،وتقليل عبء العمل على المستجيبين. ويتم التحقق من صحة البيانات من خالل إجراءات وضوابط الجودة التي يتم تنفيذها خالل سير العملية في مراحل مختلفة مثل( :إدخال البيانات ،وجمع البيانات ،وغيرها من الضوابط النهائية). .8</p></div></section><section id="evaluation" class="content-section reveal"><div class="section-head"><div class="num">7</div><div><span class="eyebrow">قسم التقرير</span><h2>تقييم الجودة</h2></div></div><div class="prose"><p>تقييم الجودة وفقا للنموذج الوطني (النموذج العام لجراءات ً تقوم الهيئة العامة لإلحصاء بتنفيذ جميع الأنشطة الإحصائية العمل الإحصائي ،)GSBPMويتم خالل مرحلة التقييم الشامل والتي تعد المرحلة الأخيرة من مراحل النموذج العام لجراءات العمل الإحصائي GSBPMباستخدام المعلومات التي تم جمعها في كل مرحلة أو عملية ويعد كمدخل فرعية لعداد تقرير التقييم الذي يلخص جميع التحديات المتعلقة بجودة كل عملية إحصائية ُ لجراءات التحسين والتطوير. .9السرية سياسة السرية .9.1 فإن الهيئة العامة لإلحصاء نص عليه المرسوم الملكي الكريم رقم ( )23وتاريخ 1379-12-07هـ َّ تنفيذا لما َّ ً ملتزمة بالسرية التامة لكافة البيانات المستوفاة ،وعدم استخدامها إال في الأغراض الإحصائية فقط.</p>
-<p>لذلك فإن البيانات محمية في خوادم البيانات الخاصة بالهيئة العامة لإلحصاء. سرية معالجة البيانات .9.2 يتم عرض البيانات في جداول مناسبة لتسهيل عملية تلخيصها وفهمها واستنتاج النتائج منها ومقارنتها بغيرها من البيانات ،والخروج منها بمدلوالت إحصائية عن مجتمع الدراسة ،كما يسهل الرجوع إليها في صورة جداول دون االطالع على البيانات الحساسة أو السرية مما يخل بمبدأ الحفاظ على سرية البيانات الإحصائية. .10</p></div></section><section id="publication" class="content-section reveal"><div class="section-head"><div class="num">9</div><div><span class="eyebrow">قسم التقرير</span><h2>سياسة النشر</h2></div></div><div class="prose"><p>سياسة النشر</p>
-<h3>.10.1التقويم الإحصائي</h3>
-<p>تم إدراج الرقم القياسي لأسعار المستهلك في التقويم الإحصائي. التقويم الإحصائي</p>
-<h3>.10.2إمكانية الوصول للمستخدمين</h3>
-<p>يتمثل أحد أهداف الهيئة العامة لإلحصاء في تلبية احتياجات عمالئها بشكل مستمر ،لذا فهي تزودهم على الفور بنتائج نشرة الرقم القياسي لأسعار المستهلك بمجرد صدورها. كما تتلقى أسئلة واستفسارات العمالء حول النشرة ونتائجها عبر قنوات الاتصال المختلفة ،مثل: الموقع الرسمي للهيئةwww.stats.gov.sa : • عنوان البريد الإلكتروني الرسمي للهيئةinfo@stats.gov.sa : • عنوان البريد الإلكتروني لدعم العمالءinfo@stats.gov.sa : • الزيارات الرسمية للمقر الرئيس للهيئة بالرياض أو أحد فروعها بالمملكة العربية السعودية. • الخطابات الرسمية. •</p>
-<h3>الموحد.)199009( :</h3>
-<p>َّ الاتصال على الرقم • .11المالحظات ً سنويا لمواكبة التغيرات الفعلية في أنماط الاستهلاك بشكل أكثر دقة ومرونة من يتم تحديث الأهمية النسبية خالل آليات ربط علمية ُتتيح دمج التحديثات بسالسة باستخدام منهجية السالسل المتحركة ،مع ضمان الاتساق واالستقرار المنهجي.</p></div></section></div></main>
-<footer class="footer"><strong>الهيئة العامة للإحصاء</strong><br>نسخة ويب مبنية من تقرير المنهجية والجودة - الرقم القياسي لأسعار المستهلك</footer>
+</div>
+<div>
+<h4>المساعدة والدعم</h4>
+<ul>
+<li><a href="#">تواصل معنا</a></li>
+<li><a href="#">طلب معلومات إحصائية</a></li>
+<li><a href="#">تقديم شكوى</a></li>
+<li><a href="#">الأسئلة الشائعة</a></li>
+</ul>
+</div>
+<div>
+<h4>نظرة عامة</h4>
+<ul>
+<li><a href="#">سياسة حرية المعلومات</a></li>
+<li><a href="#">الأخبار</a></li>
+<li><a href="#">إحصاءات ومؤشرات البوابة</a></li>
+<li><a href="#">خريطة الموقع</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© جميع الحقوق محفوظة للهيئة العامة للإحصاء 2026</span>
+<span>نسخة تجريبية للعرض الداخلي — غير مخصصة للنشر العام</span>
+</div>
+</footer>
 <script>
-const sections=[...document.querySelectorAll('.content-section')], links=[...document.querySelectorAll('.toc a')];
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.06}); document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
-const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-25% 0px -65% 0px'});sections.forEach(s=>spy.observe(s));
-const q=document.getElementById('q'); q.addEventListener('input',()=>{const term=q.value.trim(); document.querySelectorAll('.prose').forEach(box=>{box.querySelectorAll('mark').forEach(m=>m.replaceWith(m.textContent)); if(term.length>1){const walk=document.createTreeWalker(box,NodeFilter.SHOW_TEXT); const nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);nodes.forEach(n=>{if(n.parentElement.closest('script,style'))return;const i=n.data.toLowerCase().indexOf(term.toLowerCase());if(i>-1){const f=document.createDocumentFragment();f.append(n.data.slice(0,i));const m=document.createElement('mark');m.textContent=n.data.slice(i,i+term.length);f.append(m,n.data.slice(i+term.length));n.replaceWith(f)}})}})});
-</script></body></html>
+const icon=(name)=>{const icons={economy:'<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',social:'<svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>',environment:'<svg viewBox="0 0 24 24"><path d="M12 22V10"/><path d="M7 10c-3-1-4-4-3-7 3 0 6 1 7 4"/><path d="M17 14c3-1 4-4 3-7-3 0-6 1-7 4"/></svg>',folder:'<svg viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v10H3z"/></svg>',doc:'<svg viewBox="0 0 24 24"><path d="M6 2h9l3 3v17H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/></svg>'};return icons[name]||icons.folder};
+const productLinks={'الرقم القياسي لأسعار العقارات':'https://webserver-gastat-dev.lfr.cloud/ar/w/rpi-q1-2026'};
+const productHref=(name)=>productLinks[name]||'#';
+const productTarget=(name)=>productLinks[name]?' target="_blank" rel="noopener noreferrer"':'';
+const data=[{id:'economic',label:'الإحصاءات الاقتصادية',icon:'economy',cats:[['الحسابات القومية',['الناتج المحلي الإجمالي','الحسابات القومية السنوية','الحسابات القومية ربع السنوية']],['الأسعار',['الرقم القياسي لأسعار العقارات','الرقم القياسي لأسعار الجملة','متوسطات أسعار السلع والخدمات']],['الأعمال',['إحصاءات الأعمال الهيكلية','ديموغرافيا المنشآت','مؤشر ثقة الأعمال']],['التجارة الدولية',['التجارة الدولية السلعية','الصادرات غير البترولية','الواردات حسب الدول']],['الاقتصاد الرقمي',['نفاذ واستخدام تقنية المعلومات','التجارة الإلكترونية','الاقتصاد الرقمي']]]},{id:'social',label:'الإحصاءات الاجتماعية',icon:'social',cats:[['سوق العمل',['نشرة سوق العمل','معدلات البطالة','القوى العاملة حسب المناطق']],['السكان',['التقديرات السكانية','المواليد والوفيات','الخصائص الديموغرافية']],['التعليم',['إحصاءات التعليم العام','إحصاءات التعليم العالي','الالتحاق والتخرج']],['الصحة',['الحالة الصحية للسكان','الخدمات الصحية','مؤشرات الصحة العامة']],['المساكن',['خصائص المساكن','حيازة المسكن','الخدمات الأساسية للمساكن']]]},{id:'environment',label:'الإحصاءات البيئية والمكانية',icon:'environment',cats:[['البيئة',['إحصاءات المياه','النفايات وإعادة التدوير','جودة الهواء والانبعاثات']],['الطاقة',['استهلاك الطاقة','الطاقة المتجددة','كفاءة استخدام الطاقة']],['الزراعة',['الإنتاج الزراعي','الثروة الحيوانية','الصيد البحري']],['السياحة والحج والعمرة',['إحصاءات المنشآت السياحية','إحصاءات الحج والعمرة','الرحلات السياحية']],['النقل والخدمات اللوجستية',['النقل البري','النقل الجوي','النقل البحري والخدمات اللوجستية']]]}];
+let activeTab=0,activeCat=0;const tabs=document.getElementById('tabs'),categories=document.getElementById('categories'),details=document.getElementById('details'),mobileStatsAccordion=document.getElementById('mobileStatsAccordion'),statsSearch=document.getElementById('statsSearch'),statsSearchClear=document.getElementById('statsSearchClear'),statsSearchResults=document.getElementById('statsSearchResults'),statsSearchCount=document.getElementById('statsSearchCount');
+let mobileActiveTab=null,mobileActiveCat=null;
+const statsPanel=document.querySelector('.stats-panel');
+function openStats(){statsPanel.classList.add('is-open')}
+const totalProducts=data.reduce((sum,t)=>sum+t.cats.reduce((a,c)=>a+c[1].length,0),0);
+function tabProducts(t){return t.cats.reduce((sum,c)=>sum+c[1].length,0)}
+function renderTabs(){tabs.innerHTML=data.map((t,i)=>`<button class="tab ${i===activeTab?'active':''}" role="tab" aria-selected="${i===activeTab}" onmouseenter="selectTab(${i})" onfocus="selectTab(${i})" onclick="selectTab(${i});openStats()"><span class="tab-icon">${icon(t.icon)}</span><span class="tab-copy"><span>${t.label}</span><small>${t.cats.length} أقسام رئيسية</small></span><span class="tab-count-badge">${tabProducts(t)} منتج</span><span class="tab-index">0${i+1}</span></button>`).join('')}
+function renderCats(){categories.innerHTML=data[activeTab].cats.map((c,i)=>`<button class="category-btn ${i===activeCat?'active':''}" onmouseenter="selectCat(${i})" onfocus="selectCat(${i})" onclick="selectCat(${i});openStats()"><span class="cat-icon">${icon('folder')}</span><span class="cat-copy">${c[0]}</span><span class="category-count">${c[1].length}</span></button>`).join('')}
+function renderDetails(){details.innerHTML=data[activeTab].cats[activeCat][1].map((x,i)=>`<a class="detail-item" href="${productHref(x)}"${productTarget(x)}><span class="detail-icon">${icon('doc')}</span><span class="detail-copy"><strong>${x}</strong></span><span class="arrow">←</span></a>`).join('')}
+
+function renderMobileStats(){
+  if(!mobileStatsAccordion)return;
+  mobileStatsAccordion.innerHTML=data.map((t,ti)=>{
+    const mainOpen=ti===mobileActiveTab;
+    const cats=t.cats.map((c,ci)=>{
+      const catOpen=mainOpen&&ci===mobileActiveCat;
+      const products=c[1].map(x=>`<a class="mobile-product" href="${productHref(x)}"${productTarget(x)}><span class="detail-icon">${icon('doc')}</span><strong>${x}</strong><span class="arrow">←</span></a>`).join('');
+      return `<div class="mobile-category ${catOpen?'is-active':''}"><button class="mobile-category-trigger" type="button" aria-expanded="${catOpen}" onclick="selectMobileCat(${ti},${ci})"><span class="cat-icon">${icon('folder')}</span><span class="mobile-category-copy"><strong>${c[0]}</strong></span><span class="mobile-category-chevron">←</span></button><div class="mobile-products"><div class="mobile-products-inner">${products}</div></div></div>`;
+    }).join('');
+    const mainDescriptions=['الناتج المحلي • الأسعار • التجارة • الأعمال','السكان • سوق العمل • التعليم • الصحة','البيئة • الزراعة • الطاقة • النقل'];
+    return `<section class="mobile-main-stat ${mainOpen?'is-active':''}"><button class="mobile-main-trigger" type="button" aria-expanded="${mainOpen}" onclick="selectMobileTab(${ti})"><span class="mobile-main-number">0${ti+1}</span><span class="tab-icon">${icon(t.icon)}</span><span class="mobile-main-copy"><strong>${t.label}</strong><small>${mainDescriptions[ti]}</small><span class="mobile-main-total">${tabProducts(t)} نشرة إحصائية</span></span><span class="mobile-chevron">⌄</span></button><div class="mobile-main-panel"><div class="mobile-main-panel-inner">${cats}</div></div></section>`;
+  }).join('');
+}
+window.selectMobileTab=(i)=>{
+  if(mobileActiveTab===i){
+    mobileActiveTab=null;mobileActiveCat=null;
+    renderMobileStats();
+    return;
+  }
+  mobileActiveTab=i;mobileActiveCat=null;activeTab=i;activeCat=0;
+  renderMobileStats();renderTabs();renderCats();renderDetails();openStats();
+};
+window.selectMobileCat=(tabIndex,catIndex)=>{
+  mobileActiveTab=tabIndex;
+  mobileActiveCat=(mobileActiveCat===catIndex?null:catIndex);
+  activeTab=tabIndex;activeCat=catIndex;
+  renderMobileStats();renderTabs();renderCats();renderDetails();openStats();
+};
+
+window.selectTab=(i)=>{activeTab=i;activeCat=0;renderTabs();renderCats();renderDetails();openStats()};window.selectCat=(i)=>{activeCat=i;renderCats();renderDetails();openStats()};
+// سلوك مستكشف الإحصاءات:
+// على الكمبيوتر يُغلق عند مغادرة المؤشر، وعلى الجوال يبقى مفتوحًا بعد الاختيار.
+const statisticsSection=document.getElementById('statistics');
+const desktopHover=window.matchMedia('(hover: hover) and (pointer: fine)');
+
+statsPanel.addEventListener('mouseleave',()=>{
+  if(desktopHover.matches) statsPanel.classList.remove('is-open');
+});
+
+// في الجوال لا يُغلق المستكشف إلا بعد النزول وتجاوز قسم إحصاءات الهيئة.
+const mobileStatsObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(!desktopHover.matches && !entry.isIntersecting && entry.boundingClientRect.top < 0){
+      statsPanel.classList.remove('is-open');
+    }
+  });
+},{threshold:0});
+mobileStatsObserver.observe(statisticsSection);
+
+function normalizeArabic(value){return value.toLowerCase().replace(/[إأآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[ًٌٍَُِّْـ]/g,'').trim()}
+function allStatProducts(){const rows=[];data.forEach((t,ti)=>t.cats.forEach((c,ci)=>c[1].forEach(product=>rows.push({product,section:t.label,category:c[0],ti,ci}))));return rows}
+const searchableProducts=allStatProducts();
+function runStatsSearch(){const query=normalizeArabic(statsSearch?.value||'');statsSearchClear?.classList.toggle('visible',Boolean(query));if(!query){statsSearchResults?.classList.remove('visible');if(statsSearchResults)statsSearchResults.innerHTML='';statsSearchCount.textContent=`${totalProducts} نشرة إحصائية `;return}const matches=searchableProducts.filter(item=>normalizeArabic(`${item.product} ${item.section} ${item.category}`).includes(query));statsSearchCount.textContent=`${matches.length} نتيجة`;statsSearchResults.classList.add('visible');statsSearchResults.innerHTML=matches.length?matches.slice(0,12).map(item=>`<a class="stats-search-result" href="${productHref(item.product)}"${productTarget(item.product)}${productLinks[item.product]?'':` onclick=\"selectSearchResult(event,${item.ti},${item.ci})\"`}><span class="detail-icon">${icon('doc')}</span><span class="stats-search-result-copy"><strong>${item.product}</strong></span><span class="arrow">←</span></a>`).join(''):`<div class="stats-search-empty">لا توجد نتائج مطابقة. جرّب كلمة أخرى.</div>`;openStats()}
+window.selectSearchResult=(event,ti,ci)=>{event.preventDefault();activeTab=ti;activeCat=ci;mobileActiveTab=ti;mobileActiveCat=ci;renderTabs();renderCats();renderDetails();renderMobileStats();statsSearchResults.classList.remove('visible');document.querySelector('.browser')?.scrollIntoView({behavior:'smooth',block:'nearest'});openStats()};
+statsSearch?.addEventListener('input',runStatsSearch);statsSearch?.addEventListener('focus',()=>{if(statsSearch.value)runStatsSearch();openStats()});statsSearchClear?.addEventListener('click',()=>{statsSearch.value='';runStatsSearch();statsSearch.focus()});
+renderTabs();renderCats();renderDetails();renderMobileStats();
+
+// Hover cards: mouse hover on desktop, click/tap toggle on touch devices.
+document.querySelectorAll('.hover-card').forEach(card=>{
+  const toggle=card.querySelector('.hover-card-toggle');
+  const setOpen=(open)=>{
+    card.classList.toggle('is-open',open);
+    toggle?.setAttribute('aria-expanded',String(open));
+  };
+  toggle?.addEventListener('click',e=>{e.stopPropagation();setOpen(!card.classList.contains('is-open'))});
+  card.addEventListener('click',e=>{
+    if(e.target.closest('a,button') && !e.target.closest('.hover-card-toggle')) return;
+    if(window.matchMedia('(hover: none)').matches) setOpen(!card.classList.contains('is-open'));
+  });
+  card.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();setOpen(!card.classList.contains('is-open'))}
+  });
+});
+
+// Premium motion, counters, mobile navigation, and theme.
+const header=document.querySelector('.header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>15),{passive:true});
+
+const revealTargets=document.querySelectorAll('.section-head,.kpi,.stats-panel,.hover-card,.news-card,.service,.table-builder-card');
+revealTargets.forEach((el,i)=>{el.classList.add('reveal');if(i%4)el.classList.add(`reveal-delay-${Math.min(i%4,3)}`)});
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');revealObserver.unobserve(entry.target)}}),{threshold:.12});
+revealTargets.forEach(el=>revealObserver.observe(el));
+
+const numberEls=[...document.querySelectorAll('.kpi strong')];
+const counterObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(!entry.isIntersecting)return;
+  const el=entry.target,raw=el.textContent.trim(),match=raw.match(/-?[\d,.]+/);if(!match)return;
+  const target=parseFloat(match[0].replace(/,/g,'')),decimals=(match[0].split('.')[1]||'').length,suffix=raw.replace(match[0],'');
+  const start=performance.now(),duration=1200;
+  const tick=now=>{const p=Math.min((now-start)/duration,1),eased=1-Math.pow(1-p,3),value=target*eased;el.textContent=(decimals?value.toFixed(decimals):Math.round(value).toLocaleString('en-US'))+suffix;if(p<1)requestAnimationFrame(tick)};
+  requestAnimationFrame(tick);counterObserver.unobserve(el);
+}),{threshold:.55});numberEls.forEach(el=>counterObserver.observe(el));
+
+const themeBtn=document.querySelector('.theme-toggle');
+const savedTheme=localStorage.getItem('gastat-theme');if(savedTheme==='dark'){document.body.classList.add('dark');themeBtn?.classList.add('active')}
+themeBtn?.addEventListener('click',()=>{document.body.classList.toggle('dark');themeBtn.classList.toggle('active');localStorage.setItem('gastat-theme',document.body.classList.contains('dark')?'dark':'light')});
+
+const mobileNav=document.querySelector('.mobile-nav'),menuBtn=document.querySelector('.mobile-menu'),closeBtn=document.querySelector('.mobile-close');
+const setMenu=open=>{mobileNav.classList.toggle('open',open);mobileNav.setAttribute('aria-hidden',String(!open));document.body.style.overflow=open?'hidden':''};
+menuBtn?.addEventListener('click',()=>setMenu(true));closeBtn?.addEventListener('click',()=>setMenu(false));mobileNav?.addEventListener('click',e=>{if(e.target===mobileNav||e.target.closest('a'))setMenu(false)});addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+
+const hero=document.querySelector('.hero-visual');
+if(hero&&matchMedia('(pointer:fine)').matches){document.querySelector('.hero')?.addEventListener('mousemove',e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;hero.style.transform=`translate3d(${x*14}px,${y*10}px,0)`});document.querySelector('.hero')?.addEventListener('mouseleave',()=>hero.style.transform='')}
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const items=[...document.querySelectorAll('.nav-item-dropdown')];
+  items.forEach(function(item){
+    const trigger=item.querySelector('.nav-dropdown-trigger');
+    if(!trigger) return;
+    trigger.addEventListener('click',function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      const open=!item.classList.contains('is-open');
+      items.forEach(function(i){
+        i.classList.remove('is-open');
+        const b=i.querySelector('.nav-dropdown-trigger');
+        if(b) b.setAttribute('aria-expanded','false');
+      });
+      if(open){
+        item.classList.add('is-open');
+        trigger.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+  document.addEventListener('click',function(){
+    items.forEach(function(i){
+      i.classList.remove('is-open');
+      const b=i.querySelector('.nav-dropdown-trigger');
+      if(b) b.setAttribute('aria-expanded','false');
+    });
+  });
+});
+</script>
+
+</body></html>
