@@ -2,6 +2,51 @@
 
 <html dir="rtl" lang="ar">
   <head>
+    <style id="gastat-critical-kpi-render">
+      /* Prevent removed legacy KPI controls from flashing before the final UI is ready. */
+      .indicators-section .gastat-kpi-categories,
+      .indicators-section .gastat-kpi-empty,
+      .indicators-section .kpi-nav-controls {
+        display: none !important;
+      }
+      .indicators-section .section-head .kpi-heading-copy {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important;
+        flex-wrap: wrap !important;
+      }
+      .indicators-section .section-head .gastat-section-last-updated {
+        margin: 0 !important;
+        flex: 0 0 auto;
+      }
+      #table-builder[hidden] {
+        display: none !important;
+      }
+      /* Keep the active hero visible from the first paint, even before carousel JS runs. */
+      html body #main-content > .gastat-hero-carousel .gastat-hero-slide.is-active {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        z-index: 2 !important;
+      }
+      html body #main-content > .gastat-hero-carousel .gastat-hero-slide.is-active > img,
+      html body #main-content > .gastat-hero-carousel .gastat-hero-slide.is-active .gastat-hero-overlay,
+      html body #main-content > .gastat-hero-carousel .gastat-hero-slide.is-active .gastat-hero-slide-content {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      html body #main-content > .gastat-hero-carousel .gastat-hero-slide.is-active .gastat-hero-slide-content {
+        display: flex !important;
+        transform: none !important;
+      }
+      @media (max-width: 640px) {
+        .indicators-section .section-head .kpi-heading-copy {
+          gap: 8px !important;
+        }
+      }
+    </style>
     <meta charset="utf-8" />
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <title>
@@ -17962,7 +18007,7 @@ main#main-content {
       <section
         class="gastat-hero-carousel"
         aria-roledescription="عرض شرائح"
-        aria-label="أبرز الأخبار الإحصائية"
+        aria-label="أبرز الخدمات والأخبار الإحصائية"
       >
         <div class="gastat-hero-stage">
           <article
@@ -17972,65 +18017,23 @@ main#main-content {
           >
             <img
               src="https://webserver-gastat-dev.lfr.cloud/documents/20117/0/stats01.png/023663a9-4b80-3b94-2a12-fe0c210a5b7a?t=1783835312517"
-              alt="نمو صادرات خدمات المملكة العربية السعودية بنسبة 7.9% في الربع الأول من عام 2026"
+              alt="الخرائط التفاعلية (لمحة)"
               fetchpriority="high"
             />
             <div class="gastat-hero-overlay"></div>
             <div class="container gastat-hero-slide-content">
-              <h1>
-                نمو صادرات خدمات المملكة العربية السعودية بنسبة 7.9% في الربع
-                الأول من عام 2026
-              </h1>
+              <h1>الخرائط التفاعلية (لمحة)</h1>
               <p>
-                أظهرت نتائج إحصاءات التجارة الدولية في الخدمات أن إجمالي قيمة
-                صادرات المملكة من الخدمات للربع الأول لعام 2026م بلغ 71.3 مليار
-                ريال سعودي، مقارنةً بـ 66.1 مليار ريال للربع الرابع من عام
-                2025م، مسجلًا نموًا نسبته 7.9%. كما بلغ إجمالي قيمة واردات
-                المملكة من الخدمات للربع الأول لعام 2026م نحو 111.4 مليار ريال
-                سعودي، مقابل 119.6مليار ريال في الربع الرابع من عام 2025 م،
-                مسجلًا انخفاضًا نسبته 6.9%.
+                استكشف بيانات مناطق المملكة بصريًا، وقارن المؤشرات بين المناطق
+                الإدارية من خلال تجربة مكانية تفاعلية واضحة وسريعة تساعدك على
+                فهم التوزيعات والاتجاهات والوصول إلى المعلومة بسهولة.
               </p>
               <a
                 class="gastat-hero-more"
-                href="https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&amp;category=1340149"
+                href="https://lamha.stats.gov.sa/"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><span>اقرأ المزيد</span
-                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M19 12H5"></path>
-                  <path d="m11 18-6-6 6-6"></path></svg
-              ></a>
-            </div>
-          </article>
-          <article class="gastat-hero-slide" data-hero-slide aria-hidden="true">
-            <img
-              src="https://webserver-gastat-dev.lfr.cloud/documents/20117/0/stats-011.png/cb58f773-a7e1-392c-6400-c18ec1e2ea9e?t=1783834995012"
-              alt="انخفاض معدل البطالة لإجمالي سكان المملكة ليصل إلى 3.1% خلال الربع الأول من عام 2026م"
-            />
-            <div class="gastat-hero-overlay"></div>
-            <div class="container gastat-hero-slide-content">
-              <h1>
-                انخفاض معدل البطالة لإجمالي سكان المملكة ليصل إلى 3.1% خلال
-                الربع الأول من عام 2026م
-              </h1>
-              <p>
-                بناءً على تقديرات مسح القوى العاملة للهيئة العامة للإحصاء، بلغ
-                معدل البطالة الإجمالي (للسعوديين وغير السعوديين) 3.1% خلال الربع
-                الأول من عام 2026م، مسجلًا بذلك انخفاضًا بمقدار 0.4 نقطة مئوية
-                مقارنة بالربع الرابع من عام 2025، وسجل ارتفاعًا سنويًّا بمقدار
-                0.3 نقطة مئوية مقارنةً بالربع الأول من عام2025م. وبلغ معدل
-                مشاركة القوى العاملة الإجمالي (للسعوديين وغير السعوديين) 67.2%
-                بانخفاض مقداره 0.2 نقطة مئوية مقارنةً بالربع السابق من عام
-                2025م، وبانخفاض سنوي مقداره 1.0 نقطة مئوية مقارنة بالربع المماثل
-                من عام 2025م. هذا وقد بلغ معدل البطالة للسعوديين 6.4% في الربع
-                الأول من عام 2026م
-              </p>
-              <a
-                class="gastat-hero-more"
-                href="https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&amp;category=417515"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span>اقرأ المزيد</span
+                ><span>استعراض الخدمة</span
                 ><svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 12H5"></path>
                   <path d="m11 18-6-6 6-6"></path></svg
@@ -18098,13 +18101,6 @@ main#main-content {
               aria-selected="false"
               aria-label="البانر 2"
               data-hero-dot="1"
-            ></button
-            ><button
-              type="button"
-              role="tab"
-              aria-selected="false"
-              aria-label="البانر 3"
-              data-hero-dot="2"
             ></button>
           </div>
           <button
@@ -18187,7 +18183,19 @@ main#main-content {
       <section class="section indicators-section">
         <div class="container">
           <div class="section-head">
-            <div class="kpi-heading-copy"><h2>أهم المؤشرات الإحصائية</h2></div>
+            <div class="kpi-heading-copy gastat-section-heading-row">
+              <h2>أهم المؤشرات الإحصائية</h2>
+            </div>
+            <span
+              class="gastat-section-last-updated gastat-kpi-last-updated-fixed"
+              aria-label="آخر تحديث: اليوم"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="8"></circle>
+                <path d="M12 8v4l3 2"></path>
+              </svg>
+              <span>آخر تحديث: <strong>اليوم</strong></span>
+            </span>
             <div class="kpi-nav-controls" aria-label="التنقل بين المؤشرات">
               <button
                 type="button"
@@ -18212,7 +18220,7 @@ main#main-content {
             <a
               class="gastat-economic-topics-link"
               href="https://www.stats.gov.sa/ar/statistics?index=119021&amp;subindex=120034"
-              ><span>عرض جميع المواضيع في قسم الإحصاءات الاقتصادية</span
+              ><span>عرض جميع المواضيع في قسم السكان والمجتمع</span
               ><span aria-hidden="true">←</span></a
             >
           </div>
@@ -18737,8 +18745,10 @@ main#main-content {
       </section>
       <section
         aria-labelledby="table-builder-title"
+        aria-hidden="true"
         class="table-builder-section semantic-builder"
         id="table-builder"
+        hidden
       >
         <div class="container">
           <div class="semantic-builder-card">
@@ -20389,7 +20399,10 @@ main#main-content {
         root.dataset.ready = "1";
         const slides = [...root.querySelectorAll("[data-hero-slide]")],
           dots = [...root.querySelectorAll("[data-hero-dot]")];
-        let index = 0,
+        let index = Math.max(
+            0,
+            slides.findIndex((slide) => slide.classList.contains("is-active")),
+          ),
           timer;
         const show = (n) => {
           index = (n + slides.length) % slides.length;
@@ -20428,8 +20441,6 @@ main#main-content {
             play();
           }),
         );
-        root.addEventListener("mouseenter", stop);
-        root.addEventListener("mouseleave", play);
         root.addEventListener("focusin", stop);
         root.addEventListener("focusout", (e) => {
           if (!root.contains(e.relatedTarget)) play();
@@ -22159,7 +22170,6 @@ main#main-content {
     <script id="gastat-section-last-updated-script">
       (function () {
         var sections = [
-          { selector: ".indicators-section", label: "اليوم" },
           { selector: "#gastat-authority-news", label: "منذ يومين" },
         ];
         var icon =
@@ -22271,14 +22281,13 @@ main#main-content {
             "Sixth United Nations World Data Forum 2026",
           "هكاثون الابتكار في البيانات": "Data Innovation Hackathon",
           "الكلمات الأعلى بحثًا:": "Top searches:",
-          "نمو صادرات خدمات المملكة العربية السعودية بنسبة 7.9% في الربع الأول من عام 2026":
-            "Saudi Arabia's services exports grew by 7.9% in Q1 2026",
-          "أظهرت نتائج إحصاءات التجارة الدولية في الخدمات أن إجمالي قيمة صادرات المملكة من الخدمات للربع الأول لعام 2026م بلغ 71.3 مليار ريال سعودي، مقارنةً بـ 66.1 مليار ريال للربع الرابع من عام 2025م، مسجلًا نموًا نسبته 7.9%. كما بلغ إجمالي قيمة واردات المملكة من الخدمات للربع الأول لعام 2026م نحو 111.4 مليار ريال سعودي، مقابل 119.6مليار ريال في الربع الرابع من عام 2025 م، مسجلًا انخفاضًا نسبته 6.9%.":
-            "International trade in services statistics show that Saudi services exports reached SAR 71.3 billion in Q1 2026, up 7.9%, while imports reached SAR 111.4 billion, down 6.9% from Q4 2025.",
-          "انخفاض معدل البطالة لإجمالي سكان المملكة ليصل إلى 3.1% خلال الربع الأول من عام 2026م":
-            "Overall unemployment in Saudi Arabia declined to 3.1% in Q1 2026",
-          "بناءً على تقديرات مسح القوى العاملة للهيئة العامة للإحصاء، بلغ معدل البطالة الإجمالي (للسعوديين وغير السعوديين) 3.1% خلال الربع الأول من عام 2026م، مسجلًا بذلك انخفاضًا بمقدار 0.4 نقطة مئوية مقارنة بالربع الرابع من عام 2025، وسجل ارتفاعًا سنويًّا بمقدار 0.3 نقطة مئوية مقارنةً بالربع الأول من عام2025م. وبلغ معدل مشاركة القوى العاملة الإجمالي (للسعوديين وغير السعوديين) 67.2% بانخفاض مقداره 0.2 نقطة مئوية مقارنةً بالربع السابق من عام 2025م، وبانخفاض سنوي مقداره 1.0 نقطة مئوية مقارنة بالربع المماثل من عام 2025م. هذا وقد بلغ معدل البطالة للسعوديين 6.4% في الربع الأول من عام 2026م":
-            "Labour Force Survey estimates show that overall unemployment reached 3.1% in Q1 2026. Labour force participation stood at 67.2%, while unemployment among Saudis reached 6.4%.",
+          "الخرائط التفاعلية (لمحة)": "Interactive Maps (Lamha)",
+          "استكشف بيانات مناطق المملكة بصريًا، وقارن المؤشرات بين المناطق الإدارية من خلال تجربة مكانية تفاعلية واضحة وسريعة تساعدك على فهم التوزيعات والاتجاهات والوصول إلى المعلومة بسهولة.":
+            "Explore Saudi regional data visually and compare indicators across administrative regions through a clear, fast interactive spatial experience.",
+          "مستكشف البيانات": "Data Explorer",
+          "ابحث في المؤشرات والسلاسل الزمنية والبيانات التفصيلية، وخصص الجداول والفترات للوصول إلى البيانات التي تحتاجها وتحليلها وتنزيلها من مكان واحد بطريقة مبسطة ومرنة.":
+            "Search indicators, time series, and detailed data, then customize tables and periods to analyze and download what you need from one place.",
+          "استعراض الخدمة": "Explore Service",
           "&quot;الإحصاء&quot; المملكة تتسلم رسمياً استضافة منتدى الأمم المتحدة العالمي للبيانات 2026 في الرياض":
             "Saudi Arabia officially receives the hosting of the 2026 UN World Data Forum in Riyadh",
           "تسلم الدكتور فهد بن عبدالله الدوسري رئيس الهيئة العامة للإحصاء رسمياً استضافة المملكة منتدى الأمم المتحدة العالمي السادس للبيانات 2026، وذلك في ختام أعمال النسخة الخامسة من المنتدى المنعقد مؤخراً في مدينة ميدلين بجمهورية كولومبيا خلال الفترة (12–15 نوفمبر 2024م)":
@@ -23539,7 +23548,7 @@ main#main-content {
         }
       }
     </style>
-    <script id="gastat-kpi-categories-script">
+    <script type="application/json" id="gastat-kpi-categories-script-disabled">
       (() => {
         const section = document.querySelector(".indicators-section");
         const track = section?.querySelector(".kpis-track");
@@ -29150,9 +29159,10 @@ main#main-content {
           );
           const link = row?.querySelector(".gastat-economic-topics-link");
           const tabs = section?.querySelector(".gastat-kpi-categories");
-          if (!section || !row || !link || !tabs) return false;
+          if (!section || !row || !link) return false;
           if (row.dataset.adaptiveReady === "true") return true;
           row.dataset.adaptiveReady = "true";
+          if (!tabs) return true;
           tabs.insertAdjacentElement("afterend", row);
           const label = link.querySelector("span:first-child");
           const config = {
@@ -29227,14 +29237,13 @@ main#main-content {
         };
         const setup = () => {
           const section = document.querySelector(".indicators-section");
-          const legacy = section?.querySelector(".gastat-kpi-categories");
           const slider = section?.querySelector(".kpis-slider");
           const cards = [...(slider?.querySelectorAll(".kpi") || [])];
           const empty = section?.querySelector(".gastat-kpi-empty");
           const topicLink = section?.querySelector(
             ".gastat-economic-topics-link",
           );
-          if (!section || !legacy || !slider || !cards.length || !topicLink)
+          if (!section || !slider || !cards.length || !topicLink)
             return false;
           if (section.dataset.compactClassificationReady === "true")
             return true;
@@ -29249,7 +29258,7 @@ main#main-content {
           controls.className = "gastat-kpi-compact-controls";
           controls.innerHTML =
             '<div class="gastat-kpi-mode-tabs" aria-label="طريقة تصنيف المؤشرات"><span class="gastat-kpi-mode" aria-selected="true" aria-current="true">حسب الموضوعات</span></div><select class="gastat-kpi-compact-select" aria-label="اختر الموضوع"></select>';
-          legacy.before(controls);
+          topicLink.closest(".gastat-economic-topics-link-row").before(controls);
           const select = controls.querySelector("select");
           const fill = (items) => {
             select.innerHTML = items
@@ -35427,17 +35436,17 @@ main#main-content {
         <h2 class="discovery-heading" id="gastat-discovery-title" data-ar="أدوات استكشاف البيانات" data-en="Data exploration tools">أدوات استكشاف البيانات</h2>
       </div>
       <div class="discovery-tabs" role="tablist" aria-label="أدوات استكشاف البيانات">
-        <button class="discovery-tab" id="discovery-map-tab" role="tab" aria-selected="true" aria-controls="discovery-map-panel" tabindex="0">
+        <button class="discovery-tab" id="discovery-map-tab" role="tab" aria-selected="false" aria-controls="discovery-map-panel" tabindex="-1">
           <span class="discovery-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m3.5 6.5 5-2.5 7 2.5 5-2.5v13.5l-5 2.5-7-2.5-5 2.5V6.5Zm5-2.5v13.5m7-11V20" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
           <span class="discovery-tab-copy"><span data-ar="الخرائط التفاعلية (لمحة)" data-en="Interactive maps (Lamha)">الخرائط التفاعلية (لمحة)</span><span class="discovery-tab-note" data-ar="استكشاف مكاني لمناطق المملكة" data-en="Spatial exploration of Saudi regions">استكشاف مكاني لمناطق المملكة</span></span>
         </button>
-        <button class="discovery-tab" id="discovery-explorer-tab" role="tab" aria-selected="false" aria-controls="discovery-explorer-panel" tabindex="-1">
+        <button class="discovery-tab" id="discovery-explorer-tab" role="tab" aria-selected="true" aria-controls="discovery-explorer-panel" tabindex="0">
           <span class="discovery-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="7.5" ry="3" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V5m-15 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6" stroke="currentColor" stroke-width="1.8"/></svg></span>
           <span class="discovery-tab-copy"><span data-ar="مستكشف البيانات" data-en="Data Explorer">مستكشف البيانات</span><span class="discovery-tab-note" data-ar="مؤشرات وجداول وسلاسل زمنية" data-en="Indicators, tables and time series">مؤشرات وجداول وسلاسل زمنية</span></span>
         </button>
       </div>
 
-      <div class="discovery-panel" id="discovery-map-panel" role="tabpanel" aria-labelledby="discovery-map-tab">
+      <div class="discovery-panel" id="discovery-map-panel" role="tabpanel" aria-labelledby="discovery-map-tab" hidden>
         <div class="discovery-copy">
           <span class="discovery-kicker" data-ar="عرض مكاني تفاعلي" data-en="Interactive spatial view">عرض مكاني تفاعلي</span>
           <h3 class="discovery-title" data-ar="الخرائط التفاعلية (لمحة)" data-en="Interactive maps (Lamha)">الخرائط التفاعلية (لمحة)</h3>
@@ -35463,7 +35472,7 @@ main#main-content {
         </div>
       </div>
 
-      <div class="discovery-panel" id="discovery-explorer-panel" role="tabpanel" aria-labelledby="discovery-explorer-tab" hidden>
+      <div class="discovery-panel" id="discovery-explorer-panel" role="tabpanel" aria-labelledby="discovery-explorer-tab">
         <div class="discovery-copy">
           <span class="discovery-kicker" data-ar="بيانات قابلة للاستكشاف" data-en="Data ready to explore">بيانات قابلة للاستكشاف</span>
           <h3 class="discovery-title" data-ar="مستكشف البيانات" data-en="Data Explorer">مستكشف البيانات</h3>
@@ -35577,6 +35586,196 @@ main#main-content {
   document.addEventListener('DOMContentLoaded', applyBackgrounds, { once: true });
   window.addEventListener('load', applyBackgrounds, { once: true });
 })();
+</script>
+<style id="gastat-hero-visible-final-fix">
+  /* الهيرو النهائي: يظهر مباشرة دون انتظار أي سكربت أو تنسيق قديم. */
+  html body main#main-content > section.gastat-hero-carousel {
+    position: relative !important;
+    display: block !important;
+    min-height: 390px !important;
+    overflow: hidden !important;
+    background: #101a2a !important;
+  }
+  html body main#main-content > section.gastat-hero-carousel > .gastat-hero-stage,
+  html body main#main-content > section.gastat-hero-carousel > .gastat-hero-stage > article.gastat-hero-slide.is-active {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  html body main#main-content > section.gastat-hero-carousel > .gastat-hero-stage > article.gastat-hero-slide.is-active {
+    z-index: 5 !important;
+  }
+  html body main#main-content > section.gastat-hero-carousel > .gastat-hero-stage > article.gastat-hero-slide.is-active > img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  html body main#main-content > section.gastat-hero-carousel > .gastat-hero-stage > article.gastat-hero-slide.is-active > .gastat-hero-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 2 !important;
+    background: linear-gradient(90deg, rgba(9,22,40,.48), rgba(9,22,40,.82)) !important;
+  }
+  html body main#main-content > section.gastat-hero-carousel > .gastat-hero-stage > article.gastat-hero-slide.is-active > .gastat-hero-slide-content {
+    position: relative !important;
+    z-index: 8 !important;
+    display: flex !important;
+    height: 100% !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  html body main#main-content > section.gastat-hero-carousel > .gastat-hero-stage > article.gastat-hero-slide.is-active > .gastat-hero-slide-content :is(h1,p,a) {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  @media (max-width: 760px) {
+    html body main#main-content > section.gastat-hero-carousel { min-height: 350px !important; }
+  }
+</style>
+<style id="gastat-kpi-last-updated-definitive-style">
+  /* تثبيت شارة التحديث بجوار عنوان أهم المؤشرات بعد اكتمال بناء القسم. */
+  .indicators-section > .container > .section-head {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+  .indicators-section .section-head .gastat-kpi-heading-stable,
+  .indicators-section .section-head .kpi-heading-copy {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  .indicators-section .section-head .gastat-section-last-updated {
+    position: static !important;
+    inset: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 6px 11px !important;
+    border: 1px solid #cfe3d9 !important;
+    border-radius: 999px !important;
+    background: #f3faf6 !important;
+    color: #52645d !important;
+    font-size: 13px !important;
+    font-weight: 650 !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    overflow: visible !important;
+  }
+  .indicators-section .section-head .gastat-section-last-updated svg {
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+    flex: 0 0 16px !important;
+    fill: none !important;
+    stroke: #1b8354 !important;
+    stroke-width: 1.8 !important;
+  }
+  @media (max-width: 760px) {
+    .indicators-section .section-head .gastat-kpi-heading-stable,
+    .indicators-section .section-head .kpi-heading-copy {
+      gap: 8px !important;
+    }
+    .indicators-section .section-head .gastat-section-last-updated {
+      padding: 5px 9px !important;
+      font-size: 12px !important;
+    }
+  }
+</style>
+<script id="gastat-kpi-last-updated-definitive-script">
+  (function () {
+    var scheduled = 0;
+
+    function ensureKpiLastUpdated() {
+      var section = document.querySelector('.indicators-section');
+      if (!section) return;
+
+      var headings = section.querySelectorAll('h1, h2, h3');
+      var heading = null;
+      for (var i = 0; i < headings.length; i += 1) {
+        if ((headings[i].textContent || '').trim() === 'أهم المؤشرات الإحصائية') {
+          heading = headings[i];
+          break;
+        }
+      }
+      if (!heading || !heading.parentNode) return;
+
+      var row = heading.closest('.kpi-heading-copy, .gastat-kpi-heading-stable');
+      if (!row) {
+        row = document.createElement('div');
+        row.className = 'kpi-heading-copy gastat-section-heading-row gastat-kpi-heading-stable';
+        heading.parentNode.insertBefore(row, heading);
+        row.appendChild(heading);
+      } else {
+        row.classList.add('gastat-section-heading-row', 'gastat-kpi-heading-stable');
+      }
+
+      var badge = section.querySelector('.gastat-section-last-updated');
+      if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'gastat-section-last-updated';
+        badge.setAttribute('aria-label', 'آخر تحديث: اليوم');
+        badge.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg><span>آخر تحديث: <strong>اليوم</strong></span>';
+        row.appendChild(badge);
+      }
+    }
+
+    function scheduleEnsure() {
+      if (scheduled) return;
+      scheduled = window.requestAnimationFrame(function () {
+        scheduled = 0;
+        ensureKpiLastUpdated();
+      });
+    }
+
+    ensureKpiLastUpdated();
+    document.addEventListener('DOMContentLoaded', ensureKpiLastUpdated, { once: true });
+    window.addEventListener('load', ensureKpiLastUpdated, { once: true });
+    window.setTimeout(ensureKpiLastUpdated, 100);
+    window.setTimeout(ensureKpiLastUpdated, 500);
+    window.setTimeout(ensureKpiLastUpdated, 1500);
+
+    var root = document.querySelector('.indicators-section') || document.body;
+    if (root && window.MutationObserver) {
+      var observer = new MutationObserver(scheduleEnsure);
+      observer.observe(root, { childList: true, subtree: true });
+      window.setTimeout(function () { observer.disconnect(); }, 6000);
+    }
+  })();
 </script>
 </body>
 </html>
