@@ -18267,6 +18267,14 @@ main#main-content {
               ><span class="kpi-nav-status" aria-live="polite"></span>
             </div>
           </div>
+          <div class="gastat-economic-topics-link-row">
+            <a
+              class="gastat-economic-topics-link"
+              href="https://www.stats.gov.sa/ar/statistics?index=119021&amp;subindex=120034"
+              ><span>عرض جميع المواضيع في قسم السكان والمجتمع</span
+              ><span aria-hidden="true">←</span></a
+            >
+          </div>
           <div aria-label="أهم المؤشرات الإحصائية" class="kpis-slider">
             <div class="kpis-track">
               <article class="kpi">
@@ -29003,6 +29011,106 @@ main#main-content {
             '.gastat-kpi-category[aria-selected="true"]',
           );
           update(selected?.dataset.category || "economic");
+          return true;
+        };
+        if (!setup()) {
+          const observer = new MutationObserver(() => {
+            if (setup()) observer.disconnect();
+          });
+          observer.observe(document.documentElement, {
+            childList: true,
+            subtree: true,
+          });
+        }
+      })();
+    </script>
+    <script id="gastat-kpi-compact-classification-script">
+      (() => {
+        const topicOptions = [
+          { value: "economy-trade-investment", label: "الاقتصاد والتجارة والاستثمار" },
+          { value: "prices-inflation", label: "الأسعار والتضخم" },
+          { value: "business-industry-innovation", label: "الأعمال والصناعة والابتكار" },
+          { value: "labour-skills", label: "سوق العمل والمهارات" },
+          { value: "population-housing", label: "السكان والمساكن" },
+          { value: "health-education-wellbeing", label: "الصحة والتعليم والرفاه" },
+          { value: "society-lifestyle", label: "المجتمع وأساليب الحياة" },
+          { value: "energy-minerals", label: "الطاقة والثروة المعدنية" },
+          { value: "environment-climate-agriculture", label: "البيئة والمناخ والأراضي والزراعة" },
+          { value: "transport-tourism-hajj-umrah", label: "النقل والسياحة والحج والعمرة" },
+        ];
+        const topicByTitle = {
+          "التقديرات السكانية لعام 2024": "population-housing",
+          "نمو الناتج المحلي الإجمالي الحقيقي": "economy-trade-investment",
+          "البطالة بين السعوديين": "labour-skills",
+          "معدل التضخم السنوي": "prices-inflation",
+          "الإنتاج الصناعي": "business-industry-innovation",
+          "عدد المنشآت النشطة": "business-industry-innovation",
+          "نمو الصادرات غير النفطية": "economy-trade-investment",
+          "نمو مبيعات التجارة الإلكترونية": "business-industry-innovation",
+          "نسبة تملك المساكن للأسر السعودية": "population-housing",
+          "نسبة استخدام الإنترنت": "society-lifestyle",
+          "نسبة المناطق المحمية": "environment-climate-agriculture",
+          "حصة الطاقة المتجددة": "energy-minerals",
+          "معدل إعادة تدوير النفايات": "environment-climate-agriculture",
+          "مؤشر تغطية المناطق الإدارية": "population-housing",
+        };
+        const setup = () => {
+          const section = document.querySelector(".indicators-section");
+          const slider = section?.querySelector(".kpis-slider");
+          const cards = [...(slider?.querySelectorAll(".kpi") || [])];
+          const empty = section?.querySelector(".gastat-kpi-empty");
+          const topicLink = section?.querySelector(
+            ".gastat-economic-topics-link",
+          );
+          if (!section || !slider || !cards.length || !topicLink)
+            return false;
+          if (section.dataset.compactClassificationReady === "true")
+            return true;
+          section.dataset.compactClassificationReady = "true";
+          cards.forEach((card) => {
+            const title = card.querySelector(":scope>span")?.textContent.trim();
+            card.dataset.topic = topicByTitle[title] || "other";
+            if (title === "مؤشر تغطية المناطق الإدارية")
+              card.dataset.kpiCategory = "environment";
+          });
+          const controls = document.createElement("div");
+          controls.className = "gastat-kpi-compact-controls";
+          controls.innerHTML =
+            '<div class="gastat-kpi-mode-tabs" aria-label="طريقة تصنيف المؤشرات"><span class="gastat-kpi-mode" aria-selected="true" aria-current="true">حسب الموضوعات</span></div><select class="gastat-kpi-compact-select" aria-label="اختر الموضوع"></select>';
+          topicLink.closest(".gastat-economic-topics-link-row").before(controls);
+          const select = controls.querySelector("select");
+          const fill = (items) => {
+            select.innerHTML = items
+              .map(
+                (item) =>
+                  '<option value="' +
+                  item.value +
+                  '">' +
+                  item.label +
+                  "</option>",
+              )
+              .join("");
+          };
+          const updateTopicLink = (text, href) => {
+            const label = topicLink.querySelector("span:first-child");
+            if (label) label.textContent = text;
+            topicLink.href = href;
+          };
+          const applyTopic = (value) => {
+            // ملاحظة: هذه الصفحة تعرض 5 مؤشرات مختارة فقط دائمًا (بدون تصفية حسب
+            // الموضوع) بناءً على طلب سابق بإظهار المؤشرات الخمسة كاملة على سطح
+            // المكتب دون تنقل. لذلك نكتفي هنا بتحديث نص الرابط فقط ولا نخفي البطاقات.
+            let shown = cards.length;
+            const item =
+              topicOptions.find((x) => x.value === value) || topicOptions[0];
+            updateTopicLink(
+              "عرض جميع المواضيع في قسم " + item.label,
+              "https://www.stats.gov.sa/ar/statistics",
+            );
+          };
+          select.addEventListener("change", () => applyTopic(select.value));
+          fill(topicOptions);
+          applyTopic(topicOptions[0].value);
           return true;
         };
         if (!setup()) {
