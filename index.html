@@ -26780,7 +26780,7 @@ main#main-content {
       /* الزر الأيسر: السابق */
       .indicators-section .kpi-nav-prev,
       #gastat-data-tools [data-direction="previous"] {
-        order: 1 !important;
+        order: -1 !important;
       }
 
       /* الزر الأيمن: التالي */
@@ -35732,5 +35732,521 @@ main#main-content {
         }
       }
     </style>
+    <style id="gastat-statistical-indicators-icons-final">
+      /* إظهار أيقونات المؤشرات الإحصائية وإبرازها بعد أن أخفاها تنسيق قديم. */
+      .indicators-section .kpi .kpi-icon {
+        display: inline-grid !important;
+        place-items: center !important;
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        flex: 0 0 48px !important;
+        margin: 0 0 16px !important;
+        border: 1px solid rgba(27, 131, 84, 0.16) !important;
+        border-radius: 14px !important;
+        background: #eaf7f0 !important;
+        color: #166a45 !important;
+        box-shadow: 0 8px 18px rgba(27, 131, 84, 0.10) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        transition: transform 180ms ease, background-color 180ms ease,
+          color 180ms ease, box-shadow 180ms ease !important;
+      }
+
+      .indicators-section .kpi .kpi-icon svg {
+        display: block !important;
+        width: 25px !important;
+        height: 25px !important;
+        fill: none !important;
+        stroke: currentColor !important;
+        stroke-width: 1.8 !important;
+        stroke-linecap: round !important;
+        stroke-linejoin: round !important;
+        overflow: visible !important;
+      }
+
+      .indicators-section .kpi:hover .kpi-icon,
+      .indicators-section .kpi:focus-within .kpi-icon {
+        background: #1b8354 !important;
+        color: #fff !important;
+        border-color: #1b8354 !important;
+        box-shadow: 0 10px 22px rgba(27, 131, 84, 0.22) !important;
+        transform: translateY(-2px) scale(1.04) !important;
+      }
+
+      @media (max-width: 650px) {
+        .indicators-section .kpi .kpi-icon {
+          width: 44px !important;
+          height: 44px !important;
+          min-width: 44px !important;
+          flex-basis: 44px !important;
+          margin-bottom: 13px !important;
+        }
+
+        .indicators-section .kpi .kpi-icon svg {
+          width: 23px !important;
+          height: 23px !important;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .indicators-section .kpi .kpi-icon {
+          transition: none !important;
+        }
+      }
+    </style>
+    <style id="gastat-kpi-reference-layout-final" media="not all">
+      .indicators-section .kpis-track > article.kpi.gsr-kpi-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        min-height: 395px !important;
+        padding: 18px 20px 18px !important;
+        border: 1px solid #d5dfda !important;
+        border-radius: 22px !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        text-align: center !important;
+        overflow: hidden !important;
+        transform: none !important;
+      }
+      .indicators-section .gsr-kpi-card::before { display: none !important; }
+      .indicators-section .gsr-kpi-head {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        min-height: 62px !important;
+        text-align: right !important;
+      }
+      .indicators-section .gsr-kpi-card .gsr-kpi-icon {
+        display: inline-grid !important;
+        place-items: center !important;
+        width: 46px !important;
+        height: 42px !important;
+        min-width: 46px !important;
+        margin: 0 !important;
+        border: 0 !important;
+        border-radius: 12px !important;
+        background: #1b8757 !important;
+        color: #fff !important;
+        box-shadow: none !important;
+      }
+      .indicators-section .gsr-kpi-card .gsr-kpi-icon svg {
+        display: block !important;
+        width: 22px !important;
+        height: 22px !important;
+        fill: none !important;
+        stroke: currentColor !important;
+        stroke-width: 1.8 !important;
+        stroke-linecap: round !important;
+        stroke-linejoin: round !important;
+      }
+      .indicators-section .gsr-kpi-title {
+        flex: 1 !important;
+        margin: 3px 0 0 !important;
+        color: #1b2840 !important;
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        line-height: 1.45 !important;
+      }
+      .indicators-section .gsr-kpi-period {
+        margin: 12px 0 19px !important;
+        color: #617087 !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+      }
+      .indicators-section .gsr-kpi-value {
+        display: block !important;
+        margin: 0 0 12px !important;
+        color: #12203b !important;
+        font-size: clamp(27px, 2vw, 34px) !important;
+        font-weight: 800 !important;
+        line-height: 1.1 !important;
+        direction: ltr !important;
+      }
+      .indicators-section .gsr-kpi-change {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 13px !important;
+        margin: 0 0 20px !important;
+        color: #455166 !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+      }
+      .indicators-section .gsr-kpi-change b {
+        color: #202638 !important;
+        font-size: 13px !important;
+        direction: ltr !important;
+      }
+      .indicators-section .gsr-kpi-chart {
+        display: block !important;
+        width: 100% !important;
+        height: 62px !important;
+        margin: 0 0 24px !important;
+        background: #1e8959 !important;
+        overflow: hidden !important;
+        direction: ltr !important;
+      }
+      .indicators-section .gsr-kpi-chart svg {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+      .indicators-section .gsr-kpi-chart polyline {
+        fill: none !important;
+        stroke: #087b59 !important;
+        stroke-width: 3 !important;
+        stroke-linecap: round !important;
+        stroke-linejoin: round !important;
+        vector-effect: non-scaling-stroke !important;
+      }
+      .indicators-section .gsr-kpi-chart.is-down polyline { stroke: #c74412 !important; }
+      .indicators-section .gsr-kpi-more {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 14px !important;
+        width: 100% !important;
+        min-height: 50px !important;
+        margin-top: auto !important;
+        border: 1px solid #cfd9d4 !important;
+        border-radius: 13px !important;
+        background: #fff !important;
+        color: #4b5363 !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+      }
+      .indicators-section .gsr-kpi-more svg {
+        width: 18px !important;
+        height: 18px !important;
+        fill: none !important;
+        stroke: #09865a !important;
+        stroke-width: 2 !important;
+      }
+      .indicators-section .gsr-kpi-more:hover,
+      .indicators-section .gsr-kpi-more:focus-visible {
+        border-color: #1b8354 !important;
+        background: #f1faf5 !important;
+        color: #166a45 !important;
+      }
+      @media (max-width: 900px) {
+        .indicators-section .kpis-track > article.kpi.gsr-kpi-card {
+          min-height: 370px !important;
+          padding: 17px !important;
+        }
+      }
+    </style>
+    <script type="application/json" id="gastat-kpi-reference-layout-final-script">
+      (() => {
+        const items = [
+          { title: 'التقديرات السكانية', period: '2024', value: '35,300,280', change: '0.0%', icon: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>', points: '0,58 35,45 68,49 104,31 145,19 180,8', dir: 'up' },
+          { title: 'معدل نمو الناتج المحلي الإجمالي الحقيقي', period: 'الربع الثاني 2026', value: '-4.8%', change: '1.2%', icon: '<path d="m4 16 5-5 4 4 7-8"/><path d="M15 7h5v5"/>', points: '0,47 33,55 70,42 105,30 144,23 180,9', dir: 'up' },
+          { title: 'البطالة بين السعوديين', period: 'الربع الأول 2026', value: '6.4%', change: '0.8%', icon: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/>', points: '0,58 34,39 66,47 99,27 132,12 153,20 180,4', dir: 'up' },
+          { title: 'معدل التضخم', period: 'يوليو 2026', value: '1.8%', change: '0.0%', icon: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', points: '0,4 31,17 61,29 91,19 123,34 151,43 180,56', dir: 'down' },
+          { title: 'الإنتاج الصناعي', period: 'يونيو 2026', value: '-16.3%', change: '2.1%', icon: '<path d="M3 21h18M5 21V9l5 3V9l5 3V5h4v16"/>', points: '0,57 31,45 62,34 92,40 124,25 151,16 180,7', dir: 'up' }
+        ];
+
+        document.querySelectorAll('.indicators-section .kpis-track > article.kpi').forEach((card, index) => {
+          const item = items[index % items.length];
+          card.classList.add('gsr-kpi-card');
+          card.innerHTML = `
+            <div class="gsr-kpi-head">
+              <span class="gsr-kpi-icon" aria-hidden="true"><svg viewBox="0 0 24 24">${item.icon}</svg></span>
+              <h3 class="gsr-kpi-title">${item.title}</h3>
+            </div>
+            <div class="gsr-kpi-period">${item.period}</div>
+            <strong class="gsr-kpi-value">${item.value}</strong>
+            <div class="gsr-kpi-change"><span>التغير عن الإصدار السابق</span><b>${item.change}</b></div>
+            <a class="gsr-kpi-more" href="#statistics"><span>اكتشف المزيد</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></a>`;
+        });
+        const removeCharts = () => document
+          .querySelectorAll('.indicators-section .kpi-sparkline, .indicators-section .gsr-kpi-chart')
+          .forEach((chart) => chart.remove());
+        removeCharts();
+        document.addEventListener('DOMContentLoaded', removeCharts, { once: true });
+        window.addEventListener('load', removeCharts, { once: true });
+      })();
+    </script>
+    <style id="gastat-kpi-title-icons-only">
+      /* التعديل الوحيد: أيقونة على يمين عنوان المؤشر. */
+      .indicators-section .kpi .gastat-kpi-title-with-icon {
+        display: flex !important;
+        direction: rtl !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        width: 100% !important;
+        min-height: 58px !important;
+        margin: 0 0 8px !important;
+        text-align: right !important;
+      }
+      .indicators-section .kpi .gastat-kpi-title-with-icon > span:not(.kpi-icon) {
+        flex: 1 1 auto !important;
+        margin: 0 !important;
+        color: inherit !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+      }
+      html body.dga-platform-page .indicators-section article.kpi
+        .gastat-kpi-title-with-icon > .kpi-icon {
+        display: inline-grid !important;
+        place-items: center !important;
+        order: -1 !important;
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        flex: 0 0 42px !important;
+        margin: 0 !important;
+        border: 0 !important;
+        border-radius: 12px !important;
+        background: #eef9f3 !important;
+        color: #078557 !important;
+        box-shadow: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+      }
+      html body.dga-platform-page .indicators-section article.kpi
+        .gastat-kpi-title-with-icon > .kpi-icon svg {
+        display: block !important;
+        width: 22px !important;
+        height: 22px !important;
+        fill: none !important;
+        stroke: #078557 !important;
+        stroke-width: 1.8 !important;
+        stroke-linecap: round !important;
+        stroke-linejoin: round !important;
+      }
+    </style>
+    <script id="gastat-kpi-title-icons-only-script">
+      (() => {
+        const apply = () => {
+          document.querySelectorAll('.indicators-section .kpis-track > article.kpi').forEach((card) => {
+            if (card.querySelector(':scope > .gastat-kpi-title-with-icon')) return;
+            const icon = card.querySelector(':scope > .kpi-icon');
+            const title = card.querySelector(':scope > span:not(.trend)');
+            if (!icon || !title) return;
+            const row = document.createElement('div');
+            row.className = 'gastat-kpi-title-with-icon';
+            card.insertBefore(row, card.firstChild);
+            row.append(icon, title);
+          });
+          document.querySelectorAll('.indicators-section .gastat-kpi-title-with-icon > .kpi-icon').forEach((icon) => {
+            icon.style.setProperty('background', '#eef9f3', 'important');
+            icon.style.setProperty('background-color', '#eef9f3', 'important');
+            icon.style.setProperty('background-image', 'none', 'important');
+            icon.style.setProperty('color', '#078557', 'important');
+            icon.querySelectorAll('svg, svg *').forEach((part) => {
+              part.style.setProperty('stroke', '#078557', 'important');
+              part.style.setProperty('fill', 'none', 'important');
+            });
+          });
+        };
+        apply();
+        document.addEventListener('DOMContentLoaded', apply, { once: true });
+        window.addEventListener('load', apply, { once: true });
+      })();
+    </script>
+    <style id="gastat-lower-sections-icon-colors">
+      :is(
+        #latest-publications .gastat-nds-stat-icon,
+        #gastat-data-tools .gastat-data-tools__card-icon,
+        #gastat-discovery-tabs .discovery-tab-icon
+      ),
+      :is(
+        #latest-publications .gastat-nds-card:hover .gastat-nds-stat-icon,
+        #latest-publications .gastat-nds-card:focus-within .gastat-nds-stat-icon,
+        #gastat-data-tools .gastat-data-tools__card:hover .gastat-data-tools__card-icon,
+        #gastat-data-tools .gastat-data-tools__card:focus-within .gastat-data-tools__card-icon,
+        #gastat-discovery-tabs .discovery-tab:hover .discovery-tab-icon,
+        #gastat-discovery-tabs .discovery-tab[aria-selected="true"] .discovery-tab-icon
+      ) {
+        background: #eef9f3 !important;
+        background-color: #eef9f3 !important;
+        background-image: none !important;
+        border-color: transparent !important;
+        color: #078557 !important;
+      }
+      :is(
+        #latest-publications .gastat-nds-stat-icon,
+        #gastat-data-tools .gastat-data-tools__card-icon,
+        #gastat-discovery-tabs .discovery-tab-icon
+      ) svg,
+      :is(
+        #latest-publications .gastat-nds-stat-icon,
+        #gastat-data-tools .gastat-data-tools__card-icon,
+        #gastat-discovery-tabs .discovery-tab-icon
+      ) svg * {
+        color: #078557 !important;
+        stroke: #078557 !important;
+      }
+    </style>
+    <script id="gastat-lower-sections-icon-colors-script">
+      (() => {
+        const selector = [
+          '#latest-publications .gastat-nds-stat-icon',
+          '#gastat-data-tools .gastat-data-tools__card-icon',
+          '#gastat-discovery-tabs .discovery-tab-icon'
+        ].join(',');
+        const apply = () => document.querySelectorAll(selector).forEach((icon) => {
+          icon.style.setProperty('background', '#eef9f3', 'important');
+          icon.style.setProperty('background-color', '#eef9f3', 'important');
+          icon.style.setProperty('background-image', 'none', 'important');
+          icon.style.setProperty('border-color', 'transparent', 'important');
+          icon.style.setProperty('color', '#078557', 'important');
+          icon.querySelectorAll('svg, svg *').forEach((part) => {
+            part.style.setProperty('color', '#078557', 'important');
+            part.style.setProperty('stroke', '#078557', 'important');
+          });
+        });
+        apply();
+        document.addEventListener('DOMContentLoaded', apply, { once: true });
+        window.addEventListener('load', apply, { once: true });
+      })();
+    </script>
+    <style id="gastat-home-icons-unified-circle-final">
+      :is(
+        main .kpi-icon,
+        main .gastat-nds-stat-icon,
+        main .gastat-data-tools__card-icon,
+        main .gastat-interactive-maps-card__icon,
+        main .interactive-regions-map-card__icon,
+        main .semantic-builder-title-icon,
+        main .discovery-tab-icon,
+        main .cat-icon,
+        main .detail-icon,
+        main .tab-icon
+      ) {
+        display: inline-grid !important;
+        place-items: center !important;
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
+        max-width: 48px !important;
+        max-height: 48px !important;
+        flex: 0 0 48px !important;
+        border: 0 !important;
+        border-radius: 50% !important;
+        background: #eef9f3 !important;
+        background-color: #eef9f3 !important;
+        background-image: none !important;
+        color: #078557 !important;
+        box-shadow: none !important;
+      }
+      :is(
+        main .kpi-icon,
+        main .gastat-nds-stat-icon,
+        main .gastat-data-tools__card-icon,
+        main .gastat-interactive-maps-card__icon,
+        main .interactive-regions-map-card__icon,
+        main .semantic-builder-title-icon,
+        main .discovery-tab-icon,
+        main .cat-icon,
+        main .detail-icon,
+        main .tab-icon
+      ) svg {
+        display: block !important;
+        width: 24px !important;
+        height: 24px !important;
+        color: #078557 !important;
+        fill: none !important;
+        stroke: #078557 !important;
+      }
+      :is(
+        main .kpi-icon,
+        main .gastat-nds-stat-icon,
+        main .gastat-data-tools__card-icon,
+        main .gastat-interactive-maps-card__icon,
+        main .interactive-regions-map-card__icon,
+        main .semantic-builder-title-icon,
+        main .discovery-tab-icon,
+        main .cat-icon,
+        main .detail-icon,
+        main .tab-icon
+      ) svg * {
+        color: #078557 !important;
+        stroke: #078557 !important;
+      }
+    </style>
+    <script id="gastat-home-icons-unified-circle-final-script">
+      (() => {
+        const selector = [
+          'main .kpi-icon',
+          'main .gastat-nds-stat-icon',
+          'main .gastat-data-tools__card-icon',
+          'main .gastat-interactive-maps-card__icon',
+          'main .interactive-regions-map-card__icon',
+          'main .semantic-builder-title-icon',
+          'main .discovery-tab-icon',
+          'main .cat-icon',
+          'main .detail-icon',
+          'main .tab-icon'
+        ].join(',');
+        const apply = () => document.querySelectorAll(selector).forEach((icon) => {
+          ['width','height','min-width','min-height','max-width','max-height'].forEach((property) => {
+            icon.style.setProperty(property, '48px', 'important');
+          });
+          icon.style.setProperty('flex', '0 0 48px', 'important');
+          icon.style.setProperty('border-radius', '50%', 'important');
+          icon.style.setProperty('background', '#eef9f3', 'important');
+          icon.style.setProperty('background-color', '#eef9f3', 'important');
+          icon.style.setProperty('background-image', 'none', 'important');
+          icon.style.setProperty('color', '#078557', 'important');
+          icon.querySelectorAll('svg').forEach((svg) => {
+            svg.style.setProperty('width', '24px', 'important');
+            svg.style.setProperty('height', '24px', 'important');
+          });
+          icon.querySelectorAll('svg, svg *').forEach((part) => {
+            part.style.setProperty('color', '#078557', 'important');
+            part.style.setProperty('stroke', '#078557', 'important');
+          });
+        });
+        apply();
+        document.addEventListener('DOMContentLoaded', apply, { once: true });
+        window.addEventListener('load', apply, { once: true });
+        if (window.MutationObserver) {
+          const observer = new MutationObserver(apply);
+          observer.observe(document.querySelector('main') || document.body, { childList: true, subtree: true });
+          window.setTimeout(() => observer.disconnect(), 6000);
+        }
+      })();
+    </script>
+    <style id="gastat-publications-icons-contrast-final">
+      #latest-publications .gastat-nds-stat-icon {
+        color: #067a50 !important;
+        opacity: 1 !important;
+      }
+      #latest-publications .gastat-nds-stat-icon svg,
+      #latest-publications .gastat-nds-stat-icon svg * {
+        color: #067a50 !important;
+        stroke: #067a50 !important;
+        stroke-width: 4.5 !important;
+        opacity: 1 !important;
+      }
+    </style>
+    <script id="gastat-publications-icons-contrast-final-script">
+      (() => {
+        const apply = () => document
+          .querySelectorAll('#latest-publications .gastat-nds-stat-icon')
+          .forEach((icon) => {
+            icon.style.setProperty('color', '#067a50', 'important');
+            icon.style.setProperty('opacity', '1', 'important');
+            icon.querySelectorAll('svg, svg *').forEach((part) => {
+              part.style.setProperty('color', '#067a50', 'important');
+              part.style.setProperty('stroke', '#067a50', 'important');
+              part.style.setProperty('stroke-width', '4.5', 'important');
+              part.style.setProperty('opacity', '1', 'important');
+            });
+          });
+        apply();
+        document.addEventListener('DOMContentLoaded', apply, { once: true });
+        window.addEventListener('load', apply, { once: true });
+      })();
+    </script>
 </body>
 </html>
