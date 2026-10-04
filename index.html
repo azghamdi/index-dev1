@@ -19199,7 +19199,7 @@ main#main-content {
           .replace(/[إأآ]/g, "ا")
           .replace(/ى/g, "ي")
           .replace(/ة/g, "ه")
-          .replace(/[ًٌٍَُِّْـ]/g, "")
+          .replace(/[ًٌٍَُِّْـ]/g, "")
           .trim();
       }
       function allStatProducts() {
@@ -20057,7 +20057,7 @@ main#main-content {
             .trim()
             .toLocaleLowerCase("ar")
             .normalize("NFKD")
-            .replace(/[ًٌٍَُِّْـ]/g, "");
+            .replace(/[ًٌٍَُِّْـ]/g, "");
         const records = tabs.flatMap((tab, ti) => {
           const main =
             tab
@@ -35419,6 +35419,7 @@ main#main-content {
             name: "الأعمال والصناعة",
             items: [
               ["الإنتاج الصناعي", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123454"],
+              ["البحث والتطوير", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123265"],
               ["المنشآت الصغيرة والمتوسطة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123088"],
               ["قطاع الأعمال والمنشآت", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=3631799"],
               ["القطاع غير الربحي", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=2163811"],
@@ -35428,10 +35429,9 @@ main#main-content {
           {
             name: "التقنية والاقتصاد الرقمي",
             items: [
+              ["استخدام الأفراد للإنترنت", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=122971"],
               ["استخدام المنشآت للتقنية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=127305"],
               ["الاقتصاد الرقمي", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=122941"],
-              ["البحث والتطوير", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123265"],
-              ["استخدام الأفراد للإنترنت", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=122971"],
             ],
           },
           {
@@ -35473,30 +35473,31 @@ main#main-content {
           {
             name: "الصحة والتعليم",
             items: [
-              ["التعليم والتدريب", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=514986"],
               ["مهارات الكبار والتعلّم", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=3030916"],
+              ["التعليم والتدريب", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=514986"],
               ["صحة الطفل والطفولة المبكرة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123872"],
               ["الرعاية الصحية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123812"],
               ["العوامل المؤثرة في الصحة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123842"],
               ["المنشآت والكوادر الصحية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=2968800"],
               ["الحالة الصحية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=417594"],
               ["السلامة والصحة المهنية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123762"],
+              ["النشاط البدني والرياضة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=1278616"],
               ["صحة المرأة والإنجاب", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123902"],
-              ["تعداد السعودية ٢٠٢٢", "https://www.stats.gov.sa/ar/statistics?index=119025&subindex=127380"],
             ],
           },
           {
             name: "السكان والمساكن",
             items: [
               ["الإسكان والمساكن", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436318&category=417705"],
-              ["عدد السكان وخصائصهم", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436318&category=417653"],
+              ["الخدمات في المناطق", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124988"],
               ["تعداد السعودية ٢٠٢٢", "https://www.stats.gov.sa/ar/statistics?index=119025&subindex=127380"],
+              ["عدد السكان وخصائصهم", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436318&category=417653"],
             ],
           },
           {
             name: "سوق العمل",
             items: [
-              ["التوظيف والمشتغلون", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124074"],
+              ["المسجلون في أنظمة العمل", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124074"],
               ["معدل البطالة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=417515"],
               ["العمل التطوعي", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123992"],
             ],
@@ -35510,23 +35511,23 @@ main#main-content {
               ["النقل الجوي", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124954"],
               ["النقل البحري", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124924"],
               ["السكك الحديدية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=565258"],
-              ["النقل البري", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124894"],
+              ["النقل على الطرق", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124894"],
               ["التخزين والخدمات اللوجستية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=2163948"],
             ],
           },
           {
             name: "المجتمع والأحوال المعيشية",
             items: [
-              ["الثقافة والترفيه", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=127333"],
               ["دخل الأسرة وإنفاقها", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=127329"],
+              ["الثقافة والترفيه", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=127333"],
               ["الأمن والسلامة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=2377692"],
-              ["الخدمات في المناطق", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124988"],
               ["كبار السن", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123674"],
               ["ذوو الإعاقة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123728"],
               ["الأسرة السعودية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=3153652"],
               ["المرأة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123614"],
               ["الشباب", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=2696599"],
-              ["النشاط البدني والرياضة", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=1278616"],
+              ["استخدام الأفراد للإنترنت", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=122971"],
+              ["ثقة المستهلك", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=10132653"],
             ],
           },
         ];
