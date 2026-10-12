@@ -36263,7 +36263,7 @@ main#main-content {
       society?.querySelectorAll('a[href*="category=122971"]').forEach(link => link.remove());
       const digital = find('الاقتصاد الرقمي وتقنية المعلومات والاتصالات')?.querySelector('.goh__primary-statistics-submenu'); if (digital && !digital.dataset.digitalOrderReady) { ['122971', '122941', '127305'].forEach(id => { const link = Array.from(digital.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === id); if (link) digital.appendChild(link); }); digital.dataset.digitalOrderReady = 'true'; } const services = menu.querySelector('a[href*="category=124988"]');
       const destination = economy?.querySelector('.goh__primary-statistics-submenu');
-      if (services && destination && services.parentElement !== destination) destination.appendChild(services);
+      if (services && destination && services.parentElement !== destination) destination.appendChild(services); if (destination && !destination.dataset.economyTrimmed) { const allowed = ['124988', '120038', '419265']; Array.from(destination.querySelectorAll('a')).filter(a => !allowed.includes(new URL(a.href).searchParams.get('category'))).forEach(a => a.remove()); allowed.forEach(id => { const link = Array.from(destination.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === id); if (link) destination.appendChild(link); }); destination.dataset.economyTrimmed = 'true'; }
       const additions = [
         ['السكان والمساكن', 'التقديرات السكانية', '2366987', '436312'],
         ['السكان والمساكن', 'المساكن', '3175009', '436312'],
