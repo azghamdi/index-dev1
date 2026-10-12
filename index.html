@@ -36258,7 +36258,7 @@ main#main-content {
     document.querySelectorAll('#goh-official-nav .goh__statistics-sections-v2').forEach(menu => {
       const entries = Array.from(menu.querySelectorAll('.goh__primary-statistics-entry'));
       const find = name => entries.find(entry => entry.querySelector('.goh__primary-statistics-item')?.textContent.trim() === name);
-      const economy = find('الاقتصاد الوطني');
+      const economy = find('الاقتصاد الوطني'); economy?.querySelectorAll('a[href*="category=10132653"]').forEach(link => link.remove());
       const society = find('المجتمع والأحوال المعيشية');
       society?.querySelectorAll('a[href*="category=122971"]').forEach(link => link.remove());
       const services = menu.querySelector('a[href*="category=124988"]');
