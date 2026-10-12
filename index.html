@@ -36251,3 +36251,47 @@ main#main-content {
     </script>
 </body>
 </html>
+
+<script id="statistics-menu-labels-and-placement">
+(() => {
+  const update = () => {
+    document.querySelectorAll('#goh-official-nav .goh__statistics-sections-v2').forEach(menu => {
+      const entries = Array.from(menu.querySelectorAll('.goh__primary-statistics-entry'));
+      const find = name => entries.find(entry => entry.querySelector('.goh__primary-statistics-item')?.textContent.trim() === name);
+      const economy = find('الاقتصاد الوطني');
+      const society = find('المجتمع والأحوال المعيشية');
+      society?.querySelectorAll('a[href*="category=122971"]').forEach(link => link.remove());
+      const services = menu.querySelector('a[href*="category=124988"]');
+      const destination = economy?.querySelector('.goh__primary-statistics-submenu');
+      if (services && destination && services.parentElement !== destination) destination.appendChild(services);
+      const additions = [
+        ['السكان والمساكن', 'التقديرات السكانية', '2366987', '436312'],
+        ['السكان والمساكن', 'المساكن', '3175009', '436312'],
+        ['السكان والمساكن', 'الأسر المعيشية — تعداد 2022', '417700', '436318'],
+        ['السكان والمساكن', 'عرض معلومات المناطق الإدارية — تعداد 2022', '494915', '436318'],
+        ['السكان والمساكن', 'الصحة والإعاقة — تعداد 2022', '417709', '436318'],
+        ['المجتمع والأحوال المعيشية', 'المرأة', '123644', '436312'],
+        ['المجتمع والأحوال المعيشية', 'الرياضة', '123936', '436312']
+      ];
+      additions.forEach(([section, label, category, tab]) => {
+        const submenu = find(section)?.querySelector('.goh__primary-statistics-submenu');
+        if (!submenu || Array.from(menu.querySelectorAll('a')).some(link => new URL(link.href).searchParams.get('category') === category)) return;
+        const link = document.createElement('a');
+        link.href = 'https://www.stats.gov.sa/ar/statistics-tabs?tab=' + tab + '&category=' + category;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = label;
+        submenu.appendChild(link);
+      });
+      menu.querySelectorAll('.goh__primary-statistics-submenu a').forEach(link => {
+        const label = link.textContent.replace(/(?:الإحصاءات|إحصاءات)s*/g, '').trim();
+        if (link.textContent !== label) link.textContent = label;
+      });
+      menu.querySelectorAll('.goh__primary-statistics-submenu').forEach(submenu => submenu.classList.toggle('is-two-column', submenu.children.length > 6));
+    });
+  };
+  update();
+  const nav = document.getElementById('goh-official-nav');
+  if (nav) new MutationObserver(update).observe(nav, { childList: true, subtree: true });
+})();
+</script>
