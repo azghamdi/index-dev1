@@ -28776,12 +28776,12 @@ main#main-content {
         if (!item || !trigger) return;
         const desktop = () =>
           matchMedia("(min-width:1181px) and (hover:hover)").matches;
-        item.addEventListener("pointerenter", () => {
+        let statisticsCloseTimer; item.addEventListener("pointerenter", () => { clearTimeout(statisticsCloseTimer);
           if (!desktop()) return;
           item.classList.add("is-open");
           trigger.setAttribute("aria-expanded", "true");
         });
-        item.addEventListener("pointerleave", () => {
+        item.addEventListener("pointerleave", () => { if (desktop()) { clearTimeout(statisticsCloseTimer); statisticsCloseTimer = setTimeout(() => { if (item.matches(":hover, :focus-within")) return; item.classList.remove("is-open"); trigger.setAttribute("aria-expanded", "false"); }, 450); return; }
           if (!desktop()) return;
           item.classList.remove("is-open");
           trigger.setAttribute("aria-expanded", "false");
@@ -36252,7 +36252,7 @@ main#main-content {
 </body>
 </html>
 
-<style id="statistics-menu-visibility-fix"> #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-item { cursor: pointer; } @media (min-width: 1181px) { #goh-official-nav .goh__dropdown.goh__statistics-sections-v2 { margin-top: 8px !important; } #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-submenu { max-height: min(610px, calc(100vh - 190px)) !important; overflow-y: auto !important; } #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-entry { position: static; } #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-entry > .goh__primary-statistics-submenu { top: 0 !important; bottom: auto !important; right: calc(100% + 8px) !important; width: min(390px, calc(100vw - 800px)) !important; } } </style> <script id="statistics-menu-labels-and-placement">
+<style id="statistics-menu-visibility-fix"> @media (min-width:1181px) { #goh-official-nav .goh__dropdown.goh__statistics-sections-v2::before { content: ""; position: absolute; top: -10px; right: 0; width: 100%; height: 10px; } } #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-item { cursor: pointer; } @media (min-width: 1181px) { #goh-official-nav .goh__dropdown.goh__statistics-sections-v2 { margin-top: 8px !important; } #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-submenu { max-height: min(610px, calc(100vh - 190px)) !important; overflow-y: auto !important; } #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-entry { position: static; } #goh-official-nav .goh__statistics-sections-v2 .goh__primary-statistics-entry > .goh__primary-statistics-submenu { top: 0 !important; bottom: auto !important; right: calc(100% + 8px) !important; width: min(390px, calc(100vw - 800px)) !important; } } </style> <script id="statistics-menu-labels-and-placement">
 (() => {
   const update = () => {
     document.querySelectorAll('#goh-official-nav .goh__statistics-sections-v2').forEach(menu => {
