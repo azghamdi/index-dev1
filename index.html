@@ -36283,7 +36283,7 @@ main#main-content {
         link.textContent = label;
         submenu.appendChild(link);
       });
-      menu.querySelectorAll('.goh__primary-statistics-submenu a').forEach(link => {
+      const population = find('السكان والمساكن')?.querySelector('.goh__primary-statistics-submenu'); if (population && !population.dataset.censusGrouped) { population.querySelectorAll('a[href*="subindex=127380"]').forEach(link => link.remove()); const censusIds = ['417705','417700','494915','417709']; censusIds.forEach(id => { const link = Array.from(population.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === id); if (link) { link.textContent = link.textContent.replace('— تعداد 2022', '- تعداد ٢٠٢٢'); population.appendChild(link); } }); population.style.gridTemplateColumns = 'minmax(0, 1fr)'; population.dataset.censusGrouped = 'true'; } menu.querySelectorAll('.goh__primary-statistics-submenu a').forEach(link => {
         const label = link.textContent.replace(/(?:الإحصاءات|إحصاءات)s*/g, '').trim();
         if (link.textContent !== label) link.textContent = label;
       });
