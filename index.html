@@ -17228,12 +17228,12 @@ main#main-content {
                           type="button"
                           aria-expanded="false"
                         >
-                          <span>الأعمال والصناعة</span
+                          <span>الأعمال</span
                           ><span aria-hidden="true">›</span>
                         </button>
                         <div
                           class="goh__stat-topic-flyout goh__subject-items"
-                          aria-label="موضوعات الأعمال والصناعة"
+                          aria-label="موضوعات الأعمال"
                         >
                           <button type="button">قطاع الأعمال</button
                           ><button type="button">الصناعة</button
@@ -17864,12 +17864,12 @@ main#main-content {
                     type="button"
                     aria-expanded="false"
                   >
-                    <span>الأعمال والصناعة</span
+                    <span>الأعمال</span
                     ><span aria-hidden="true">›</span>
                   </button>
                   <div
                     class="goh__stat-topic-flyout goh__subject-items"
-                    aria-label="موضوعات الأعمال والصناعة"
+                    aria-label="موضوعات الأعمال"
                   >
                     <button type="button">قطاع الأعمال</button
                     ><button type="button">الصناعة</button
@@ -35416,7 +35416,7 @@ main#main-content {
             ],
           },
           {
-            name: "الأعمال والصناعة",
+            name: "الأعمال",
             items: [
               ["إحصاءات الرقم القياسي للإنتاج الصناعي", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123454"],
               ["إحصاءات البحث والتطوير", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123265"],
@@ -36259,7 +36259,7 @@ main#main-content {
       if (menu.classList.contains('goh__dropdown')) menu.style.setProperty('margin-top', '8px', 'important'); const entries = Array.from(menu.querySelectorAll('.goh__primary-statistics-entry'));
       const find = name => entries.find(entry => entry.querySelector('.goh__primary-statistics-item')?.textContent.trim() === name);
       const economy = find('الاقتصاد الوطني'); economy?.querySelectorAll('a[href*="category=10132653"]').forEach(link => link.remove());
-      const society = find('المجتمع والأحوال المعيشية'); const business = find('الأعمال والصناعة')?.querySelector('.goh__primary-statistics-submenu'); if (business && !business.dataset.businessListReady) { const requested = [["الرقم القياسي للإنتاج الصناعي","123454"],["الأعمال الهيكلية","123038"],["المنشآت الصغيرة والمتوسطة","123088"],["ديموغرافية الأعمال","3631799"],["مؤشرات الأعمال قصيرة المدى","123342"],["مؤشر ثقة الأعمال","1340144"],["تجارة الجملة والتجزئة","123427"],["البحث والتطوير","123265"],["المسح الاقتصادي الشامل","2197212"]]; const existing = Array.from(business.querySelectorAll('a')); requested.forEach(([label, category]) => { let link = existing.find(a => new URL(a.href).searchParams.get('category') === category); if (!link) { link = document.createElement('a'); link.href = 'https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=' + category; link.target = '_blank'; link.rel = 'noopener noreferrer'; } link.textContent = label; business.appendChild(link); }); existing.filter(a => !requested.some(([,id]) => new URL(a.href).searchParams.get('category') === id)).forEach(a => business.appendChild(a)); business.dataset.businessListReady = 'true'; }
+      const society = find('المجتمع والأحوال المعيشية'); const business = find('الأعمال')?.querySelector('.goh__primary-statistics-submenu'); if (business && !business.dataset.businessListReady) { const requested = [["الرقم القياسي للإنتاج الصناعي","123454"],["الأعمال الهيكلية","123038"],["المنشآت الصغيرة والمتوسطة","123088"],["ديموغرافية الأعمال","3631799"],["مؤشرات الأعمال قصيرة المدى","123342"],["مؤشر ثقة الأعمال","1340144"],["تجارة الجملة والتجزئة","123427"],["البحث والتطوير","123265"],["المسح الاقتصادي الشامل","2197212"]]; const existing = Array.from(business.querySelectorAll('a')); requested.forEach(([label, category]) => { let link = existing.find(a => new URL(a.href).searchParams.get('category') === category); if (!link) { link = document.createElement('a'); link.href = 'https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=' + category; link.target = '_blank'; link.rel = 'noopener noreferrer'; } link.textContent = label; business.appendChild(link); }); existing.filter(a => !requested.some(([,id]) => new URL(a.href).searchParams.get('category') === id)).forEach(a => business.appendChild(a)); business.dataset.businessListReady = 'true'; }
       if (society && !society.dataset.householdIctMoved) { const target = society.querySelector('.goh__primary-statistics-submenu'); const links = Array.from(menu.querySelectorAll('a[href*="category=122971"]')); if (target && links.length) { target.appendChild(links[0]); links.slice(1).forEach(link => link.remove()); society.dataset.householdIctMoved = 'true'; } }
       const enterpriseIct = menu.querySelector('a[href*="category=127305"]'); if (enterpriseIct && business && enterpriseIct.parentElement !== business) business.appendChild(enterpriseIct); const digital = find('الاقتصاد الرقمي وتقنية المعلومات والاتصالات')?.querySelector('.goh__primary-statistics-submenu'); if (digital && !digital.dataset.digitalOrderReady) { ['122971', '122941', '127305'].forEach(id => { const link = Array.from(digital.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === id); if (link) digital.appendChild(link); }); digital.dataset.digitalOrderReady = 'true'; } const services = menu.querySelector('a[href*="category=124988"]');
       const destination = economy?.querySelector('.goh__primary-statistics-submenu');
