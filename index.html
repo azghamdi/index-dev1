@@ -17198,7 +17198,7 @@ main#main-content {
                           ><button type="button">الوظائف الشاغرة</button
                           ><button type="button">دخل وإنفاق الأسر</button
                           ><button type="button">الإسكان</button
-                          ><button type="button">أسعار العقارات</button
+                          ><button type="button">الرقم القياسي لأسعار العقارات</button
                           ><button type="button">الأراضي</button>
                         </div>
                       </div>
@@ -17834,7 +17834,7 @@ main#main-content {
                     ><button type="button">الوظائف الشاغرة</button
                     ><button type="button">دخل وإنفاق الأسر</button
                     ><button type="button">الإسكان</button
-                    ><button type="button">أسعار العقارات</button
+                    ><button type="button">الرقم القياسي لأسعار العقارات</button
                     ><button type="button">الأراضي</button>
                   </div>
                 </div>
@@ -20554,10 +20554,10 @@ main#main-content {
             else if (title.includes("متوسطات أسعار"))
               paths =
                 '<path d="M13 19h27l11 11-22 22-16-16V19z"/><circle cx="22" cy="28" r="3"/><path d="M29 42l13-13"/>';
-            else if (title.includes("أسعار الجملة"))
+            else if (title.includes("الرقم القياسي لأسعار الجملة"))
               paths =
                 '<path d="m12 24 20-10 20 10-20 10-20-10zM12 24v22l20 10 20-10V24M32 34v22"/>';
-            else if (title.includes("أسعار المستهلك"))
+            else if (title.includes("الرقم القياسي لأسعار المستهلك"))
               paths =
                 '<path d="M14 25h36l-4 22H19l-5-30H9M22 54h1M42 54h1M21 25l6-12M43 25l-6-12"/>';
             else if (title.includes("التجارة الدولية"))
@@ -22132,12 +22132,12 @@ main#main-content {
           ["الناتج المحلي الإجمالي", "Gross Domestic Product"],
           ["الاقتصادي الشامل", "Comprehensive Economy"],
           ["الاقتصاد الرقمي", "Digital Economy"],
-          ["أسعار المستهلك", "Consumer Prices"],
-          ["أسعار الجملة", "Wholesale Prices"],
-          ["أسعار العقارات", "Real Estate Prices"],
-          ["متوسطات الأسعار", "Average Prices"],
-          ["تكاليف البناء", "Construction Costs"],
-          ["أسعار المنتجين", "Producer Prices"],
+          ["الرقم القياسي لأسعار المستهلك", "Consumer Prices"],
+          ["الرقم القياسي لأسعار الجملة", "Wholesale Prices"],
+          ["الرقم القياسي لأسعار العقارات", "Real Estate Prices"],
+          ["متوسطات أسعار السلع والخدمات", "Average Prices"],
+          ["الرقم القياسي لتكاليف البناء", "Construction Costs"],
+          ["الرقم القياسي لأسعار المنتجين", "Producer Prices"],
           ["الأعمال قصيرة المدى", "Short-term Business"],
           ["الإنتاج الصناعي", "Industrial Production"],
           ["ثقة الأعمال", "Business Confidence"],
@@ -35450,7 +35450,7 @@ main#main-content {
           {
             name: "القطاع الخارجي", items: [["التجارة الدولية للسلع", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123481"], ["التجارة الدولية للخدمات", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=1340149"], ["الاستثمار الأجنبي المباشر", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=123583"]], }, { name: "الأسعار",
             items: [
-              ["إحصاءات أسعار العقارات", "https://www-dv.stats.gov.sa/ar/w/statistics/repi/2026-q2-1"],
+              ["الرقم القياسي لأسعار العقارات", "https://www-dv.stats.gov.sa/ar/w/statistics/repi/2026-q2-1"],
               ["إحصاءات الرقم القياسي لتكاليف البناء", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=3453505"],
               ["إحصاءات الطاقة المنزلية", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=124707"],
               ["إحصاءات متوسطات الأسعار", "https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=121662"],
@@ -36259,7 +36259,7 @@ main#main-content {
       const enterpriseIct = menu.querySelector('a[href*="category=127305"]'); if (enterpriseIct && business && enterpriseIct.parentElement !== business) business.appendChild(enterpriseIct); const digital = find('الاقتصاد الرقمي وتقنية المعلومات والاتصالات')?.querySelector('.goh__primary-statistics-submenu'); if (digital && !digital.dataset.digitalOrderReady) { ['122971', '122941', '127305'].forEach(id => { const link = Array.from(digital.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === id); if (link) digital.appendChild(link); }); digital.dataset.digitalOrderReady = 'true'; } const services = menu.querySelector('a[href*="category=124988"]');
       const destination = economy?.querySelector('.goh__primary-statistics-submenu');
       const servicesDestination = society?.querySelector('.goh__primary-statistics-submenu'); if (services && servicesDestination && services.parentElement !== servicesDestination) servicesDestination.appendChild(services); if (destination && !destination.dataset.economyTrimmed) { const digitalEconomy = menu.querySelector('a[href*="category=122941"]'); if (digitalEconomy) destination.appendChild(digitalEconomy); const allowed = ['120038', '419265', '122941']; Array.from(destination.querySelectorAll('a')).filter(a => !allowed.includes(new URL(a.href).searchParams.get('category'))).forEach(a => a.remove()); allowed.forEach(id => { const link = Array.from(destination.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === id); if (link) destination.appendChild(link); }); destination.dataset.economyTrimmed = 'true'; } const retiredDigitalSection = find('الاقتصاد الرقمي وتقنية المعلومات والاتصالات'); if (retiredDigitalSection && !retiredDigitalSection.querySelector('a')) retiredDigitalSection.remove();
-      const prices = find('الأسعار')?.querySelector('.goh__primary-statistics-submenu'); const energy = find('الطاقة والموارد')?.querySelector('.goh__primary-statistics-submenu'); if (prices && !prices.dataset.priceListReady) { const household = Array.from(prices.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === '124707'); if (household && energy) energy.appendChild(household); const requested = [['أسعار المستهلك','121421'],['أسعار الجملة','122852'],['متوسطات الأسعار','121662'],['الرقم القياسي لتكاليف البناء','3453505'],['أسعار المنتجين','10329368']]; const existing = Array.from(prices.querySelectorAll('a')); requested.forEach(([label,id]) => { let link = existing.find(a => new URL(a.href).searchParams.get('category') === id); if (!link) { link = document.createElement('a'); link.href = 'https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=' + id; link.target = '_blank'; link.rel = 'noopener noreferrer'; } link.textContent = label; prices.appendChild(link); }); prices.dataset.priceListReady = 'true'; } const additions = [
+      const prices = find('الأسعار')?.querySelector('.goh__primary-statistics-submenu'); const energy = find('الطاقة والموارد')?.querySelector('.goh__primary-statistics-submenu'); if (prices && !prices.dataset.priceListReady) { const household = Array.from(prices.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === '124707'); if (household && energy) energy.appendChild(household); const requested = [['الرقم القياسي لأسعار المستهلك','121421'],['الرقم القياسي لأسعار الجملة','122852'],['متوسطات أسعار السلع والخدمات','121662'],['الرقم القياسي لتكاليف البناء','3453505'],['الرقم القياسي لأسعار المنتجين','10329368']]; const existing = Array.from(prices.querySelectorAll('a')); requested.forEach(([label,id]) => { let link = existing.find(a => new URL(a.href).searchParams.get('category') === id); if (!link) { link = document.createElement('a'); link.href = 'https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&category=' + id; link.target = '_blank'; link.rel = 'noopener noreferrer'; } link.textContent = label; prices.appendChild(link); }); prices.dataset.priceListReady = 'true'; } const additions = [
         ['السكان والمساكن', 'التقديرات السكانية', '2366987', '436312'],
         ['السكان والمساكن', 'المساكن', '3175009', '436312'],
         ['السكان والمساكن', 'الأسر المعيشية — تعداد 2022', '417700', '436318'],
@@ -36290,3 +36290,4 @@ main#main-content {
   if (nav) new MutationObserver(update).observe(nav, { childList: true, subtree: true });
 })();
 </script>
+
