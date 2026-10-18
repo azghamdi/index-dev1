@@ -36284,7 +36284,7 @@ main#main-content {
         submenu.appendChild(link);
       });
       const population = find('السكان والمساكن')?.querySelector('.goh__primary-statistics-submenu'); if (population && !population.dataset.censusGrouped) { population.querySelectorAll('a[href*="category=417705"],a[href*="category=417700"],a[href*="category=494915"],a[href*="category=417709"]').forEach(link => link.remove()); const censusLink = population.querySelector('a[href*="subindex=127380"]') || document.createElement('a'); censusLink.href = 'https://www.stats.gov.sa/ar/statistics?index=119025&subindex=127380'; censusLink.textContent = 'تعداد السعودية ٢٠٢٢'; censusLink.target = '_blank'; censusLink.rel = 'noopener noreferrer'; population.appendChild(censusLink); const censusIds = ['417705','417700','494915','417709']; censusIds.forEach(id => { const link = Array.from(population.querySelectorAll('a')).find(a => new URL(a.href).searchParams.get('category') === id); if (link) { link.textContent = link.textContent.replace('— تعداد 2022', '- تعداد ٢٠٢٢'); population.appendChild(link); } }); population.style.gridTemplateColumns = 'minmax(0, 1fr)'; population.dataset.censusGrouped = 'true'; } menu.querySelectorAll('.goh__primary-statistics-submenu a').forEach(link => {
-        const label = link.textContent.replace(/(?:الإحصاءات|إحصاءات)s*/g, '').trim();
+        const label = new URL(link.href).searchParams.get('category') === '124583' ? 'الإحصاءات الزراعية' : link.textContent.replace(/(?:الإحصاءات|إحصاءات)s*/g, '').trim();
         if (link.textContent !== label) link.textContent = label;
       });
       menu.querySelectorAll('.goh__primary-statistics-submenu').forEach(submenu => submenu.classList.toggle('is-two-column', submenu.children.length > 6));
